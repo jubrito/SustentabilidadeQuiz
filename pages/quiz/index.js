@@ -1,10 +1,16 @@
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
-
-export default function Home() {
-  return <Title>Teste</Title>
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import QuizScreen from '../../src/screens/Quiz';
+import db from '../../db.json';
+export default function QuizDaGaleraPage() {
+  return (
+    <ThemeProvider theme={db.theme}>
+      <QuizScreen
+        externalQuestions={db.questions}
+        externalBg={db.bg}
+        externalBgMobile={db.bg_mobile}
+        externalTextResults={db.results}
+      />
+    </ThemeProvider>
+  );
 }
