@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import styled from 'styled-components';
 import Head from 'next/head'; // Componente que permite colocarmos informações no head da página
 import { useRouter } from 'next/router';
@@ -38,6 +38,12 @@ import parse from "html-react-parser";
 export default function Home() {
   const router = useRouter();
   const [name, setName] = useState('');
+  const [windowHeight, setWindowHeight] = useState('');
+  useEffect(()=> {
+    if (typeof window !== "undefined") {
+      setWindowHeight(window.innerHeight);
+    }
+  }, [])
 
   function submitForm(event) {
     event.preventDefault(); // impede o recarregamento da página que viola o SPA
@@ -138,7 +144,7 @@ export default function Home() {
         />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/jubrito/uxuiquiz"/>
-      <Footer><SeaWidget width="100%" height="180px" bottom="28px"/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
+      <Footer><SeaWidget width="100%" height="180px" bottom="28px" innerHeight={windowHeight}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
     </QuizBackground>
   );
 }

@@ -55,7 +55,7 @@ const QuizExplanations = styled.div`
   }
   // Surface Duo
   @media screen and (max-width: 540px) {
-    /* transform: translateX(-95%) translateY(30%) translateZ(0px) !important; */
+    transform: translateX(-100%) translateY(0%) translateZ(0px);
     min-height: 670px;
     /* background-size: cover; */
     /* background-size: 100%; */
@@ -73,6 +73,7 @@ const QuizExplanations = styled.div`
   }
   // Iphone
   @media screen and (max-width: 376px) {
+    transform: translateX(-100%) translateY(11%) translateZ(0px);
   }
   // Moto G4 / Galaxy S5
   @media screen and (max-width: 361px) {
@@ -80,6 +81,8 @@ const QuizExplanations = styled.div`
   }
   // Iphone SE
   @media screen and (max-width: 321px) {
+    transform: translateX(-100%) translateY(0%) translateZ(0px);
+
     p {
       font-size: 11px;
     }

@@ -31,8 +31,13 @@ const FooterBox = styled.footer`
       bottom: 30px !important;
     }
     // Surface Duo
-    @media screen and (min-width: 411px) and (max-width: 520px) {
+    @media screen and (min-width: 516px) and (max-width: 540px) {
       bottom: 28px !important;
+      height: 120px !important;
+    }
+    // Iphone Plus
+    @media screen and (min-width: 411px) and (max-width: 515px) {
+      bottom: 42px !important;
       height: 120px !important;
     }
     /* // Iphone X
@@ -40,15 +45,19 @@ const FooterBox = styled.footer`
       bottom: 42px !important;
       height: 360px !important;
     } */
-    // Motog4
-    @media screen and (min-width: 376px) and (max-width: 410px) {
+    @media screen and (min-width: 377px) and (max-width: 410px) {
       bottom: 42px !important;
       height: 170px !important;
     }
     // Iphone
-    @media screen and (min-width: 361px) and (max-width: 375px) {
+    @media screen and (min-width: 361px) and (max-width: 376px) {
+      bottom: 41px !important;
+      height: 150px !important;
+    }
+    // Motog4
+    @media screen and (min-width: 320px) and (max-width: 360px) {
       bottom: 42px !important;
-      height: 200px !important;
+      height: 170px !important;
     }
     // Iphone SE
     @media screen and (min-width: 280px) and (max-width: 320px) {

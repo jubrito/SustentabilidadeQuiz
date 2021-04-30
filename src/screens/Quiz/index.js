@@ -230,6 +230,7 @@ function QuestionWidget({
   useEffect(() => {
       // console.log(matchingList)
     console.log(window.innerWidth)
+    // console.log(window.innerHeight)
     if (window.innerWidth >= 322 && window.innerWidth < 361) {
       setTranslateShow({x: '0%', y: '8%', z: '0px'});
       setTranslateHide({x: '0%', y: '8%', z: '0px'});
@@ -386,7 +387,7 @@ function QuestionExplanation({
 }) {
 
   const [translateShow, setTranslateShow] = useState({ x: '', y:''})  
-  const [translateHide, setTranslateHide] = useState({ x: '', y:''})  
+  const [translateHide, setTranslateHide] = useState({ x: '', y:''}) 
   const breakpoints = useBreakpoint();
   useEffect(() => {
     var large_screen, medium_screen, ipad_pro_screen, ipad_screen, surface_duo_screen, iphone_plus_screen, iphone_screen, motog4_screen, iphonese_screen;
@@ -478,6 +479,7 @@ function QuestionExplanation({
       console.log("default")
     }
   }, [window.innerWidth]);
+  
   return (
     <>
         <QuizExplanations
@@ -530,6 +532,8 @@ export default function QuizPage({
   const bg_mobile = externalBgMobile !== undefined ? externalBgMobile : externalBg;
   const [action, setAction] = useState("hide");
   const [hasAlreadyConfirmed, setHasAlreadyConfirmed] = useState(false);
+  const [windowHeight, setWindowHeight] = useState('');
+  
   function addResult(result) {
     setResults([
       ...results,
@@ -580,9 +584,12 @@ export default function QuizPage({
   // chamada quando o usuário clica no botão "confirmar"
   function handleExplanation() {
     setHasAlreadyConfirmed(true);
-    
   }
-
+  useEffect(()=> {
+    if (typeof window !== "undefined") {
+      setWindowHeight(window.innerHeight);
+    }
+  }, [])
   return (
     // Ao invés de fazer assim abaixo, criamos o componente com o style do background
     // <div style={{ backgroundImage: `url (${db.bg})` }}>
@@ -621,7 +628,7 @@ export default function QuizPage({
       {/* <RecyclingBinWidget/> */}
     </QuizBackground>
     {/* <Footer><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer> */}
-      <Footer><SeaWidget width="100%" height="79px" bottom="28px"/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
+      <Footer><SeaWidget width="100%" height="79px" bottom="28px" innerHeight={windowHeight}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
     </BreakpointProvider>
     </>
   );
