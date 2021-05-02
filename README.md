@@ -22,7 +22,7 @@ O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas a
 </p>
 
 <div align="center">
-  <img alt="Aplicação Web" src="./quiz.gif">
+  <img alt="Aplicação Web" src="./quizweb.gif">
   <!-- </br></br> -->
   <!-- <img alt="Aplicação Mobile" src="./ecoleta-mobile.gif" width="300"> -->
 </div>
