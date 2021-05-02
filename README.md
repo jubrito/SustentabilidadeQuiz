@@ -1,78 +1,90 @@
-# Example app with styled-components
+<div align="center">
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
+![Node_Badge](https://img.shields.io/badge/node-14.13.1-brightgreen)  ![React_Badge](https://img.shields.io/badge/web-react-ff69b4) ![Next_Badge](https://img.shields.io/badge/framework-nextjs-blue) ![Npm_Badge](https://img.shields.io/badge/npm-6.14.8-red)  ![GitHub](https://img.shields.io/github/license/x0n4d0/SustentabilidadeQuiz)  <a href="https://alura.com.br">
+    <img alt="Adapted from Alura" src="https://img.shields.io/badge/adapted20from-Alura-yellow">
+  </a>
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
+</div>
 
-## Deploy your own
+<p align="center">
+<strong>Quiz - Suas Ações são sustentáveis?</strong> 
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! O primeiro passo para transformar o mundo é entender os impactos das suas ações e, ao mesmo tempo, descobrir novas alternativas.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+</p>
 
-## How to use
+<p align="center">
+  <a href="#computer-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#hammer-ferramentas">Ferramentas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#woman_technologist-rodando-a-aplica%C3%A7%C3%A3o">Rodando a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#octocat-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#page_facing_up-licença">Licença</a>
+</p>
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+<div align="center">
+  <img alt="Aplicação Web" src="./quiz.gif">
+  <!-- </br></br> -->
+  <!-- <img alt="Aplicação Mobile" src="./ecoleta-mobile.gif" width="300"> -->
+</div>
 
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
+## **:computer: TECNOLOGIAS**
+
+#### **FRONT-END** ([React](https://pt-br.reactjs.org/) + [NextJS](https://nextjs.org/))
+
+  - **[Styled Components](https://styled-components.com/)** biblioteca que permite usar estilos de nível de componente escritos com JavaScript e CSS (CSS-in-JS)
+  - **[Framer Motion](https://www.framer.com/motion/):** biblioteca para animação e movimentação de componentes
+  - **[HTML React Parser](https://www.npmjs.com/package/html-react-parser)** biblioteca para conversão de strings HTML em componentes React
+  - **[React Anchor Link Smooth Scroll](https://www.npmjs.com/package/react-anchor-link-smooth-scroll)** âncora com rolagem suave
+  - **[React Lottie](https://www.npmjs.com/package/react-lottie)** animações com React
+  - **[3D React Carousel](https://www.npmjs.com/package/3d-react-carousal)** componente de carousel em 3D
+  - **[Prop Types](https://www.npmjs.com/package/prop-types)** verificação das propriedades de componentes em tempo de execução
+  
+  <kbd>[package.json](./package.json)</kbd>
+
+## **:hammer: FERRAMENTAS**
+
+- Fontes: **[Roboto](https://fonts.google.com/specimen/Roboto)**, **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)**
+- Maps: **[Leaflet](https://react-leaflet.js.org/en/)**
+- Editor: **[Visual Studio Code](https://code.visualstudio.com/)**</kbd>**
+
+
+## **:woman_technologist: RODANDO A APLICAÇÃO** 
+
+Requisitos: [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), Editor ([VSCode](https://code.visualstudio.com/))
+
+```sh
+# Encontre o seu endereço IPv4 
+$ ipconfig
+
+# Clone este repositório
+$ git clone https://github.com/jubrito/SustentabilidadeQuiz
+
+# Acesse a pasta e abra a raiz do projeto no cmd/terminal
+$ cd SustentabilidadeQuiz
+
+# Instalando as dependências do website
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run start
+
 ```
+Acesse [http://localhost:3000](http://localhost:3000) - (a aplicação será aberta na porta:3000) 
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-### Try it on CodeSandbox
+## **:octocat: COMO CONTRIBUIR**
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+  - Faça um **[fork](https://help.github.com/pt/github/getting-started-with-github/fork-a-repo)** do repositório;
+  - Acesse sua página GitHub e faça um **clone** do seu fork;
+  - Crie uma *branch* com o nome da sua feature: `git chechout -b feature/minhaFeature`;
+  - Realize e salve as alterações;
+  <!-- - Instale as dependências do *commitlint* na raíz do projeto para a verificação dos commits: `npm install` ou `yarn`; -->
+  - *Commite* suas alterações de acordo com as [convenções de commit](https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/), 
+  - Faça um *push* para a sua *branch*: `git push origin feature/minhaFeature`;
+  - Abra um *pull request* no repositório onde o *fork* foi feito. Após o *merge* suas alterações irão fazer parte do projeto;
+  - Após o *merge* da sua pull request for feito, sua *branch* poderá ser deletada.
 
-### Notes
+## **:page_facing_up: LICENÇA**
+Licença MIT &rarr; **<kbd>[LICENSE](https://github.com/Rocketseat/nlw-01-booster/blob/master/LICENSE.md)</kbd>**
 
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
-
-<details>
-<summary>Click to expand workaround example</summary>
-<br />
-
-**components/StyledLink.js**
-
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
-
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
-
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: #40a9ff;
-  }
-
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
-```
-
-**pages/index.js**
-
-```javascript
-import StyledLink from '../components/StyledLink'
-
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
-
-</details>
+Adaptação do projeto Open Source desenvolvido durante a Imersão React - Alura Week, [Alura](https://www.alura.com.br/)

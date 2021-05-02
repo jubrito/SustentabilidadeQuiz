@@ -146,7 +146,7 @@ export default function Home() {
           animate="show"
         />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/jubrito/uxuiquiz"/>
+      <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
       <Footer><SeaWidget width="100%" height="180px" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
     </QuizBackground>
   );

@@ -761,7 +761,7 @@ export default function QuizPage({
           </>)}
       </QuizContainer>
       {/* <GitHubCorner projectUrl={`https://github.com/${gitHubUser}/${projectName}`} /> */}
-      <GitHubCorner projectUrl="https://github.com/jubrito/uxuiquiz"/>
+      <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
       {/* <RecyclingBinWidget/> */}
       <Footer><SeaWidget width="100%" height="79px" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
     </QuizBackground>
