@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'; // garantir que as props dos componentes sej
 const InputBase = styled.input`
     width: ${(props) => (props.type == 'radio' ? 'unset' : '100%')};
     padding: 15px;
-    font-size: 16px;
+    font-size: ${(props) => (props.type == 'radio' ? '16px' : '14px')};
     border: 1px solid ${({ theme }) => theme.colors.primary};
     /* background-color: ${({ theme }) => theme.colors.black}; */
     background-color: #e2e2e24a;

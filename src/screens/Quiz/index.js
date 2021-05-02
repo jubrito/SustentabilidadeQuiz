@@ -33,7 +33,28 @@ const Carousel = dynamic(
   ssr: false
   }
 )
+function isIOS() {
+  return (
+    (/iPad|iPhone|iPod/.test(navigator.platform) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) &&
+    !window.MSStream
+  );
+}
 
+function getIOSInputEventHandlers() {
+  if (isIOS()) {
+    return {};
+  }
+
+  return {
+    onTouchStart: e => {
+      e.currentTarget.style.fontSize = "16px";
+    },
+    onBlur: e => {
+      e.currentTarget.style.fontSize = "";
+    }
+  };
+}
 function LoadingWidget() {
   const [animationState, setAnimationState] = useState({
     isStopped: false,
@@ -272,13 +293,9 @@ function QuestionWidget({
         console.log("ipad_pro_screen")
 
       } else if (window.innerWidth >=1025  && window.innerWidth <1215){
-        // setTranslateShow({x: '27%', y: '-50%', z: '0px'});
-        // setTranslateHide({x: '26%', y: '-50%', z: '0px'});
         // console.log("medium_screen")
       
       } else if (window.innerWidth >= 1215 && window.innerWidth < 1400){
-        // setTranslateShow({x: '14%', y: '-50%'});
-        // setTranslateHide({x: '10%', y: '-50%'});
         // console.log("large_screen")
       } else {
         setTranslateShow({x: '0', y: '0'});
@@ -364,6 +381,7 @@ function QuestionWidget({
                   checked={isSelected}
                   // se já clicou em confirmar (hasAlreadyConfirmed=true), o botão deve ser desabilitado
                   disabled={hasAlreadyConfirmed}
+                  {...getIOSInputEventHandlers()}
                 />
                 {alternative}
               </Widget.Topic>
