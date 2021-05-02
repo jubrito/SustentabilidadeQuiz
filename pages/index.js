@@ -62,6 +62,7 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg} backgroundImageResponsive={db.bg_mobile}>
       <Head>
         <title>{db.title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <meta property="og:title" content={db.title} key="title" />
         <meta property="og:image" content={db.backgroundImage} />
       </Head>
