@@ -14,6 +14,8 @@ const InputBase = styled.input`
     background-color: #e2e2e24a;
     border-radius: ${({ theme }) => theme.borderRadius};
     outline: 0;
+    -webkit-user-select: text;
+    user-select: text;  
     /* margin-bottom: 25px; */
 `;
 
