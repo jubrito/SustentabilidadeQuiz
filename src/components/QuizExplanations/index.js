@@ -62,7 +62,7 @@ const QuizExplanations = styled.div`
   // Surface Duo
   @media screen and (max-width: 540px) {
     transform: translateX(-100%) translateY(0%) translateZ(0px);
-    min-height: 670px;
+    min-height: 300px;
     .explanations {
       min-height: 670px;
       }
@@ -84,7 +84,6 @@ const QuizExplanations = styled.div`
   }
   // Moto G4 / Galaxy S5
   @media screen and (max-width: 361px) {
-      min-height: 600px;
     .explanations {
       min-height: 600px;
     }
@@ -98,7 +97,6 @@ const QuizExplanations = styled.div`
   }
   // Galaxy Fold
   @media screen and (max-width: 280px) {
-      min-height: 640px;
     .explanations {
       min-height: 640px;
     }
