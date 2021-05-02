@@ -406,11 +406,16 @@ function QuestionWidget({
               Próximo
             </Button>
             : 
+            window.innerWidth < 1024 ? 
             <AnchorLink href="#explanation">
               <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
                 Confirmar
               </Button>
             </AnchorLink>
+            :
+            <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
+              Confirmar
+            </Button>
           }
           {/* <p>{`${selectedAlternative}`}</p> */}
         </AlternativesForm>
