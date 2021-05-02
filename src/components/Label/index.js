@@ -8,8 +8,6 @@ const Label = styled.input`
     border-radius: ${({ theme }) => theme.borderRadius};
     outline: 0;
     margin-bottom: 25px;
-    display: flex;
-    align-items: center;
 
     @media screen and (max-width: 1215px) {
         font-size: 13px;
