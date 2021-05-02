@@ -22,7 +22,7 @@ const SVG = styled.svg`
 export default function LinkButton({ href, text }) {
   return (
     <StyledLinkButton href={href} style={{ width: '24px'}}>
-      <Button width="90%">{text}</Button>
+      <Button width="90%" type="button">{text}</Button>
     </StyledLinkButton>
   );
 }

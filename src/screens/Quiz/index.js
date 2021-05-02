@@ -22,7 +22,9 @@ import Subtitle from '../../components/Subtitle';
 import Footer from '../../components/Footer';
 import SeaWidget from '../../components/SeaWidget';
 import {BreakpointProvider} from '../../components/BreakpointProvider';
-import {useBreakpoint} from '../../components/BreakpointProvider'
+import {useBreakpoint} from '../../components/BreakpointProvider';
+import {Carousel} from '3d-react-carousal';
+import ProgressBar from '../../components/ProgressBar';
 
 function LoadingWidget() {
   const [animationState, setAnimationState] = useState({
@@ -97,14 +99,22 @@ function RecyclingBinWidget() {
 function ResultWidget({ results, totalQuestions, externalTextResults }) {
   const points = results.filter((x) => x).length;
   const [textResult, setTextResult] = useState("");
+  const [finalResult, setFinalResult] = useState("");
+  const [percentageResult, setPercentageResult] = useState("");
   
   useEffect(()=> {
     if (points < 4) {
-     setTextResult(externalTextResults.bad);
-    } else if (points >= 5 ||points < 10) {
-      setTextResult(externalTextResults.regular);
+      setTextResult(externalTextResults.indiferente);
+      setFinalResult("indiferente");
+    } else if (points >= 4 && points < 8) {
+      setTextResult(externalTextResults.iniciante);
+      setFinalResult("iniciante");
+    } else if (points >= 8 && points < 12) {
+      setTextResult(externalTextResults.engajado);
+      setFinalResult("engajado");
     } else {
-      setTextResult(externalTextResults.good);
+      setTextResult(externalTextResults.consciente);
+      setFinalResult("consciente");
     }
   }, [externalTextResults]);
   return (
@@ -125,6 +135,7 @@ function ResultWidget({ results, totalQuestions, externalTextResults }) {
       </Widget.Header>
 
       <Widget.Content>
+        <ProgressBar result={(100-(100*(points/totalQuestions)))}/>
         <p>
           Você acertou
           {' '}
@@ -383,131 +394,182 @@ function QuestionExplanation({
   answer,
   animate,
   data_screen,
-  myRef
+  myRef,
+  carousel
 }) {
 
   const [translateShow, setTranslateShow] = useState({ x: '', y:''})  
   const [translateHide, setTranslateHide] = useState({ x: '', y:''}) 
   const breakpoints = useBreakpoint();
-  useEffect(() => {
-    var large_screen, medium_screen, ipad_pro_screen, ipad_screen, surface_duo_screen, iphone_plus_screen, iphone_screen, motog4_screen, iphonese_screen;
-    const matchingList2 = Object.keys(breakpoints).map(media => {
-      var breakpoint_media = breakpoints[media];
-      switch (media) {
-        case 'iphonese_screen':
-          iphonese_screen = breakpoint_media;
-          // console.log(iphonese_screen)
-        break;
-        case 'motog4_screen':
-          motog4_screen = breakpoint_media;
-        break;
-        case 'iphone_screen':
-          iphone_screen = breakpoint_media;
-        break;
-        case 'iphone_plus_screen':
-          iphone_plus_screen = breakpoint_media;
-        break;
-        case 'surface_duo_screen':
-          surface_duo_screen = breakpoint_media;
-        break;
-        case 'ipad_screen':
-          ipad_screen = breakpoint_media;
-        break;
-        case 'ipad_pro_screen':
-          ipad_pro_screen = breakpoint_media;
-        break;
-        case 'medium_screen':
-          medium_screen = breakpoint_media;
-        break;
-        case 'large_screen':
-          large_screen = breakpoint_media;
-        break;
+  if (!carousel) {
+    useEffect(() => {
+      var large_screen, medium_screen, ipad_pro_screen, ipad_screen, surface_duo_screen, iphone_plus_screen, iphone_screen, motog4_screen, iphonese_screen;
+      const matchingList2 = Object.keys(breakpoints).map(media => {
+        var breakpoint_media = breakpoints[media];
+        switch (media) {
+          case 'iphonese_screen':
+            iphonese_screen = breakpoint_media;
+            // console.log(iphonese_screen)
+          break;
+          case 'motog4_screen':
+            motog4_screen = breakpoint_media;
+          break;
+          case 'iphone_screen':
+            iphone_screen = breakpoint_media;
+          break;
+          case 'iphone_plus_screen':
+            iphone_plus_screen = breakpoint_media;
+          break;
+          case 'surface_duo_screen':
+            surface_duo_screen = breakpoint_media;
+          break;
+          case 'ipad_screen':
+            ipad_screen = breakpoint_media;
+          break;
+          case 'ipad_pro_screen':
+            ipad_pro_screen = breakpoint_media;
+          break;
+          case 'medium_screen':
+            medium_screen = breakpoint_media;
+          break;
+          case 'large_screen':
+            large_screen = breakpoint_media;
+          break;
+        }
+      })
+    }, []);
+    useEffect(() => {
+        // console.log(matchingList)
+      console.log(window.innerWidth)
+      
+      if (window.innerWidth < 322) {
+        setTranslateShow({x: '-100%', y: '0%', z: '0px'});
+        setTranslateHide({x: '-100%', y: '0%', z: '0px'});
+        console.log("iphonese_screen")
+
+      } else if (window.innerWidth >= 322 && window.innerWidth < 361) {
+        setTranslateShow({x: '-100%', y: '8%', z: '0px'});
+        setTranslateHide({x: '-100%', y: '8%', z: '0px'});
+        console.log("motog4_screen")
+
+      } else if (window.innerWidth >= 361 && window.innerWidth < 376) {
+        setTranslateShow({x: '-100%', y: '12%', z: '0px'});
+        setTranslateHide({x: '-100%', y: '12%', z: '0px'});
+        console.log("iphone_screen")
+
+      } else if (window.innerWidth >= 376 && window.innerWidth < 415) {
+        setTranslateShow({x: '-100%', y: '1%', z: '0px'});
+        setTranslateHide({x: '-100%', y: '1%', z: '0px'});
+        console.log("iphone_plus_screen")
+
+      } else if (window.innerWidth >= 415 && window.innerWidth < 541) {
+        setTranslateShow({x: '-100%', y: '0%', z: '0px'});
+        setTranslateHide({x: '-100%', y: '0%', z: '0px'});
+        console.log("surface_duo_screen")
+
+      } else if (window.innerWidth >= 541 && window.innerWidth < 769) {
+        setTranslateShow({x: '-100%', y: '56%', z: '0px'});
+        setTranslateHide({x: '-100%', y: '56%', z: '0px'});
+        console.log("ipad_screen")
+
+      } else if (window.innerWidth >= 769 && window.innerWidth < 1025) {
+        setTranslateShow({x: '14%', y: '-100%', z: '0px'});
+        setTranslateHide({x: '14%', y: '-100%', z: '0px'});
+        console.log("ipad_pro_screen")
+
+      } else if (window.innerWidth >=1025  && window.innerWidth <1215){
+        setTranslateShow({x: '27%', y: '-50%', z: '0px'});
+        setTranslateHide({x: '27%', y: '-50%', z: '0px'});
+        console.log("medium_screen")
+      
+      } else if (window.innerWidth >= 1215 && window.innerWidth < 1400){
+        setTranslateShow({x: '14%', y: '-50%'});
+        setTranslateHide({x: '14%', y: '-50%'});
+        console.log("large_screen")
+      } else {
+        setTranslateShow({x: '15%', y: '-50%'});
+        setTranslateHide({x: '15%', y: '-50%'});
+        console.log("default")
       }
-    })
-  }, []);
-  useEffect(() => {
-      // console.log(matchingList)
-    console.log(window.innerWidth)
-    
-    if (window.innerWidth < 322) {
-      setTranslateShow({x: '-100%', y: '0%', z: '0px'});
-      setTranslateHide({x: '-100%', y: '0%', z: '0px'});
-      console.log("iphonese_screen")
-
-    } else if (window.innerWidth >= 322 && window.innerWidth < 361) {
-      setTranslateShow({x: '-100%', y: '8%', z: '0px'});
-      setTranslateHide({x: '-100%', y: '8%', z: '0px'});
-      console.log("motog4_screen")
-
-    } else if (window.innerWidth >= 361 && window.innerWidth < 376) {
-      setTranslateShow({x: '-100%', y: '12%', z: '0px'});
-      setTranslateHide({x: '-100%', y: '12%', z: '0px'});
-      console.log("iphone_screen")
-
-    } else if (window.innerWidth >= 376 && window.innerWidth < 415) {
+    }, [window.innerWidth]);
+    return (
+      <>
+          <QuizExplanations
+          as={motion.section}
+          // delay quanto tempo espera pra começar e duração em s
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            // o elemento terá estados de animação
+            show: { opacity: 1, x: translateShow.x , y: translateShow.y, z:'0' },
+            hidden: { opacity: 0, x: translateHide.x, y:translateHide.y, z:'100%' },
+          }}
+          initial="hidden"
+          animate={animate}
+          >
+          <div ref={myRef} className="explanations">
+            <Subtitle><strong>Resposta correta:</strong> {answer}</Subtitle>
+            {explanations.map((explanation, explanationIndex) => {
+            return <div key={explanationIndex}>{parse(explanation)}</div>
+            })}
+            <p className="source">Fonte: 
+            {source.map((src, srcIndex) => {
+            return <a href={src.url} key={srcIndex} target="_blank">{src.title}</a>
+            })}
+            </p>
+          </div>
+          </QuizExplanations>
+          </>
+    );
+  } else {
+    useEffect(()=> {
       setTranslateShow({x: '-100%', y: '1%', z: '0px'});
       setTranslateHide({x: '-100%', y: '1%', z: '0px'});
-      console.log("iphone_plus_screen")
+    },[])
+    let slides = [
+      <div>
+        <img src="./carousel_led.jpg" alt="Lâmpadas led consomem 10 vezes menos energia que as incandescentes. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <p>Lâmpadas led consomem <strong>10 vezes menos energia que as incandescentes.</strong></p>
+      </div>,
+      <div>
+        <img src="./carousel_embalagens.jpg" alt="A cada 5kg de lixo caseiro, 1kg é de embalagens. Por dia, no Brasil são descartadas 25 mil toneladas de embalagens, equivalente a todo o cimento usado na construção do Maracanã. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <p>A cada 5kg de lixo caseiro, 1kg é de embalagens. Por dia, no Brasil são descartadas <strong>25 mil toneladas de embalagens</strong>, equivalente a <strong>todo o cimento usado na construção do Maracanã</strong>.</p>
+      </div>,
+      <div>
+        <img src="./carousel_oil.jpg" alt="1 litro de óleo de cozinha contabina água suficiente para você tomar banho por 1 ano. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <p><strong>1 litro de óleo de cozinha</strong> contabina água suficiente para você <strong>tomar banho por 1 ano</strong>.</p>
+      </div>,
+      <div>
+        <img src="./carousel_banho.jpg" alt="No Brasil, 5 minutos de banho equivalem a 128 piscinas olímpicas por dia. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <p>No Brasil, <strong>5 minutos de banho</strong> equivalem a <strong>128 piscinas olímpicas</strong> por dia.</p>
+      </div>,
+      <div>
+        <img src="./carousel_eiffel.jpg" alt="Ao usar sacolas duráveis, uma família deia de usar em 1 ano sacolinhas descartáveis que, lado a lado, formariam uma faixa da altura da Torre Eiffel. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <p>Ao usar sacolas duráveis, uma família deia de usar <strong>em 1 ano</strong> sacolinhas descartáveis que, lado a lado, formariam uma <strong>faixa da altura da Torre Eiffel</strong>.</p>
+      </div>];
+    return (
+      <>
+          <QuizExplanations
+          as={motion.section}
+          // delay quanto tempo espera pra começar e duração em s
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            // o elemento terá estados de animação
+            show: { opacity: 1, x: translateShow.x , y: translateShow.y, z:'0' },
+            hidden: { opacity: 0, x: translateHide.x, y:translateHide.y, z:'100%' },
+          }}
+          initial="hidden"
+          animate="show"
+          >
 
-    } else if (window.innerWidth >= 415 && window.innerWidth < 541) {
-      setTranslateShow({x: '-100%', y: '0%', z: '0px'});
-      setTranslateHide({x: '-100%', y: '0%', z: '0px'});
-      console.log("surface_duo_screen")
-
-    } else if (window.innerWidth >= 541 && window.innerWidth < 769) {
-      setTranslateShow({x: '-100%', y: '56%', z: '0px'});
-      setTranslateHide({x: '-100%', y: '56%', z: '0px'});
-      console.log("ipad_screen")
-
-    } else if (window.innerWidth >= 769 && window.innerWidth < 1025) {
-      setTranslateShow({x: '14%', y: '-100%', z: '0px'});
-      setTranslateHide({x: '14%', y: '-100%', z: '0px'});
-      console.log("ipad_pro_screen")
-
-    } else if (window.innerWidth >=1025  && window.innerWidth <1215){
-      setTranslateShow({x: '27%', y: '-50%', z: '0px'});
-      setTranslateHide({x: '27%', y: '-50%', z: '0px'});
-      console.log("medium_screen")
-    
-    } else if (window.innerWidth >= 1215 && window.innerWidth < 1400){
-      setTranslateShow({x: '14%', y: '-50%'});
-      setTranslateHide({x: '14%', y: '-50%'});
-      console.log("large_screen")
-    } else {
-      setTranslateShow({x: '15%', y: '-50%'});
-      setTranslateHide({x: '15%', y: '-50%'});
-      console.log("default")
-    }
-  }, [window.innerWidth]);
-  
-  return (
-    <>
-        <QuizExplanations
-        as={motion.section}
-        // delay quanto tempo espera pra começar e duração em s
-        transition={{ delay: 0, duration: 0.5 }}
-        variants={{
-          // o elemento terá estados de animação
-          show: { opacity: 1, x: translateShow.x , y: translateShow.y, z:'0' },
-          hidden: { opacity: 0, x: translateHide.x, y:translateHide.y, z:'100%' },
-        }}
-        initial="hidden"
-        animate={animate}
-        >
-        <div ref={myRef}>
-          <Subtitle><strong>Resposta correta:</strong> {answer}</Subtitle>
-          {explanations.map((explanation, explanationIndex) => {
-           return <div key={explanationIndex}>{parse(explanation)}</div>
-          })}
-          <p className="source">Fonte: 
-          {source.map((src, srcIndex) => {
-           return <a href={src.url} key={srcIndex} target="_blank">{src.title}</a>
-          })}
-          </p>
-        </div>
-        </QuizExplanations>
-        </>
-  );
+          {/* <div ref={myRef}> */}
+            <QuizExplanations.Carousel>
+              <Carousel slides={slides} autoplay={true} pause={true} interval={9000}/>
+            </QuizExplanations.Carousel>
+          {/* </div> */}
+          </QuizExplanations>
+          </>
+    );
+  }
 }
 
 const screenStates = {
@@ -532,6 +594,7 @@ export default function QuizPage({
   const bg_mobile = externalBgMobile !== undefined ? externalBgMobile : externalBg;
   const [action, setAction] = useState("hide");
   const [hasAlreadyConfirmed, setHasAlreadyConfirmed] = useState(false);
+  const [windowWidth, setWindowWidth] = useState('');
   const [windowHeight, setWindowHeight] = useState('');
   
   function addResult(result) {
@@ -560,7 +623,7 @@ export default function QuizPage({
   useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 3 * 1000);
+    }, 2 * 1000);
   }, []);
 
   // Muda o estado de ação para "show", exibindo as explicações da pergunta
@@ -578,7 +641,10 @@ export default function QuizPage({
     if (nextQuestion < totalQuestions) {
       setCurrentQuestion(questionIndex + 1);
     } else {
-      setScreenState(screenStates.RESULT);
+      setScreenState(screenStates.LOADING);
+      setTimeout(() => {
+        setScreenState(screenStates.RESULT);
+      }, 2 * 1000);
     }
   }
   // chamada quando o usuário clica no botão "confirmar"
@@ -587,6 +653,7 @@ export default function QuizPage({
   }
   useEffect(()=> {
     if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
       setWindowHeight(window.innerHeight);
     }
   }, [])
@@ -616,19 +683,36 @@ export default function QuizPage({
                 explanations={explanations}
                 source={source}
                 animate={action}
-                answer={answer}>
+                answer={answer}
+                carousel={false}>
               </QuestionExplanation>
           </div>
           </>
         )}
-        {screenState == screenStates.RESULT && <ResultWidget results={results} totalQuestions={totalQuestions} externalTextResults={externalTextResults}/>}
+        {screenState == screenStates.RESULT && (
+          <>
+          <div className="relative">
+            <ResultWidget 
+              results={results} 
+              totalQuestions={totalQuestions} 
+              externalTextResults={externalTextResults}
+            />
+            <QuestionExplanation
+              carousel={true}
+              explanations={explanations}
+              source={source}
+              animate={action}
+              answer={answer}>
+            </QuestionExplanation>
+          </div>
+          </>)}
       </QuizContainer>
       {/* <GitHubCorner projectUrl={`https://github.com/${gitHubUser}/${projectName}`} /> */}
       <GitHubCorner projectUrl="https://github.com/jubrito/uxuiquiz"/>
       {/* <RecyclingBinWidget/> */}
     </QuizBackground>
     {/* <Footer><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer> */}
-      <Footer><SeaWidget width="100%" height="79px" bottom="28px" innerHeight={windowHeight}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
+      <Footer><SeaWidget width="100%" height="79px" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
     </BreakpointProvider>
     </>
   );

@@ -39,9 +39,11 @@ export default function Home() {
   const router = useRouter();
   const [name, setName] = useState('');
   const [windowHeight, setWindowHeight] = useState('');
+  const [windowWidth, setWindowWidth] = useState('');
   useEffect(()=> {
     if (typeof window !== "undefined") {
       setWindowHeight(window.innerHeight);
+      setWindowWidth(window.innerWidth);
     }
   }, [])
 
@@ -144,7 +146,7 @@ export default function Home() {
         />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/jubrito/uxuiquiz"/>
-      <Footer><SeaWidget width="100%" height="180px" bottom="28px" innerHeight={windowHeight}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
+      <Footer><SeaWidget width="100%" height="180px" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
     </QuizBackground>
   );
 }

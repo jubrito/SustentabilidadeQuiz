@@ -41,6 +41,25 @@ const GlobalStyle = createGlobalStyle`
       font-size: 12px !important;
     }
   }
+  .slider-single-content {
+    p{
+      background-color: rgb(254, 254, 254, 1);
+      margin: -4px 0;
+      padding: 13px;
+    }
+  }
+  .slider-container{
+    width: 100%;
+    margin: -0 auto 0 -50%;
+  }
+  .slider-single:not(.active) {
+    p {
+      display: none;
+    }
+  }
+  i.fa-arrow-left, i.fa-arrow-right {
+    color: ${({ theme }) => theme.colors.primary};
+  }
  
 `;
 
@@ -55,6 +74,7 @@ export default function App({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />

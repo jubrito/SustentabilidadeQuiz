@@ -28,7 +28,7 @@ import Lottie from 'react-lottie';
 // `;
 // height: 300px;
 
-export default function SeaWidget({ width, height, bottom, innerHeight, ...props }) {
+export default function SeaWidget({ width, height, bottom, innerHeight, innerWidth, ...props }) {
   // Se tiver um botão por exemplo pra fazer a animação ocorrer teria que ser assim
   // useEffect(() => {
   //   setAnimationState({
@@ -54,12 +54,10 @@ export default function SeaWidget({ width, height, bottom, innerHeight, ...props
   const [lottieHeight, setLottieHeight] = useState(height);
   const [lottieBottom, setLottieBottom] = useState(bottom);
   useEffect(() => {
-    console.log('oi')
-    if (innerHeight<=800) {
-      setLottieHeight('205px');
+    if (innerHeight<=800 && innerWidth <= 1024) {
+      setLottieHeight('110px');
       setLottieBottom('28px');
     } else if(innerHeight>=1080) {
-      console.log('sim')
       setLottieHeight('310px');
       setLottieBottom('28px');
     }
