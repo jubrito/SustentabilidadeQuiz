@@ -23,8 +23,8 @@ O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas a
 
 <div align="center">
   <img alt="Aplicação Web" src="./quizweb.gif">
-  <!-- </br></br> -->
-  <!-- <img alt="Aplicação Mobile" src="./ecoleta-mobile.gif" width="300"> -->
+  </br></br>
+  <img alt="Aplicação Mobile" src="./quizmobile.gif" width="300">
 </div>
 
 ## **:computer: TECNOLOGIAS**
