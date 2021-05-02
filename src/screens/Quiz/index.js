@@ -23,8 +23,15 @@ import Footer from '../../components/Footer';
 import SeaWidget from '../../components/SeaWidget';
 import {BreakpointProvider} from '../../components/BreakpointProvider';
 import {useBreakpoint} from '../../components/BreakpointProvider';
-import {Carousel} from '3d-react-carousal';
+// import {Carousel} from '3d-react-carousal';
 import ProgressBar from '../../components/ProgressBar';
+import dynamic from 'next/dynamic';
+const Carousel = dynamic(
+  () => import ('3d-react-carousal'),
+  {
+  ssr: false
+  }
+)
 
 function LoadingWidget() {
   const [animationState, setAnimationState] = useState({
@@ -239,42 +246,44 @@ function QuestionWidget({
     })
   }, []);
   useEffect(() => {
-      // console.log(matchingList)
-    console.log(window.innerWidth)
-    // console.log(window.innerHeight)
-    if (window.innerWidth >= 322 && window.innerWidth < 361) {
-      setTranslateShow({x: '0%', y: '8%', z: '0px'});
-      setTranslateHide({x: '0%', y: '8%', z: '0px'});
-      console.log("motog4_screen")
+    // console.log(matchingList)
+    if (typeof window !== "undefined") {
+      console.log(window.innerWidth)
+      // console.log(window.innerHeight)
+      if (window.innerWidth >= 322 && window.innerWidth < 361) {
+        setTranslateShow({x: '0%', y: '8%', z: '0px'});
+        setTranslateHide({x: '0%', y: '8%', z: '0px'});
+        console.log("motog4_screen")
 
-    } else if (window.innerWidth >= 361 && window.innerWidth < 376) {
-      setTranslateShow({x: '0%', y: '12%', z: '0px'});
-      setTranslateHide({x: '0%', y: '12%', z: '0px'});
-      console.log("iphone_screen")
+      } else if (window.innerWidth >= 361 && window.innerWidth < 376) {
+        setTranslateShow({x: '0%', y: '12%', z: '0px'});
+        setTranslateHide({x: '0%', y: '12%', z: '0px'});
+        console.log("iphone_screen")
 
-    } else if (window.innerWidth >= 376 && window.innerWidth < 769) {
-      setTranslateShow({x: '0%', y: '0%', z: '0px'});
-      setTranslateHide({x: '0%', y: '0%', z: '0px'});
-      console.log("ipad_screen")
+      } else if (window.innerWidth >= 376 && window.innerWidth < 769) {
+        setTranslateShow({x: '0%', y: '0%', z: '0px'});
+        setTranslateHide({x: '0%', y: '0%', z: '0px'});
+        console.log("ipad_screen")
 
-    } else if (window.innerWidth >= 769 && window.innerWidth < 1025) {
-      setTranslateShow({x: '0%', y: '-50%', z: '0px'});
-      setTranslateHide({x: '0%', y: '-50%', z: '0px'});
-      console.log("ipad_pro_screen")
+      } else if (window.innerWidth >= 769 && window.innerWidth < 1025) {
+        setTranslateShow({x: '0%', y: '-50%', z: '0px'});
+        setTranslateHide({x: '0%', y: '-50%', z: '0px'});
+        console.log("ipad_pro_screen")
 
-    } else if (window.innerWidth >=1025  && window.innerWidth <1215){
-      // setTranslateShow({x: '27%', y: '-50%', z: '0px'});
-      // setTranslateHide({x: '26%', y: '-50%', z: '0px'});
-      // console.log("medium_screen")
-    
-    } else if (window.innerWidth >= 1215 && window.innerWidth < 1400){
-      // setTranslateShow({x: '14%', y: '-50%'});
-      // setTranslateHide({x: '10%', y: '-50%'});
-      // console.log("large_screen")
-    } else {
-      setTranslateShow({x: '0', y: '0'});
-      setTranslateHide({x: '0', y: '-100%'});
-      console.log("default")
+      } else if (window.innerWidth >=1025  && window.innerWidth <1215){
+        // setTranslateShow({x: '27%', y: '-50%', z: '0px'});
+        // setTranslateHide({x: '26%', y: '-50%', z: '0px'});
+        // console.log("medium_screen")
+      
+      } else if (window.innerWidth >= 1215 && window.innerWidth < 1400){
+        // setTranslateShow({x: '14%', y: '-50%'});
+        // setTranslateHide({x: '10%', y: '-50%'});
+        // console.log("large_screen")
+      } else {
+        setTranslateShow({x: '0', y: '0'});
+        setTranslateHide({x: '0', y: '-100%'});
+        console.log("default")
+      }
     }
   }, [window.innerWidth])
     
@@ -440,56 +449,57 @@ function QuestionExplanation({
     }, []);
     useEffect(() => {
         // console.log(matchingList)
-      console.log(window.innerWidth)
-      
-      if (window.innerWidth < 322) {
-        setTranslateShow({x: '-100%', y: '0%', z: '0px'});
-        setTranslateHide({x: '-100%', y: '0%', z: '0px'});
-        console.log("iphonese_screen")
+      if (typeof window !== "undefined") {
+        console.log(window.innerWidth)
+        if (window.innerWidth < 322) {
+          setTranslateShow({x: '-100%', y: '0%', z: '0px'});
+          setTranslateHide({x: '-100%', y: '0%', z: '0px'});
+          console.log("iphonese_screen")
 
-      } else if (window.innerWidth >= 322 && window.innerWidth < 361) {
-        setTranslateShow({x: '-100%', y: '8%', z: '0px'});
-        setTranslateHide({x: '-100%', y: '8%', z: '0px'});
-        console.log("motog4_screen")
+        } else if (window.innerWidth >= 322 && window.innerWidth < 361) {
+          setTranslateShow({x: '-100%', y: '8%', z: '0px'});
+          setTranslateHide({x: '-100%', y: '8%', z: '0px'});
+          console.log("motog4_screen")
 
-      } else if (window.innerWidth >= 361 && window.innerWidth < 376) {
-        setTranslateShow({x: '-100%', y: '12%', z: '0px'});
-        setTranslateHide({x: '-100%', y: '12%', z: '0px'});
-        console.log("iphone_screen")
+        } else if (window.innerWidth >= 361 && window.innerWidth < 376) {
+          setTranslateShow({x: '-100%', y: '12%', z: '0px'});
+          setTranslateHide({x: '-100%', y: '12%', z: '0px'});
+          console.log("iphone_screen")
 
-      } else if (window.innerWidth >= 376 && window.innerWidth < 415) {
-        setTranslateShow({x: '-100%', y: '1%', z: '0px'});
-        setTranslateHide({x: '-100%', y: '1%', z: '0px'});
-        console.log("iphone_plus_screen")
+        } else if (window.innerWidth >= 376 && window.innerWidth < 415) {
+          setTranslateShow({x: '-100%', y: '1%', z: '0px'});
+          setTranslateHide({x: '-100%', y: '1%', z: '0px'});
+          console.log("iphone_plus_screen")
 
-      } else if (window.innerWidth >= 415 && window.innerWidth < 541) {
-        setTranslateShow({x: '-100%', y: '0%', z: '0px'});
-        setTranslateHide({x: '-100%', y: '0%', z: '0px'});
-        console.log("surface_duo_screen")
+        } else if (window.innerWidth >= 415 && window.innerWidth < 541) {
+          setTranslateShow({x: '-100%', y: '0%', z: '0px'});
+          setTranslateHide({x: '-100%', y: '0%', z: '0px'});
+          console.log("surface_duo_screen")
 
-      } else if (window.innerWidth >= 541 && window.innerWidth < 769) {
-        setTranslateShow({x: '-100%', y: '56%', z: '0px'});
-        setTranslateHide({x: '-100%', y: '56%', z: '0px'});
-        console.log("ipad_screen")
+        } else if (window.innerWidth >= 541 && window.innerWidth < 769) {
+          setTranslateShow({x: '-100%', y: '56%', z: '0px'});
+          setTranslateHide({x: '-100%', y: '56%', z: '0px'});
+          console.log("ipad_screen")
 
-      } else if (window.innerWidth >= 769 && window.innerWidth < 1025) {
-        setTranslateShow({x: '14%', y: '-100%', z: '0px'});
-        setTranslateHide({x: '14%', y: '-100%', z: '0px'});
-        console.log("ipad_pro_screen")
+        } else if (window.innerWidth >= 769 && window.innerWidth < 1025) {
+          setTranslateShow({x: '14%', y: '-100%', z: '0px'});
+          setTranslateHide({x: '14%', y: '-100%', z: '0px'});
+          console.log("ipad_pro_screen")
 
-      } else if (window.innerWidth >=1025  && window.innerWidth <1215){
-        setTranslateShow({x: '27%', y: '-50%', z: '0px'});
-        setTranslateHide({x: '27%', y: '-50%', z: '0px'});
-        console.log("medium_screen")
-      
-      } else if (window.innerWidth >= 1215 && window.innerWidth < 1400){
-        setTranslateShow({x: '14%', y: '-50%'});
-        setTranslateHide({x: '14%', y: '-50%'});
-        console.log("large_screen")
-      } else {
-        setTranslateShow({x: '15%', y: '-50%'});
-        setTranslateHide({x: '15%', y: '-50%'});
-        console.log("default")
+        } else if (window.innerWidth >=1025  && window.innerWidth <1215){
+          setTranslateShow({x: '27%', y: '-50%', z: '0px'});
+          setTranslateHide({x: '27%', y: '-50%', z: '0px'});
+          console.log("medium_screen")
+        
+        } else if (window.innerWidth >= 1215 && window.innerWidth < 1400){
+          setTranslateShow({x: '14%', y: '-50%'});
+          setTranslateHide({x: '14%', y: '-50%'});
+          console.log("large_screen")
+        } else {
+          setTranslateShow({x: '15%', y: '-50%'});
+          setTranslateHide({x: '15%', y: '-50%'});
+          console.log("default")
+        }
       }
     }, [window.innerWidth]);
     return (
