@@ -675,7 +675,7 @@ export default function QuizPage({
   // callbackfunction
   useEffect(() => {
     setTimeout(() => {
-      setScreenState(screenStates.RESULT);
+      setScreenState(screenStates.QUIZ);
     }, 2 * 1000);
   }, []);
 
