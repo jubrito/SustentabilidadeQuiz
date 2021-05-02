@@ -23,6 +23,7 @@ const QuizBackground = styled.div`
   min-height: 110vh;
   position: relative;
   flex: 1;
+  z-index: 1;
   @media screen and (max-width: 1082px) {
   background-size: cover;
   }

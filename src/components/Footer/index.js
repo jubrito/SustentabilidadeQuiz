@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const FooterBox = styled.footer`
   position: absolute;
-  bottom:-16vh;
+  bottom:-11vh;
   margin-top: 20px;
   width: 100%;
   height: auto;
@@ -10,7 +10,7 @@ const FooterBox = styled.footer`
   /* border-top-left-radius: ${({ theme }) => theme.borderRadius};
   border-top-right-radius: ${({ theme }) => theme.borderRadius}; */
   text-align: center;
-  z-index: 10;
+  z-index: -1;
   p,a,a:hover {
     color: ${({ theme }) => theme.colors.white};
   }
@@ -21,6 +21,10 @@ const FooterBox = styled.footer`
   }
   div {
     left: 0px;
+    // Tv
+    @media screen and (min-width: 1236px) and (max-width: 1024px) {
+      height: 350px !important;
+    }
     // Ipad Pro
     @media screen and (min-width: 769px) and (max-width: 1024px) {
       height: 350px !important;
@@ -82,11 +86,11 @@ const FooterBox = styled.footer`
   }
   // Iphone
   @media screen and (max-width: 376px) {
-    bottom: -102%;
+    bottom: -100%;
   }
   // Iphone SE
   @media screen and (max-width: 376px) {
-    bottom: -112%;
+    bottom: -100%;
   }
 `;
 
