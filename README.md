@@ -46,6 +46,7 @@ O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas a
 - Fontes: **[Roboto](https://fonts.google.com/specimen/Roboto)**, **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)**
 - Maps: **[Leaflet](https://react-leaflet.js.org/en/)**
 - Editor: **[Visual Studio Code](https://code.visualstudio.com/)**</kbd>**
+- Manipulação de Imagens: **[Adobe Photoshop](https://www.adobe.com/br/)**</kbd>**
 
 
 ## **:woman_technologist: RODANDO A APLICAÇÃO** 
