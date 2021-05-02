@@ -23,16 +23,16 @@ import Footer from '../../components/Footer';
 import SeaWidget from '../../components/SeaWidget';
 import {BreakpointProvider} from '../../components/BreakpointProvider';
 import {useBreakpoint} from '../../components/BreakpointProvider';
-// import {Carousel} from '3d-react-carousal';
+import {Carousel} from '3d-react-carousal';
 import ProgressBar from '../../components/ProgressBar';
 import dynamic from 'next/dynamic';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-const Carousel = dynamic(
-  () => import ('3d-react-carousal'),
-  {
-  ssr: false
-  }
-)
+// const Carousel = dynamic(
+//   () => import ('3d-react-carousal'),
+//   {
+//     ssr: false
+//   }
+//   )
+import {AnchorLink} from 'react-anchor-link-smooth-scroll'
 function isIOS() {
   return (
     (/iPad|iPhone|iPod/.test(navigator.platform) ||
@@ -599,7 +599,7 @@ function QuestionExplanation({
 
           {/* <div ref={myRef}> */}
             <QuizExplanations.Carousel>
-              <Carousel slides={slides} autoplay={true} pause={true} interval={9000}/>
+              <Carousel slides={slides} autoplay={true} pause={true} interval={10000}/>
             </QuizExplanations.Carousel>
           {/* </div> */}
           </QuizExplanations>
@@ -658,7 +658,7 @@ export default function QuizPage({
   // callbackfunction
   useEffect(() => {
     setTimeout(() => {
-      setScreenState(screenStates.QUIZ);
+      setScreenState(screenStates.RESULT);
     }, 2 * 1000);
   }, []);
 
@@ -679,7 +679,7 @@ export default function QuizPage({
     } else {
       setScreenState(screenStates.LOADING);
       setTimeout(() => {
-        setScreenState(screenStates.RESULT);
+        setScreenState(screenStates.QUIZ);
       }, 2 * 1000);
     }
   }

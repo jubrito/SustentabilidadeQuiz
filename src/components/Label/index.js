@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const InputBase = styled.input`
+const Label = styled.input`
     padding: 15px;
     font-size: size 14px;
     border: 1px solid ${({ theme }) => theme.colors.quaternary};
     border-radius: ${({ theme }) => theme.borderRadius};
     outline: 0;
     margin-bottom: 25px;
+    display: flex;
+    align-items: center;
 
     @media screen and (max-width: 1215px) {
         font-size: 13px;
