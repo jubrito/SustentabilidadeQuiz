@@ -26,6 +26,7 @@ import {useBreakpoint} from '../../components/BreakpointProvider';
 // import {Carousel} from '3d-react-carousal';
 import ProgressBar from '../../components/ProgressBar';
 import dynamic from 'next/dynamic';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 const Carousel = dynamic(
   () => import ('3d-react-carousal'),
   {
@@ -387,9 +388,11 @@ function QuestionWidget({
               Próximo
             </Button>
             : 
-            <Button type="button" onClick={() => handleExplanation()} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
-              Confirmar
-            </Button>
+            <AnchorLink href="#explanation">
+              <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
+                Confirmar
+              </Button>
+            </AnchorLink>
           }
           {/* <p>{`${selectedAlternative}`}</p> */}
         </AlternativesForm>
@@ -516,7 +519,7 @@ function QuestionExplanation({
           initial="hidden"
           animate={animate}
           >
-          <div ref={myRef} className="explanations">
+          <div ref={myRef} className="explanations" id="explanation">
             <Subtitle><strong>Resposta correta:</strong> {answer}</Subtitle>
             {explanations.map((explanation, explanationIndex) => {
             return <div key={explanationIndex}>{parse(explanation)}</div>

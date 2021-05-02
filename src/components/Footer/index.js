@@ -19,19 +19,24 @@ const FooterBox = styled.footer`
     padding: 5px;
     font-size: 10px;
   }
+  // Ipad Pro
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    bottom: 0;
+  }
   div {
     left: 0px;
-    // Tv
+    /* // Tv
     @media screen and (min-width: 1236px) and (max-width: 1024px) {
       height: 350px !important;
-    }
+      bottom
+    } */
     // Ipad Pro
     @media screen and (min-width: 769px) and (max-width: 1024px) {
-      height: 350px !important;
+      height: 650px !important;
     }
     // Ipad
     @media screen and (min-width: 521px) and (max-width: 768px) {
-      height: 50px !important;
+      height: 200px !important;
       bottom: 30px !important;
     }
     // Surface Duo
@@ -42,7 +47,7 @@ const FooterBox = styled.footer`
     // Iphone Plus
     @media screen and (min-width: 411px) and (max-width: 515px) {
       bottom: 42px !important;
-      height: 120px !important;
+      height: 220px !important;
     }
     /* // Iphone X
     @media screen and (min-width: 376px) and (max-width: 410px) {
@@ -56,7 +61,7 @@ const FooterBox = styled.footer`
     // Iphone
     @media screen and (min-width: 361px) and (max-width: 376px) {
       bottom: 41px !important;
-      height: 150px !important;
+      height: 250px !important;
     }
     // Motog4
     @media screen and (min-width: 320px) and (max-width: 360px) {
@@ -66,7 +71,7 @@ const FooterBox = styled.footer`
     // Iphone SE
     @media screen and (min-width: 280px) and (max-width: 320px) {
       bottom: 42px !important;
-      height: 100px !important;
+      height: 300px !important;
     }
     // Galaxy fold & motog4
     @media screen and (min-width: 280px) and (max-width: 319px) {
@@ -82,15 +87,15 @@ const FooterBox = styled.footer`
   @media screen and (max-width: 540px) {
     font-size: 12px;
     padding: 0 5px;
-    bottom: -100%;
+    bottom: -190px;
   }
   // Iphone
   @media screen and (max-width: 376px) {
-    bottom: -100%;
+
   }
   // Iphone SE
   @media screen and (max-width: 376px) {
-    bottom: -100%;
+
   }
 `;
 
