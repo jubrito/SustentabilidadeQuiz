@@ -44,7 +44,7 @@ const ProgressBarDefault = styled.div`
     /* --red: ${({ theme }) => theme.colors.wrong};
     --yellow: #ffdb3a;
     --green: ${({ theme }) => theme.colors.success}; */
-    /* background: linear-gradient(to right, --red 0%, --yellow 45%, --green 100%); */
+    background: linear-gradient(to right, #ca004ff5 0%, yellow 45%, #64dd17 100%);
   }
 
   .shrinker {

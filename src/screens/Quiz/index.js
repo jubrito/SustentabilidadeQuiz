@@ -23,16 +23,17 @@ import Footer from '../../components/Footer';
 import SeaWidget from '../../components/SeaWidget';
 import {BreakpointProvider} from '../../components/BreakpointProvider';
 import {useBreakpoint} from '../../components/BreakpointProvider';
-import {Carousel} from '3d-react-carousal';
 import ProgressBar from '../../components/ProgressBar';
 import dynamic from 'next/dynamic';
-// const Carousel = dynamic(
-//   () => import ('3d-react-carousal'),
-//   {
-//     ssr: false
-//   }
-//   )
-import {AnchorLink} from 'react-anchor-link-smooth-scroll'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+  // import Carousel from "react-spring-3d-carousel";
+  const Carousel = dynamic(
+    () => import ('react-spring-3d-carousel'),
+    {
+    ssr: false
+    }
+  )
+// import {Carousel} from '3d-react-carousal';
 function isIOS() {
   return (
     (/iPad|iPhone|iPod/.test(navigator.platform) ||
@@ -557,10 +558,22 @@ function QuestionExplanation({
           </>
     );
   } else {
+    const [windowScreen, setWindowScreen] = useState(false);
     useEffect(()=> {
       setTranslateShow({x: '-100%', y: '1%', z: '0px'});
       setTranslateHide({x: '-100%', y: '1%', z: '0px'});
     },[])
+    useEffect(()=> {
+      if (typeof window !== 'undefined') {
+        setWindowScreen(true);
+      } else {
+        setWindowScreen(false);
+      }
+    },[window]);
+    const CarouselResults = dynamic(
+      () => import('../../components/Carousel3D'),
+      { ssr: false }
+    )
     let slides = [
       <div>
         <img src="./carousel_led.jpg" alt="Lâmpadas led consomem 10 vezes menos energia que as incandescentes. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
@@ -581,10 +594,11 @@ function QuestionExplanation({
       <div>
         <img src="./carousel_eiffel.jpg" alt="Ao usar sacolas duráveis, uma família deia de usar em 1 ano sacolinhas descartáveis que, lado a lado, formariam uma faixa da altura da Torre Eiffel. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
         <p>Ao usar sacolas duráveis, uma família deia de usar <strong>em 1 ano</strong> sacolinhas descartáveis que, lado a lado, formariam uma <strong>faixa da altura da Torre Eiffel</strong>.</p>
-      </div>];
+      </div>
+    ];
     return (
       <>
-          <QuizExplanations
+        <QuizExplanations
           as={motion.section}
           // delay quanto tempo espera pra começar e duração em s
           transition={{ delay: 0, duration: 0.5 }}
@@ -595,15 +609,18 @@ function QuestionExplanation({
           }}
           initial="hidden"
           animate="show"
-          >
-
-          {/* <div ref={myRef}> */}
-            <QuizExplanations.Carousel>
-              <Carousel slides={slides} autoplay={true} pause={true} interval={10000}/>
-            </QuizExplanations.Carousel>
-          {/* </div> */}
-          </QuizExplanations>
-          </>
+        >
+        {/* <div ref={myRef}> */}
+        <QuizExplanations.Carousel>
+        {
+          windowScreen ?
+            <CarouselResults slides={slides} autoplay={true} pause={true} interval={10000}/>
+          : ""
+        }
+        </QuizExplanations.Carousel>
+        {/* </div> */}
+        </QuizExplanations>
+      </>
     );
   }
 }
@@ -679,7 +696,7 @@ export default function QuizPage({
     } else {
       setScreenState(screenStates.LOADING);
       setTimeout(() => {
-        setScreenState(screenStates.QUIZ);
+        setScreenState(screenStates.RESULT);
       }, 2 * 1000);
     }
   }
