@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import styled from 'styled-components';
 import Head from 'next/head'; // Componente que permite colocarmos informações no head da página
 import { useRouter } from 'next/router';
 // Configurado via objetos js, animações na montagem do componente
@@ -17,6 +16,7 @@ import QuizContainer from '../src/components/QuizContainer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
+import Logo from '../src/components/Logo';
 import parse from "html-react-parser";
 
 // Sem o Styled-Components
@@ -148,6 +148,8 @@ export default function Home() {
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
       <Footer><SeaWidget width="100%" height="180px" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
+      <Logo/>
+    
     </QuizBackground>
   );
 }

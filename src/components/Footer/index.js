@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const FooterBox = styled.footer`
   position: absolute;
-  bottom:-11vh;
+  bottom:0vh;
   margin-top: 20px;
   width: 100%;
   height: auto;
