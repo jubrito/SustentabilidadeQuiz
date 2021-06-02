@@ -26,6 +26,7 @@ import {useBreakpoint} from '../../components/BreakpointProvider';
 import ProgressBar from '../../components/ProgressBar';
 import dynamic from 'next/dynamic';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import LogoName from '../../components/LogoName';
   // import Carousel from "react-spring-3d-carousel";
   const Carousel = dynamic(
     () => import ('react-spring-3d-carousel'),
@@ -760,6 +761,7 @@ export default function QuizPage({
           </div>
           </>)}
       </QuizContainer>
+      <LogoName/>
       {/* <GitHubCorner projectUrl={`https://github.com/${gitHubUser}/${projectName}`} /> */}
       <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
       {/* <RecyclingBinWidget/> */}

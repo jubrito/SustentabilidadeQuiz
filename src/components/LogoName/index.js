@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const LogoDefault = styled(Logo)`
+const LogoDefault = styled.div`
   position: absolute;
   right: 60px;
   top: 10px;
@@ -19,15 +19,15 @@ const LogoDefault = styled(Logo)`
   }
 `;
 
-function Logo({  }) {
+function LogoName() {
   return (
-    // <LogoDefault>
-    <>
+    <div>
+      <LogoDefault>
       <img src="./logo_black.png" alt="Voltar ao inicio" title="Voltar ao inicio"/>
       {/* <img src="./logo_dark.png" alt="Voltar ao inicio" title="Voltar ao inicio"/> */}
-    </>
-    // </LogoDefault>
+    </LogoDefault>
+    </div>
   );
 }
 
-export default Logo;
+export default LogoName;
