@@ -6,6 +6,7 @@ const QuizContainer = styled.div`
   max-width: 400px;
   padding-top: 15px;
   margin: auto 10%;
+  position: relative;
   /* @media screen and (max-width: 500px) {
     margin: auto;
     padding: 15px;
@@ -20,7 +21,7 @@ const QuizContainer = styled.div`
   // Ipad Pro
   @media screen and (max-width: 1024px) {
     margin: auto 7%;
-    transform: translateY(80%);
+    transform: translateY(20%);
   }
   // Ipad
   @media screen and (max-width: 768px) {

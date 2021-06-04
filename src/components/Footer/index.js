@@ -18,6 +18,7 @@ const FooterBox = styled.footer`
     margin: 5px;
     padding: 5px;
     font-size: 10px;
+    font-family: 'Ubuntu', sans-serif;
   }
   // Ipad Pro
   @media screen and (min-width: 769px) and (max-width: 1024px) {

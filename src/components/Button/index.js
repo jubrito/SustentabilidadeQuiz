@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.tertiary};
+  font-family: 'Ubuntu', sans-serif;
   color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.borderRadius};
   border: 0;

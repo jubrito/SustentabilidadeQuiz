@@ -6,6 +6,8 @@ const InputBase = styled.input`
     width: ${(props) => (props.type == 'radio' ? 'unset' : '100%')};
     max-width: ${(props) => (props.type == 'radio' ? '12px' : 'unset')};
     max-height: ${(props) => (props.type == 'radio' ? '12px' : 'unset')};
+    margin-right: ${(props) => (props.type == 'radio' ? '6px' : 'unset')};
+    margin-top: ${(props) => (props.type == 'radio' ? '2px' : 'unset')};
 
     padding: 15px;
     font-size: ${(props) => (props.type == 'radio' ? '16px' : '14px')};

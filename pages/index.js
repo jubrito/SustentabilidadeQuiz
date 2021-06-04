@@ -16,7 +16,7 @@ import QuizContainer from '../src/components/QuizContainer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
-import LogoName from '../src/components/LogoName';
+import LogoAlura from '../src/components/LogoAlura';
 import parse from "html-react-parser";
 
 // Sem o Styled-Components
@@ -67,7 +67,17 @@ export default function Home() {
         <meta property="og:image" content={db.backgroundImage} />
       </Head>
       <QuizContainer>
-        <QuizLogo />
+        <QuizLogo 
+         as={motion.div}
+         transition={{ delay: 0.5, duration: 0.5 }}
+         variants={{
+           // o elemento terá estados de animação
+           show: { opacity: 1, y: '0', display: 'flex' },
+           hidden: { opacity: 0, y: '100%', display: 'none' },
+         }}
+         initial="hidden"
+         animate="show"
+        />
         <Widget
           as={motion.section}
           // delay quanto tempo espera pra começar e duração em s
@@ -144,7 +154,7 @@ export default function Home() {
           initial="hidden"
           animate="show"
         />
-      <LogoName/>
+      {/* <LogoAlura/> */}
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
       <Footer><SeaWidget width="100%" height="180px" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>    

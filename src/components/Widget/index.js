@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const Widget = styled.div`
-  margin-top: 24px;
+  /* margin-top: 24px; */
   margin-bottom: 24px;
   background-color: #fff;
   border-radius: 4px;
   overflow: hidden;
   z-index: 21;
-  min-height: 400px;
+  min-height: 450px;
   box-shadow: 0px 0px 12px rgb(20 0 0 / 30%);
 
   h1, h2, h3 {
@@ -62,7 +62,7 @@ Widget.Header = styled.header`
   }
   // Ipad
   @media screen and (max-width: 768px) {
-    padding: 15px 32px;
+    padding: 15px 22px;
   }
 `;
 

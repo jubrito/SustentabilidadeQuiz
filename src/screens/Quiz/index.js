@@ -26,7 +26,7 @@ import {useBreakpoint} from '../../components/BreakpointProvider';
 import ProgressBar from '../../components/ProgressBar';
 import dynamic from 'next/dynamic';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import LogoName from '../../components/LogoName';
+import LogoAlura from '../../components/LogoAlura';
   // import Carousel from "react-spring-3d-carousel";
   const Carousel = dynamic(
     () => import ('react-spring-3d-carousel'),
@@ -718,7 +718,18 @@ export default function QuizPage({
     <BreakpointProvider queries={queries}>
     <QuizBackground backgroundImage={bg} backgroundImageResponsive={bg_mobile}>
       <QuizContainer>
-        <QuizLogo />
+        <QuizLogo 
+         as={motion.section}
+         // delay quanto tempo espera pra começar e duração em s
+         transition={{ delay: 0, duration: 0.5 }}
+         variants={{
+           // o elemento terá estados de animação
+           show: { opacity: 1, y: '0' },
+           hidden: { opacity: 0, y: '-100%' },
+         }}
+         initial="hidden"
+         animate="show"
+         />
         {/* Se for loading renderiza o LoadingWidget */}
         {screenState == screenStates.LOADING && <LoadingWidget />}
         {screenState == screenStates.QUIZ && (
@@ -761,7 +772,7 @@ export default function QuizPage({
           </div>
           </>)}
       </QuizContainer>
-      <LogoName/>
+      {/* <LogoAlura/> */}
       {/* <GitHubCorner projectUrl={`https://github.com/${gitHubUser}/${projectName}`} /> */}
       <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
       {/* <RecyclingBinWidget/> */}

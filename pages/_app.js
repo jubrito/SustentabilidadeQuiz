@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     // Branco no começo
     color: ${({ theme }) => theme.colors.black};
   }
+  font-family: 'Ubuntu', sans-serif;
   .relative {
     position: relative;
   }
