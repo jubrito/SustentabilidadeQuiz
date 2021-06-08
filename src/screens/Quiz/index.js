@@ -544,8 +544,8 @@ function QuestionExplanation({
           initial="hidden"
           animate={animate}
           >
-          <div ref={myRef} className="explanations" id="explanation">
-            <Subtitle><strong>Resposta correta:</strong> {answer}</Subtitle>
+          <div ref={myRef} className="explanations">
+            <Subtitle id="explanation"><strong>Resposta correta:</strong> {answer}</Subtitle>
             {explanations.map((explanation, explanationIndex) => {
             return <div key={explanationIndex}>{parse(explanation)}</div>
             })}
