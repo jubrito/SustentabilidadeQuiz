@@ -409,7 +409,7 @@ function QuestionWidget({
             </Button>
             : 
             window.innerWidth < 1024 ? 
-            <AnchorLink href="#explanation">
+            <AnchorLink offset='100' href="#explanation">
               <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
                 Confirmar
               </Button>
