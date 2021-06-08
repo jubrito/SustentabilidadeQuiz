@@ -27,6 +27,7 @@ import ProgressBar from '../../components/ProgressBar';
 import dynamic from 'next/dynamic';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoAlura from '../../components/LogoAlura';
+import { Link, animateScroll as scroll } from "react-scroll";
   // import Carousel from "react-spring-3d-carousel";
   const Carousel = dynamic(
     () => import ('react-spring-3d-carousel'),
@@ -409,11 +410,20 @@ function QuestionWidget({
             </Button>
             : 
             window.innerWidth < 1024 ? 
-            <AnchorLink offset='100' href="#explanation" >
+            // <AnchorLink href="#explanation">
+            <Link
+              activeClass="active"
+              to="explanation"
+              spy={true}
+              smooth={true}
+              offset={-270}
+              duration={500}
+            >
               <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
                 Confirmar
               </Button>
-            </AnchorLink>
+            </Link>
+            // </AnchorLink>
             :
             <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
               Confirmar

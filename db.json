@@ -25,29 +25,9 @@
           ]
         },
         {
-          "image": "https://media.giphy.com/media/2dPo5eE97Aw5q/giphy.gif",
-          "title": "'Não compensa separar o lixo orgânico do reciclável porque misturam depois'",
-          "description": "Você concorda com essa frase?",
-          "answer": 1,
-          "explanation": [
-            "<p>Os veículos de recolha seletiva são compartimentados e, por isso, os fluxos de resíduos não se contaminam entre si!</p>",
-            "<p>No Brasil hoje apenas 3% dos materiais são de fato reciclados, sendo que 30% poderia ser reaproveitado. Das 180 mil ton de lixo produzidas nas grandes cidades todos os dias, <strong>menos de 40% vão pra aterros adequados</strong>. Quando chega lá, o lixo é separado, e se a reciclagem já tiver sido feita antes, o trabalho dos catadores é facilitado. <strong>Quando separamos o lixo adequadamente, estamos dando os primeiros passos para sua destinação adequada.</strong>.</p>", 
-            "<p>A maioria do lixo (60%), no entanto, vai parar em lixões a céu aberto - o que é crime ambiental. O solo é contaminado pelo chorume, líquido tóxico que vem do lixo e o gás metano, liberado pela decomposição da matérica orgânica, contamina o ar. Nesses lixões, catadores e até crianças ficam expostos a todo tipo de doença.</p>",
-            "<p>E não é só isso: a separação correta contribui também <strong>reduz a contaminação do meio ambiente</strong> e para <strong>evitar a disseminação de doenças</strong>. <i>A praticidade não compensa o esforço para reciclagem!</i></p>"
-          ],
-          "source": [{
-            "title": "Lixo: a importância da separação do lixo caseiro — Câmara dos Deputados",
-            "url": "https://www.camara.leg.br/tv/195724-lixo-a-importancia-da-separacao-do-lixo-caseiro/#:~:text=Separar%20o%20lixo%20seco%20do,evitar%20a%20dissemina%C3%A7%C3%A3o%20de%20doen%C3%A7as"
-          }],
-          "alternatives": [
-            "Verdade",
-            "Mentira"
-          ]
-        },
-        {
           "image": "https://media.giphy.com/media/L8q7fOnh6CQ9O/giphy.gif",
-          "title": "Reciclável e reciclado é a mesma coisa.",
-          "description": "Fato ou mito?",
+          "title": "Quebrei um objeto de vidro. Eai?",
+          "description": "O que normalmente você faz?",
           "answer": 0,
           "explanation": [
             "<p>Materiais <strong>reciclados</strong> são aqueles que possuiam outros usos mas foram <u>reaproveitados através do processo de reciclagem</u> para se transformarem em novos produtos. Já os <strong>recicláveis</strong> são aqueles com potencial para reciclagem.</p>", 
@@ -59,8 +39,9 @@
 
           }],
           "alternatives": [
-            "Mentira",
-            "Verdade"
+            "Coloco no reciclável dentro de uma sacola plastica",
+            "Coloco no reciclável, ué",
+            "Coloco no reciclável dentro de uma caixa, jornal ou garrafa PET"
           ]
         },
         {
