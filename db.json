@@ -28,7 +28,7 @@
           "image": "https://media.giphy.com/media/L8q7fOnh6CQ9O/giphy.gif",
           "title": "Quebrei um objeto de vidro. Eai?",
           "description": "O que normalmente você faz?",
-          "answer": 0,
+          "answer": 2,
           "explanation": [
             "<p>Materiais <strong>reciclados</strong> são aqueles que possuiam outros usos mas foram <u>reaproveitados através do processo de reciclagem</u> para se transformarem em novos produtos. Já os <strong>recicláveis</strong> são aqueles com potencial para reciclagem.</p>", 
             "<p>Entretanto, <strong>nem tudo que é reciclável é, efetivamente, reciclado</strong>. Para que isso aconteça de fato, é preciso que diversos fatores ocorram, como o descarte adequado: só assim esse material chegará aos agentes responsáveis por lhes darem um destino correto.</p>"
@@ -120,7 +120,6 @@
             "url": "https://envolverde.com.br/dica-de-sustentabilidade-o-que-fazer-com-oleo-de-cozinha-usado/"
           }],
           "alternatives": [
-            "Deixo de molho com água e detergente",
             "Jogo o óleo no lixo orgânico ou na pia",
             "Removo o excesso com um papel ou guardo em uma garrafa PET para reutilizar/descartar"
           ]

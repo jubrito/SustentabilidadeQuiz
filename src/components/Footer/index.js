@@ -7,8 +7,6 @@ const FooterBox = styled.footer`
   width: 100%;
   height: auto;
   background-color: ${({ theme }) => theme.colors.primary};
-  /* border-top-left-radius: ${({ theme }) => theme.borderRadius};
-  border-top-right-radius: ${({ theme }) => theme.borderRadius}; */
   text-align: center;
   z-index: 11;
   p,a,a:hover {

@@ -8,6 +8,7 @@ import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import SeaWidget from '../src/components/SeaWidget';
+import TurtleWidget from '../src/components/TurtleWidget';
 import Credits from '../src/components/Credits';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
@@ -17,6 +18,7 @@ import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import LogoAlura from '../src/components/LogoAlura';
 import parse from "html-react-parser";
+import BottleWidget from '../src/components/BottleWidget';
 
 // Sem o Styled-Components
 // function Title(props) {
@@ -117,6 +119,8 @@ export default function Home() {
           />  
       </Footer> 
       <SeaWidget width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>   
+      <TurtleWidget/>   
+      <BottleWidget/>   
     </QuizBackground>
   );
 }

@@ -21,6 +21,7 @@ import Subtitle from '../../components/Subtitle';
 import Footer from '../../components/Footer';
 import Credits from '../../components/Credits';
 import SeaWidget from '../../components/SeaWidget';
+import TurtleWidget from '../../components/TurtleWidget';
 import {BreakpointProvider} from '../../components/BreakpointProvider';
 import {useBreakpoint} from '../../components/BreakpointProvider';
 import ProgressBar from '../../components/ProgressBar';
@@ -28,6 +29,7 @@ import dynamic from 'next/dynamic';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoAlura from '../../components/LogoAlura';
 import { Link, animateScroll as scroll } from "react-scroll";
+import BottleWidget from '../../components/BottleWidget';
   // import Carousel from "react-spring-3d-carousel";
   const Carousel = dynamic(
     () => import ('react-spring-3d-carousel'),
@@ -556,14 +558,16 @@ function QuestionExplanation({
           >
           <div ref={myRef} className="explanations">
             <Subtitle id="explanation"><strong>Resposta correta:</strong> {answer}</Subtitle>
-              {explanations.map((explanation, explanationIndex) => {
-              return <div key={explanationIndex}>{parse(explanation)}</div>
-              })}
-              <p className="source">Fonte: 
-              {source.map((src, srcIndex) => {
-              return <a href={src.url} key={srcIndex} target="_blank">{src.title}</a>
-              })}
-              </p>
+            <div className="explanations__content">
+                {explanations.map((explanation, explanationIndex) => {
+                return <div key={explanationIndex}>{parse(explanation)}</div>
+                })}
+                <p className="source">Fonte: 
+                {source.map((src, srcIndex) => {
+                return <a href={src.url} key={srcIndex} target="_blank">{src.title}</a>
+                })}
+                </p>
+            </div>
           </div>
           </QuizExplanations>
           </>
@@ -796,7 +800,9 @@ export default function QuizPage({
             animate="show"
           />  
       </Footer> 
-      <SeaWidget width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>   
+      <SeaWidget width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>  
+      <TurtleWidget/>   
+      <BottleWidget/>   
     </QuizBackground>
     </BreakpointProvider>
     </>

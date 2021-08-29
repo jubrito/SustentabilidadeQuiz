@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Widget = styled.div`
   /* margin-top: 24px; */
   margin-bottom: 24px;
-  background-color:rgb(255 255 255 / 75%);
+  background-color:rgb(255 255 255 / 100%);
   border-radius: 4px;
   overflow: hidden;
   z-index: 21;
@@ -28,7 +28,7 @@ const Widget = styled.div`
   }
 `;
 Widget.Content = styled.div`
-  padding: 32px;
+  padding: 14px;
   & > *:first-child {
     margin-top: 0;
   }

@@ -7,12 +7,6 @@ const FooterWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 4px; 
-  svg {
-    position: absolute;
-    height: 100%;
-    right: 10px;
-    bottom: 0px;
-  }
   a {
     padding-left: 5px;
     color: white;
@@ -44,7 +38,7 @@ export default function Credits(props) {
           </a>
         </p>
         <a href="https://www.alura.com.br/">
-          <svg className="a" width="70" height="37" viewBox="0 0 135 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="a" width="60" height="37" viewBox="0 0 135 67" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0)">
               <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="2" y="2" width="110" height="50" fill="black">
                 <rect fill="white" x="2" y="2" width="110" height="50" />

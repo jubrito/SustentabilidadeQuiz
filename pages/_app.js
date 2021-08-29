@@ -17,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
     // Branco no começo
     color: ${({ theme }) => theme.colors.black};
   }
+  .highlight {
+    background-color: yellow;
+  }
   font-family: 'Ubuntu', sans-serif;
   .relative {
     position: relative;
@@ -60,9 +63,14 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   i.fa-arrow-left, i.fa-arrow-right {
-    color: ${({ theme }) => theme.colors.primary};
+    color: yellow;
   }
- 
+  .slider-left div {
+    border:0 !important;
+  }
+  .slider-right div {
+    border:0 !important;
+  }
 `;
 
 const { theme } = db;

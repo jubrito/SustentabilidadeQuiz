@@ -26,14 +26,27 @@ const QuizExplanations = styled.div`
   width: 700px;
   transform:translateX(15%) translateY(-50%) translateZ(0px);
 
+  h2 {
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 20px 10px 20px;
+    border-top-left-radius: ${({ theme }) => theme.borderRadius};
+    border-top-right-radius: ${({ theme }) => theme.borderRadius};
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    
+  }
   .explanations {
     border-radius: ${({ theme }) => theme.borderRadius};
-    /* background-color: rgb(0, 0, 0, 0.5); */
-    background-color: rgb(255 255 255 / 75%);
+    background-color: rgb(255 255 255 / 100%);
     color: black;
-    padding: 10px 20px 10px 20px;
     box-shadow: 0px 0px 12px rgb(20 0 0 / 30%);
     height: -webkit-fill-available;
+    padding: 0;
+  }
+  .explanations__content {
+    padding: 10px 20px 10px 20px;
   }
 
   @media screen and (max-width: 1400px) {
