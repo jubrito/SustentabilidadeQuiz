@@ -14,9 +14,6 @@ const QuizBackground = styled.div`
     background-position: top;
   }
   // Ipad
-  @media screen and (max-width: 768px) {
-    background-image: url(${({ backgroundImageResponsive }) => backgroundImageResponsive});
-  }
   // Iphone
   @media screen and (max-width: 376px) {
     min-height: 160vh;

@@ -119,8 +119,8 @@ export default function Home() {
           />  
       </Footer> 
       <SeaWidget width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>   
-      <TurtleWidget/>   
-      <BottleWidget/>   
+      <TurtleWidget innerHeight={windowHeight} innerWidth={windowWidth}/>   
+      <BottleWidget innerHeight={windowHeight} innerWidth={windowWidth}/>   
     </QuizBackground>
   );
 }

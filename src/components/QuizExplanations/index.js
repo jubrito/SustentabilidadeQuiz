@@ -60,18 +60,11 @@ const QuizExplanations = styled.div`
   } 
   // Ipad Pro
   @media screen and (max-width: 1024px) {
-    .explanations {
-      background-color: rgb(254,254,254,0.7);
-    }
     padding:0;
     transform:translateX(14%) translateY(-100%) translateZ(0px);
   }
   // Ipad
   @media screen and (max-width: 768px) {
-    .explanations {
-      background-color: rgb(254,254,254,0.5);
-      box-shadow: 0px -5px 12px rgb(20 0 0 / 30%);
-    }
     transform: translateX(-100%) translateY(65%) translateZ(0px);
     width: 100%;
   }
@@ -90,7 +83,6 @@ const QuizExplanations = styled.div`
   // Iphone Plus
   @media screen and (max-width: 415px) {
     .explanations {
-      box-shadow: 0px 0px 12px rgb(20 0 0 / 30%);
       height: max-content;
     }
   }

@@ -7,7 +7,11 @@ import Lottie from 'react-lottie';
 const BottleWidgetContent = styled.div`
 `
 
-export default function BottleWidget() {
+export default function BottleWidget( innerHeight, innerWidth) {
+  const [width, setWidth] = useState('10%');
+  const [height, setHeight] = useState('auto');
+  const [bottom, setBottom] = useState('unset');
+  const [top, setTop] = useState(140);
   const [animationState, setAnimationState] = useState({
     isStopped: false, isPaused: false,
     direction: 1,
@@ -22,18 +26,28 @@ export default function BottleWidget() {
     },
   };
 
+  useEffect(() => {
+    if (window.innerWidth <= 375) {
+      setWidth('auto');
+      setHeight('11%');
+      setTop('unset');
+      setBottom(460);
+    }
+  }, []);
+
   return (
     <BottleWidgetContent>
       <div>
         <Lottie
           options={defaultOptions}
           direction={animationState.direction}
-          height= 'auto'
-          speed={0.1}
-          width='10%'
+          height={height}
+          speed={0.3}
+          width={width}
           style={{
             position: 'absolute',
-            top: 140,
+            top: top,
+            bottom: bottom,
             right: '30%',
             zIndex: -1
           }}
