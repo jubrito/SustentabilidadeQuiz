@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Ubuntu', sans-serif;
     // Branco no começo
     color: ${({ theme }) => theme.colors.black};
+    background-color: ${({ theme }) => theme.colors.primary}
   }
   .highlight {
     background-color: yellow;

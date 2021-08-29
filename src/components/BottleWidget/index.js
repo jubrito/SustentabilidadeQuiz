@@ -40,7 +40,7 @@ export default function BottleWidget( innerHeight, innerWidth) {
       setWidth('100%');
       setHeight('100%');
       // setBottom('unset');
-      // setTop('50%')
+      setTop(220)
     }
     if (window.innerWidth <= 380) {
       setWidth('auto');

@@ -5,13 +5,14 @@ const QuizBackground = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.black};
-  min-height: 110vh;
+  height: 110vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
   flex: 1;
   z-index: 1;
   // Ipad Pro
-  @media screen and (max-width: 1024px) {
-    background-position: top;
+  @media screen and (max-width: 1024px) and (max-height: 1366px) {
+    /* height: calc(100%); */
   }
   // Ipad
   // Iphone

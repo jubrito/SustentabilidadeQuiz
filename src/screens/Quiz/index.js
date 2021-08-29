@@ -26,8 +26,6 @@ import {BreakpointProvider} from '../../components/BreakpointProvider';
 import {useBreakpoint} from '../../components/BreakpointProvider';
 import ProgressBar from '../../components/ProgressBar';
 import dynamic from 'next/dynamic';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import LogoAlura from '../../components/LogoAlura';
 import { Link, animateScroll as scroll } from "react-scroll";
 import BottleWidget from '../../components/BottleWidget';
   // import Carousel from "react-spring-3d-carousel";
