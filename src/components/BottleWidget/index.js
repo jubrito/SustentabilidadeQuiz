@@ -5,6 +5,15 @@ import animationData2 from '../../screens/Quiz/animations/floatingbottle.json';
 import Lottie from 'react-lottie';
 
 const BottleWidgetContent = styled.div`
+
+  svg {
+    transform: scale(1);
+  }
+  @media (max-width:1024px){ 
+    svg {
+      transform: scale(0.2) !important;
+    }
+  }
 `
 
 export default function BottleWidget( innerHeight, innerWidth) {
@@ -27,7 +36,13 @@ export default function BottleWidget( innerHeight, innerWidth) {
   };
 
   useEffect(() => {
-    if (window.innerWidth <= 375) {
+    if (window.innerWidth <= 1024) {
+      setWidth('100%');
+      setHeight('100%');
+      // setBottom('unset');
+      // setTop('50%')
+    }
+    if (window.innerWidth <= 380) {
       setWidth('auto');
       setHeight('11%');
       setTop('unset');

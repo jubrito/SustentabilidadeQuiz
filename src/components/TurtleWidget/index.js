@@ -11,6 +11,8 @@ export default function TurtleWidget(innerHeight, innerWidth) {
   const [width, setWidth] = useState('40%');
   const [height, setHeight] = useState('100%');
   const [bottom, setBottom] = useState(0);
+  const [top, setTop] = useState(0);
+  const [right, setRight] = useState(0);
   const [animationState, setAnimationState] = useState({
     isStopped: false, isPaused: false,
     direction: 1,
@@ -26,6 +28,13 @@ export default function TurtleWidget(innerHeight, innerWidth) {
   };
 
   useEffect(() => {
+    if (window.innerWidth <= 1024) {
+      setWidth('100%');
+      setHeight('30%');
+      setBottom('unset');
+      setTop('50%');
+      setRight('-20%');
+    }
     if (window.innerWidth <= 375) {
       setWidth('100%');
       setHeight('49%');
@@ -44,7 +53,8 @@ export default function TurtleWidget(innerHeight, innerWidth) {
         style={{
           position: 'absolute',
           bottom: bottom,
-          right: 0,
+          top: top,
+          right: right,
           zIndex: -1
         }}
       />
