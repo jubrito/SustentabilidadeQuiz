@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 `;
 
 const SVGWrapper = styled.svg`
-  fill: ${({ theme }) => theme.colors.tertiary};
+  fill: ${({ theme }) => theme.colors.black};
   color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   &:hover .octo-arm{

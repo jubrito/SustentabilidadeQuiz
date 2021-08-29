@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  background-color: ${({ theme }) => theme.colors.tertiary};
+  background-color: ${({ theme }) => theme.colors.black};
   font-family: 'Ubuntu', sans-serif;
   color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.borderRadius};
@@ -12,7 +12,6 @@ const Button = styled.button`
   font-weight: bold;
   font-size: 14px;
   line-height: 1;
-  text-transform: uppercase;
   outline: 0;
   transition: .3s;
   margin-top: 10px;

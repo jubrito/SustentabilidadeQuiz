@@ -6,16 +6,6 @@ import animationData2 from '../../screens/Quiz/animations/fullscreenwaves.json';
 import Lottie from 'react-lottie';
 
 const SeaWidgetContent = styled.div`
- &:after{
-   content: '';
-   position: absolute;
-   width: 300%;
-   height: 100%;
-    background-color: black;
-    opacity: 0.5;
-    top: 0;
-    right: 0;
- }
 `
 
 export default function SeaWidget({ width, height, bottom, innerHeight, innerWidth, ...props }) {

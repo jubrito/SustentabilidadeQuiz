@@ -52,7 +52,7 @@ export default function Home() {
       passar informações pra outra rota
       Insomnia: http://localhost:3000/users?search=ar (Buscando users que contenham "ar")
       http://localhost:3000/quiz?name=Juliana (Passando a informação do nome para a rota Quiz) */
-    router.push(`/quiz?name=${name}`);
+    router.push(`/quiz?name=${name}`, { shallow: true });
   }
 
   return (
@@ -68,11 +68,11 @@ export default function Home() {
       <QuizContainer>
         <QuizLogo 
          as={motion.div}
-         transition={{ delay: 0.5, duration: 0.5 }}
+         transition={{ delay: 0.2, duration: 0.5 }}
          variants={{
            // o elemento terá estados de animação
-           show: { opacity: 1, y: '0', display: 'flex' },
-           hidden: { opacity: 0, y: '100%', display: 'none' },
+           show: { opacity: 1, y: '0' },
+           hidden: { opacity: 0, y: '-100%' },
          }}
          initial="hidden"
          animate="show"
@@ -95,14 +95,8 @@ export default function Home() {
           <Widget.Content>
             <form onSubmit={(changeEvent) => submitForm(changeEvent)}>
               <p>{parse(db.description)}</p>
-              <Input
-                name="nomeDoUsuario"
-                onChange={(changeEvent) => setName(changeEvent.target.value)}
-                placeholder="Diz ai seu nome"
-                value={name}
-              />
-              <Button type="submit" disabled={name.length === 0}>
-                {`Clique aqui para jogar ${name} :)`}
+              <Button type="submit">
+                Clique aqui para jogar
               </Button>
             </form>
           </Widget.Content>

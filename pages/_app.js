@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 13px;
     a {
       padding-left: 5px;
-      color: ${({ theme }) => theme.colors.secondary};
+      color: ${({ theme }) => theme.colors.primary};
     }
     @media screen and (max-width: 1215px) {
       font-size: 12px !important;

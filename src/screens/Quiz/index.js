@@ -316,7 +316,7 @@ function QuestionWidget({
       variants={{
         // o elemento terá estados de animação
         show: { opacity: 1, x: translateShow.x, y: translateShow.y, IDBIndex: 30 },
-        hidden: { opacity: 0, x: translateHide.x, y: translateHide.y, IDBIndex: -1 },
+        hidden: { opacity: 1, x: translateHide.x, y: translateHide.y, IDBIndex: -1 },
       }}
       initial="hidden"
       animate="show"
@@ -556,14 +556,14 @@ function QuestionExplanation({
           >
           <div ref={myRef} className="explanations">
             <Subtitle id="explanation"><strong>Resposta correta:</strong> {answer}</Subtitle>
-            {explanations.map((explanation, explanationIndex) => {
-            return <div key={explanationIndex}>{parse(explanation)}</div>
-            })}
-            <p className="source">Fonte: 
-            {source.map((src, srcIndex) => {
-            return <a href={src.url} key={srcIndex} target="_blank">{src.title}</a>
-            })}
-            </p>
+              {explanations.map((explanation, explanationIndex) => {
+              return <div key={explanationIndex}>{parse(explanation)}</div>
+              })}
+              <p className="source">Fonte: 
+              {source.map((src, srcIndex) => {
+              return <a href={src.url} key={srcIndex} target="_blank">{src.title}</a>
+              })}
+              </p>
           </div>
           </QuizExplanations>
           </>
@@ -731,11 +731,11 @@ export default function QuizPage({
         <QuizLogo 
          as={motion.section}
          // delay quanto tempo espera pra começar e duração em s
-         transition={{ delay: 0, duration: 0.5 }}
+         transition={{ delay: 0, duration: 0 }}
          variants={{
            // o elemento terá estados de animação
-           show: { opacity: 1, y: '0' },
-           hidden: { opacity: 0, y: '-100%' },
+           show: { opacity: 1, y: '0', display: 'flex' },
+           hidden: { opacity: 0, y: '0', display: 'none' },
          }}
          initial="hidden"
          animate="show"

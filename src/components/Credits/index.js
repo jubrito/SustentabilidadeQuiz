@@ -2,15 +2,19 @@ import styled from 'styled-components';
 
 const FooterWrapper = styled.div`
   background-color: #00000070;
-  padding: 20px;
+  padding: 10px;
   display: flex;
+  justify-content: center;
   align-items: center;
   border-radius: 4px; 
-  img {
-    width: 58px;
-    margin-right: 23px;
+  svg {
+    position: absolute;
+    height: 100%;
+    right: 10px;
+    bottom: 0px;
   }
   a {
+    padding-left: 5px;
     color: white;
     text-decoration: none;
     transition: .3s;
@@ -33,8 +37,14 @@ export default function Credits(props) {
     // eslint-disable-next-line react/jsx-props-no-spreading
     <>
     <FooterWrapper {...props}>
+      <p>
+        Adaptação feita por Juliana Witzke de Brito do desafio proposto durante a  
+        <a href="https://www.alura.com.br/"> 
+            <span>Imersão React da Alura</span>
+          </a>
+        </p>
         <a href="https://www.alura.com.br/">
-          <svg className="a" width="100" height="67" viewBox="0 0 135 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="a" width="70" height="37" viewBox="0 0 135 67" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0)">
               <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="2" y="2" width="110" height="50" fill="black">
                 <rect fill="white" x="2" y="2" width="110" height="50" />
@@ -56,12 +66,6 @@ export default function Credits(props) {
             </defs>
           </svg>
         </a>
-        <p>
-        Adaptação feita por Juliana Witzke de Brito do desafio proposto durante a 
-        <a href="https://www.alura.com.br/">
-            <span>Imersão React da Alura</span>
-          </a>
-        </p>
     </FooterWrapper>
     </>
   );

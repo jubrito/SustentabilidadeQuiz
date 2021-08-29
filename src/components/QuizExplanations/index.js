@@ -27,9 +27,12 @@ const QuizExplanations = styled.div`
   transform:translateX(15%) translateY(-50%) translateZ(0px);
 
   .explanations {
-    background-color: rgb(254, 254, 254, 1);
-    box-shadow: -13px -3px 12px rgb(20 0 0 / 30%);
+    border-radius: ${({ theme }) => theme.borderRadius};
+    /* background-color: rgb(0, 0, 0, 0.5); */
+    background-color: rgb(255 255 255 / 75%);
+    color: black;
     padding: 10px 20px 10px 20px;
+    box-shadow: 0px 0px 12px rgb(20 0 0 / 30%);
     height: -webkit-fill-available;
   }
 

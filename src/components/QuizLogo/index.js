@@ -58,7 +58,7 @@ function Logo(props) {
   return (
     <QuizLogo {...props}>
       <Link href="/">
-      <img src="./logo-title.png" alt="Voltar ao inicio" title="Voltar ao inicio"/>
+      <img src="./logo-title-black-white.png" alt="Voltar ao inicio" title="Voltar ao inicio"/>
       {/* <img src="./logo_black.png" alt="Voltar ao inicio" title="Voltar ao inicio"/> */}
       {/* <img src="./logo_dark.png" alt="Voltar ao inicio" title="Voltar ao inicio"/> */}
       </Link>
