@@ -27,7 +27,7 @@ const QuizExplanations = styled.div`
   transform:translateX(15%) translateY(-50%) translateZ(0px);
 
   .explanations {
-    background-color: rgb(254, 254, 254, 0.6);
+    background-color: rgb(254, 254, 254, 1);
     box-shadow: -13px -3px 12px rgb(20 0 0 / 30%);
     padding: 10px 20px 10px 20px;
     height: -webkit-fill-available;

@@ -14,12 +14,12 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
 import animationData from './animations/loading-recycle.json';
-import animationData2 from './animations/small-waves.json';
 import animationData3 from './animations/mild-waves.json';
 import parse from "html-react-parser";
 import LinkButton from '../../components/LinkButton';
 import Subtitle from '../../components/Subtitle';
 import Footer from '../../components/Footer';
+import Credits from '../../components/Credits';
 import SeaWidget from '../../components/SeaWidget';
 import {BreakpointProvider} from '../../components/BreakpointProvider';
 import {useBreakpoint} from '../../components/BreakpointProvider';
@@ -782,13 +782,22 @@ export default function QuizPage({
           </div>
           </>)}
       </QuizContainer>
-      {/* <LogoAlura/> */}
-      {/* <GitHubCorner projectUrl={`https://github.com/${gitHubUser}/${projectName}`} /> */}
       <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
-      {/* <RecyclingBinWidget/> */}
-      <Footer><SeaWidget width="100%" height="79px" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>
+      <Footer>
+        <Credits
+            as={motion.div}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            variants={{
+              // o elemento terá estados de animação
+              show: { opacity: 1, y: '0', display: 'flex' },
+              hidden: { opacity: 0, y: '100%', display: 'none' },
+            }}
+            initial="hidden"
+            animate="show"
+          />  
+      </Footer> 
+      <SeaWidget width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>   
     </QuizBackground>
-    {/* <Footer><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer> */}
     </BreakpointProvider>
     </>
   );

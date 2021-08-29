@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const QuizContainer = styled.div`
   width: 100%;
   max-width: 400px;
+  max-height: fit-content;
   padding-top: 15px;
   margin: auto 10%;
   position: relative;

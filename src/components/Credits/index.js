@@ -57,11 +57,8 @@ export default function Credits(props) {
           </svg>
         </a>
         <p>
-          Orgulhosamente criado durante
-          {' '}
-          a
-          {' '}
-          <a href="https://www.alura.com.br/">
+        Adaptação feita por Juliana Witzke de Brito do desafio proposto durante a 
+        <a href="https://www.alura.com.br/">
             <span>Imersão React da Alura</span>
           </a>
         </p>

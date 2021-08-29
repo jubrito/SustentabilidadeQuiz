@@ -54,8 +54,8 @@ O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas a
 Requisitos: [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), Editor ([VSCode](https://code.visualstudio.com/))
 
 ```sh
-# Encontre o seu endereço IPv4 
-$ ipconfig
+# # Encontre o seu endereço IPv4 
+# $ ipconfig
 
 # Clone este repositório
 $ git clone https://github.com/jubrito/SustentabilidadeQuiz
@@ -66,8 +66,11 @@ $ cd SustentabilidadeQuiz
 # Instalando as dependências do website
 $ npm install
 
+# Instalando as dependências do website
+$ npm install
+
 # Execute a aplicação em modo de desenvolvimento
-$ npm run start
+$ npm run dev
 
 ```
 Acesse [http://localhost:3000](http://localhost:3000) - (a aplicação será aberta na porta:3000) 

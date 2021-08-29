@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
-import Link from '../src/components/Link';
 import Footer from '../src/components/Footer';
 import SeaWidget from '../src/components/SeaWidget';
 import Credits from '../src/components/Credits';
@@ -108,56 +107,22 @@ export default function Home() {
             </form>
           </Widget.Content>
         </Widget>
-        {/* <Widget
-          as={motion.section}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          variants={{
-            // o elemento terá estados de animação
-            show: { opacity: 1, y: '0' },
-            hidden: { opacity: 0, y: '100%' },
-          }}
-          initial="hidden"
-          animate="show"
-        >
-          <Widget.Content>
-            <h1>Quizes da Galera</h1>
-
-            <ul>
-              {db.external.map((externalQuizLink) => {
-                const [projectName, gitHubUser] = externalQuizLink
-                  .replace(/\//g, '')
-                  .replace(/https?:/, '')
-                  .replace('.vercel.app', '')
-                  .split('.');
-                return (
-                  <li key={externalQuizLink}>
-                    <Widget.Topic
-                      as={Link} // Renderiza como componente link (para garantir SPA)
-                      href={`/quiz/${projectName}___${gitHubUser}`}
-                    >
-                      {`${gitHubUser}/${projectName}`}
-                    </Widget.Topic>
-                  </li>
-                );
-              })}
-            </ul>
-          </Widget.Content>
-        </Widget> */}
-        <Credits
-          as={motion.div}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          variants={{
-            // o elemento terá estados de animação
-            show: { opacity: 1, y: '0', display: 'flex' },
-            hidden: { opacity: 0, y: '100%', display: 'none' },
-          }}
-          initial="hidden"
-          animate="show"
-        />
-      {/* <LogoAlura/> */}
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
-      <Footer><SeaWidget width="100%" height="180px" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/><p>Adaptação do desafio proposto pela Alura na Imersão React feita por Juliana Witzke de Brito</p></Footer>    
+      <Footer>
+        <Credits
+            as={motion.div}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            variants={{
+              // o elemento terá estados de animação
+              show: { opacity: 1, y: '0', display: 'flex' },
+              hidden: { opacity: 0, y: '100%', display: 'none' },
+            }}
+            initial="hidden"
+            animate="show"
+          />  
+      </Footer> 
+      <SeaWidget width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>   
     </QuizBackground>
   );
 }
