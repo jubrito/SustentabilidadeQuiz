@@ -23,7 +23,7 @@ const QuizExplanations = styled.div`
     width: 100%;
     font-size: 14px;
     font-weight: normal;
-    padding: 18px 32px;
+    padding: 15px;
     border-top-left-radius: ${({ theme }) => theme.borderRadius};
     border-top-right-radius: ${({ theme }) => theme.borderRadius};
     border-bottom-left-radius: 0;

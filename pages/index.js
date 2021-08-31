@@ -92,13 +92,13 @@ export default function Home() {
           animate="show"
         >
           <Widget.Header>
-            <h1>{db.title}</h1>
+            <h1>QUIZ</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={(changeEvent) => submitForm(changeEvent)}>
               <p>{parse(db.description)}</p>
               <Button type="submit">
-                Clique aqui para jogar
+                CLIQUE AQUI PARA JOGAR
               </Button>
             </form>
           </Widget.Content>

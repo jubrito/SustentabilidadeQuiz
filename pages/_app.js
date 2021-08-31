@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: row;
     justify-content: center;
     /* align-items: flex-start; */
-    height: 500px;
+    height: 480px;
     @media screen and (max-width: 767px) {
       flex-direction: column;
       height: 100%;

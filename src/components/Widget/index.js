@@ -19,9 +19,11 @@ const Widget = styled.div`
     font-weight: 700;
     line-height: 1;
     margin-bottom: 0;
+    text-align: center;
   }
 
   p {
+    text-align: center;
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
@@ -53,17 +55,21 @@ Widget.Content = styled.div`
     padding: 0;
   }
   position: relative;
-  // Ipad
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     padding: 22px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 14px;
   }
 `;
 
 Widget.Header = styled.header`
+  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding: 18px 32px;
+  text-align: center;
+  padding: 15px;
   background-color: ${({ theme }) => theme.colors.primary};
   h1 {
     color: ${({ theme }) => theme.colors.white}; 
@@ -73,7 +79,7 @@ Widget.Header = styled.header`
     margin: 0;
   }
   // Ipad
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     padding: 15px 22px;
   }
 `;
@@ -90,10 +96,20 @@ Widget.Topic = styled.a`
   transition: .3s;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   
   &:hover,
   &:focus {
     opacity: .9;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 14px;
   }
 `;
 

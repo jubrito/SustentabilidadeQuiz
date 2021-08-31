@@ -205,79 +205,22 @@ function QuestionWidget({
   const [translateShow, setTranslateShow] = useState({ x: '', y:''})  
   const [translateHide, setTranslateHide] = useState({ x: '', y:''})  
   const breakpoints = useBreakpoint();
-  useEffect(() => {
-    var large_screen, medium_screen, ipad_pro_screen, ipad_screen, surface_duo_screen, iphone_plus_screen, iphone_screen, motog4_screen, iphonese_screen;
-    const matchingList2 = Object.keys(breakpoints).map(media => {
-      var breakpoint_media = breakpoints[media];
-      switch (media) {
-        case 'iphonese_screen':
-          iphonese_screen = breakpoint_media;
-          // console.log(iphonese_screen)
-        break;
-        case 'motog4_screen':
-          motog4_screen = breakpoint_media;
-        break;
-        case 'iphone_screen':
-          iphone_screen = breakpoint_media;
-        break;
-        case 'iphone_plus_screen':
-          iphone_plus_screen = breakpoint_media;
-        break;
-        case 'surface_duo_screen':
-          surface_duo_screen = breakpoint_media;
-        break;
-        case 'ipad_screen':
-          ipad_screen = breakpoint_media;
-        break;
-        case 'ipad_pro_screen':
-          ipad_pro_screen = breakpoint_media;
-        break;
-        case 'medium_screen':
-          medium_screen = breakpoint_media;
-        break;
-        case 'large_screen':
-          large_screen = breakpoint_media;
-        break;
-      }
-    })
-  }, []);
-  useEffect(() => {
-    // console.log(matchingList)
-    if (typeof window !== "undefined") {
-      console.log(window.innerWidth)
-      // console.log(window.innerHeight)
-      if (window.innerWidth >= 322 && window.innerWidth < 361) {
-        setTranslateShow({x: '0%', y: '8%', z: '0px'});
-        setTranslateHide({x: '0%', y: '8%', z: '0px'});
-        console.log("motog4_screen")
-
-      } else if (window.innerWidth >= 361 && window.innerWidth < 376) {
-        setTranslateShow({x: '0%', y: '12%', z: '0px'});
-        setTranslateHide({x: '0%', y: '12%', z: '0px'});
-        console.log("iphone_screen")
-
-      } else if (window.innerWidth >= 376 && window.innerWidth < 769) {
-        setTranslateShow({x: '0%', y: '0%', z: '0px'});
-        setTranslateHide({x: '0%', y: '0%', z: '0px'});
-        console.log("ipad_screen")
-
-      } else if (window.innerWidth >= 769 && window.innerWidth < 1025) {
-        setTranslateShow({x: '0%', y: '-50%', z: '0px'});
-        setTranslateHide({x: '0%', y: '-50%', z: '0px'});
-        console.log("ipad_pro_screen")
-
-      } else if (window.innerWidth >=1025  && window.innerWidth <1215){
-        // console.log("medium_screen")
-      
-      } else if (window.innerWidth >= 1215 && window.innerWidth < 1400){
-        // console.log("large_screen")
-      } else {
-        setTranslateShow({x: '0', y: '0'});
-        setTranslateHide({x: '0', y: '-100%'});
-        console.log("default")
-      }
-    }
-  }, [window.innerWidth])
+  // useEffect(() => {
+  //   var large_screen, medium_screen, ipad_pro_screen, ipad_screen, surface_duo_screen, iphone_plus_screen, iphone_screen, motog4_screen, iphonese_screen;
+  //   const matchingList2 = Object.keys(breakpoints).map(media => {
+  //     var breakpoint_media = breakpoints[media];
+  //     switch (media) {
+  //       case 'iphonese_screen':
+  //         iphonese_screen = breakpoint_media;
+  //     }
+  //   })
+  // }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     if (window.innerWidth >= 322 && window.innerWidth < 361) {
+  //     } 
+  //   }
+  // }, [window.innerWidth])
     
   return (
     <Widget
@@ -346,6 +289,7 @@ function QuestionWidget({
                 htmlFor={alternativeId}
                 data-selected={isSelected}
                 data-status={hasAlreadyConfirmed && alternativeStatus}
+                title={'Clique para selecionar essa opção'}
               >
                 <Input
                   // style={{ display: 'none '}}
@@ -367,7 +311,7 @@ function QuestionWidget({
           {
             hasAlreadyConfirmed ? 
             <Button type="submit" onSubmit={() => handleQuizPageSubmit()} disabled={!hasAlreadyConfirmedDelay}>
-              Próximo
+              RESPONDER PRÓXIMA PERGUNTA
             </Button>
             : 
             window.innerWidth < 1024 ? 
@@ -380,12 +324,12 @@ function QuestionWidget({
               duration={500}
             >
               <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
-                Confirmar
+                CONFIRMAR OPÇÃO SELECIONADA
               </Button>
             </Link>
             :
             <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
-              Confirmar
+              CONFIRMAR OPÇÃO SELECIONADA
             </Button>
           }
         </AlternativesForm>

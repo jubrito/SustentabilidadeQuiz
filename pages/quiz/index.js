@@ -8,7 +8,7 @@ export default function QuizDaGaleraPage() {
   useEffect(() => {
     let allQuestions = db.questions;
     let randomQuestionsGenerated = [];
-    for (let i = 0; i < 1; i++)
+    for (let i = 0; i < 12; i++)
     {
         let random_index;
         while(!random_index)
