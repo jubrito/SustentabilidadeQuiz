@@ -110,7 +110,6 @@ export default function Home() {
             as={motion.div}
             transition={{ delay: 0.5, duration: 0.5 }}
             variants={{
-              // o elemento terá estados de animação
               show: { opacity: 1, y: '0', display: 'flex' },
               hidden: { opacity: 0, y: '100%', display: 'none' },
             }}

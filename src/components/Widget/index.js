@@ -9,8 +9,9 @@ const Widget = styled.div`
   overflow: hidden;
   z-index: 21;
   height: 100%;
-  min-width: 400px;
-  max-width: 400px;
+  min-width: 450px;
+  max-width: 450px;
+  min-height: 470px;
   box-shadow: 0px 0px 12px rgb(20 0 0 / 30%);
 
   h1, h2, h3 {
