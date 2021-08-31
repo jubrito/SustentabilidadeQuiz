@@ -330,7 +330,7 @@ function QuestionWidget({
                 onSubmit(); // dispara o onsubmit do form (o método handleQuizPageSubmit)
                 setIsQuestionSubmited(false);
                 setSelectedAlternative(undefined);
-              }, 3 * 1000);
+              }, 1);
             }
           }}
         >
@@ -364,19 +364,6 @@ function QuestionWidget({
               </Widget.Topic>
             );
           })}
-
-          {/* Console.log() no react na tela
-            <pre>
-              {JSON.stringify(question, null, 4)}
-            </pre> */}
-            {/* <div className="mt-15">
-              <Button type="button" onClick={() => handleExplanation()} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
-                Confirmar
-              </Button>
-              <Button type="submit" onSubmit={() => handleQuizPageSubmit()} disabled={!hasAlreadyConfirmed}>
-                Próxima Pergunta
-              </Button>
-            </div> */}
           {
             hasAlreadyConfirmed ? 
             <Button type="submit" onSubmit={() => handleQuizPageSubmit()} disabled={!hasAlreadyConfirmedDelay}>
@@ -384,7 +371,6 @@ function QuestionWidget({
             </Button>
             : 
             window.innerWidth < 1024 ? 
-            // <AnchorLink href="#explanation">
             <Link
               activeClass="active"
               to="explanation"
@@ -397,13 +383,11 @@ function QuestionWidget({
                 Confirmar
               </Button>
             </Link>
-            // </AnchorLink>
             :
             <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
               Confirmar
             </Button>
           }
-          {/* <p>{`${selectedAlternative}`}</p> */}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
@@ -530,18 +514,6 @@ function QuestionExplanation({
     ];
     return (
       <>
-        {/* <QuizExplanations
-          as={motion.section}
-          // delay quanto tempo espera pra começar e duração em s
-          transition={{ delay: 0, duration: 0.5 }}
-          variants={{
-            // o elemento terá estados de animação
-            show: { opacity: 1, x: translateShow.x , y: translateShow.y, z:'0' },
-            hidden: { opacity: 0, x: translateHide.x, y:translateHide.y, z:'100%' },
-          }}
-          initial="hidden"
-          animate="show"
-        > */}
         <QuizExplanations.Carousel>
         {
           windowScreen ?
@@ -549,8 +521,6 @@ function QuestionExplanation({
           : ""
         }
         </QuizExplanations.Carousel>
-        {/* </div> */}
-        {/* </QuizExplanations> */}
       </>
     );
   }
@@ -564,7 +534,6 @@ const screenStates = {
 export default function QuizPage({
   externalQuestions, externalBg, externalBgMobile, externalTextResults, projectName, gitHubUser,
 }) {
-  // console.log(db.questions)
   const [screenState, setScreenState] = useState(screenStates.LOADING); // estado inicial
   const totalQuestions = externalQuestions.length;
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -602,8 +571,6 @@ export default function QuizPage({
   const myRef = useRef(null);
   const executeScroll = () => myRef.current.scrollIntoView();
   
-  // nasce === didMount (componente é montado)
-  // callbackfunction
   useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);

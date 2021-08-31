@@ -28,9 +28,11 @@ const Widget = styled.div`
   }
   @media screen and (max-width: 767px) {
     width: 100%;
-    height: 100%;
-    min-width: unset;
-    min-height: 100%;
+    min-width: min-content;
+    max-width: calc(100% - 20px);
+    height: auto;
+    min-height: unset;
+    margin: 010px;
   }
   // Surface Duo
   @media screen and (max-width: 540px) {

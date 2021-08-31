@@ -52,6 +52,11 @@ const QuizExplanations = styled.div`
   @media screen and (max-width: 1024px) {
     padding:0;
   }
+  @media screen and (max-width: 767px) {
+    min-width: calc(100% - 20px);
+    padding: 10px;
+    flex-direction: column;
+  }
   // Surface Duo
   @media screen and (max-width: 540px) {
     p, h2 {
@@ -77,7 +82,8 @@ QuizExplanations.Carousel = styled.div`
   .input-container {
     width: 100%;
   }
-  @media(max-width: 600px) {
+  @media screen and (max-width: 767px) {
+    min-width: 100%;
     flex-direction: column;
   }
 `;
