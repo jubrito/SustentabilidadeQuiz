@@ -2,12 +2,15 @@ import styled from 'styled-components';
 
 const Widget = styled.div`
   /* margin-top: 24px; */
+  flex-grow : 1;
   margin-bottom: 24px;
   background-color:rgb(255 255 255 / 100%);
   border-radius: 4px;
   overflow: hidden;
   z-index: 21;
-  min-height: 450px;
+  height: 100%;
+  min-width: 400px;
+  max-width: 400px;
   box-shadow: 0px 0px 12px rgb(20 0 0 / 30%);
 
   h1, h2, h3 {
@@ -22,9 +25,15 @@ const Widget = styled.div`
     font-weight: 400;
     line-height: 1;
   }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: 100%;
+    min-width: unset;
+    min-height: 100%;
+  }
   // Surface Duo
   @media screen and (max-width: 540px) {
-    min-height: 500px;
+    /* min-height: 500px; */
   }
 `;
 Widget.Content = styled.div`

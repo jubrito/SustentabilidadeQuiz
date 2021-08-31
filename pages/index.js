@@ -60,7 +60,7 @@ export default function Home() {
   return (
     // Ao invés de fazer assim abaixo, criamos o componente com o style do background
     // <div style={{ backgroundImage: `url (${db.bg})` }}>
-    <QuizBackground backgroundImage={db.bg} backgroundImageResponsive={db.bg_mobile}>
+    <QuizBackground backgroundImage={db.bg} backgroundImageResponsive={db.bg_mobile} isHomepage={true}>
       <Head>
         <title>{db.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -118,9 +118,9 @@ export default function Home() {
             animate="show"
           />  
       </Footer> 
-      <SeaWidget width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>   
-      <TurtleWidget innerHeight={windowHeight} innerWidth={windowWidth}/>   
-      <BottleWidget innerHeight={windowHeight} innerWidth={windowWidth}/>   
+      <SeaWidget isStopped={true} width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>   
+      <TurtleWidget isStopped={true} innerHeight={windowHeight} innerWidth={windowWidth}/>   
+      <BottleWidget isStopped={true} innerHeight={windowHeight} innerWidth={windowWidth}/>   
     </QuizBackground>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ProgressBarDefault = styled.div`
-  margin-top: 10px; 
+  margin-top: 20px !important; 
 
   #progress-bar-container {
     width: 100%;
@@ -39,11 +39,6 @@ const ProgressBarDefault = styled.div`
     font-family: "Segoe UI";
     animation-direction: reverse;
     background: #e5405e;
-
-    /* Chrome10-25,Safari5.1-6 */
-    /* --red: ${({ theme }) => theme.colors.wrong};
-    --yellow: #ffdb3a;
-    --green: ${({ theme }) => theme.colors.success}; */
     background: linear-gradient(to right, #ca004ff5 0%, yellow 45%, #64dd17 100%);
   }
 

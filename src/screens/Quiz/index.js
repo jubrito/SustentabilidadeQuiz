@@ -80,7 +80,6 @@ function LoadingWidget() {
       preserveAspectRatio: 'xMidYMid slice',
     },
   };
-
   return (
     <Widget>
       <Widget.Header>
@@ -90,44 +89,14 @@ function LoadingWidget() {
         <Lottie
           options={defaultOptions}
           height="auto"
-          width="100%"
+          width="200px"
         />
       </Widget.Content>
 
     </Widget>
   );
 }
-function RecyclingBinWidget() {
-  const [animationState, setAnimationState] = useState({
-    isStopped: false, isPaused: false,
-    direction: 1,
-  });
 
-  const defaultOptions = {
-    loop: true, // false não roda em loop infinito
-    autoplay: true, // false não carrega a animação quando recarrega
-    animationData: animationData3,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
-
-  
-  return (
-    <Lottie
-      options={defaultOptions}
-      direction={animationState.direction}
-      height="240px"
-      width="180px"
-      style={{
-        position: 'absolute',
-        bottom: 22,
-        right: 0,
-        zIndex: 9,
-      }}
-    />
-  );
-}
 function ResultWidget({ results, totalQuestions, externalTextResults }) {
   const points = results.filter((x) => x).length;
   const [textResult, setTextResult] = useState("");
@@ -209,7 +178,9 @@ function QuestionWidget({
   onSubmit,
   addResult,
   handleExplanation,
-  hasAlreadyConfirmed
+  hasAlreadyConfirmed,
+  maxWidth,
+  ...props
 }) {
   const [selectedAlternative, setSelectedAlternative] = useState(undefined);
   const [isQuestionSubmited, setIsQuestionSubmited] = useState(false); // do formulário
@@ -320,6 +291,9 @@ function QuestionWidget({
       }}
       initial="hidden"
       animate="show"
+      style={{
+        maxWidth: maxWidth
+      }}
     >
       <Widget.Header>
         <BackLinkArrow href="/" />
@@ -485,61 +459,6 @@ function QuestionExplanation({
         }
       })
     }, []);
-    useEffect(() => {
-        // console.log(matchingList)
-      if (typeof window !== "undefined") {
-        console.log(window.innerWidth)
-        if (window.innerWidth < 322) {
-          setTranslateShow({x: '-100%', y: '0%', z: '0px'});
-          setTranslateHide({x: '-100%', y: '0%', z: '0px'});
-          console.log("iphonese_screen")
-
-        } else if (window.innerWidth >= 322 && window.innerWidth < 361) {
-          setTranslateShow({x: '-100%', y: '8%', z: '0px'});
-          setTranslateHide({x: '-100%', y: '8%', z: '0px'});
-          console.log("motog4_screen")
-
-        } else if (window.innerWidth >= 361 && window.innerWidth < 376) {
-          setTranslateShow({x: '-100%', y: '12%', z: '0px'});
-          setTranslateHide({x: '-100%', y: '12%', z: '0px'});
-          console.log("iphone_screen")
-
-        } else if (window.innerWidth >= 376 && window.innerWidth < 415) {
-          setTranslateShow({x: '-100%', y: '1%', z: '0px'});
-          setTranslateHide({x: '-100%', y: '1%', z: '0px'});
-          console.log("iphone_plus_screen")
-
-        } else if (window.innerWidth >= 415 && window.innerWidth < 541) {
-          setTranslateShow({x: '-100%', y: '0%', z: '0px'});
-          setTranslateHide({x: '-100%', y: '0%', z: '0px'});
-          console.log("surface_duo_screen")
-
-        } else if (window.innerWidth >= 541 && window.innerWidth < 769) {
-          setTranslateShow({x: '-100%', y: '56%', z: '0px'});
-          setTranslateHide({x: '-100%', y: '56%', z: '0px'});
-          console.log("ipad_screen")
-
-        } else if (window.innerWidth >= 769 && window.innerWidth < 1025) {
-          setTranslateShow({x: '14%', y: '-100%', z: '0px'});
-          setTranslateHide({x: '14%', y: '-100%', z: '0px'});
-          console.log("ipad_pro_screen")
-
-        } else if (window.innerWidth >=1025  && window.innerWidth <1215){
-          setTranslateShow({x: '27%', y: '-50%', z: '0px'});
-          setTranslateHide({x: '27%', y: '-50%', z: '0px'});
-          console.log("medium_screen")
-        
-        } else if (window.innerWidth >= 1215 && window.innerWidth < 1400){
-          setTranslateShow({x: '14%', y: '-50%'});
-          setTranslateHide({x: '14%', y: '-50%'});
-          console.log("large_screen")
-        } else {
-          setTranslateShow({x: '15%', y: '-50%'});
-          setTranslateHide({x: '15%', y: '-50%'});
-          console.log("default")
-        }
-      }
-    }, [window.innerWidth]);
     return (
       <>
           <QuizExplanations
@@ -611,7 +530,7 @@ function QuestionExplanation({
     ];
     return (
       <>
-        <QuizExplanations
+        {/* <QuizExplanations
           as={motion.section}
           // delay quanto tempo espera pra começar e duração em s
           transition={{ delay: 0, duration: 0.5 }}
@@ -622,8 +541,7 @@ function QuestionExplanation({
           }}
           initial="hidden"
           animate="show"
-        >
-        {/* <div ref={myRef}> */}
+        > */}
         <QuizExplanations.Carousel>
         {
           windowScreen ?
@@ -632,7 +550,7 @@ function QuestionExplanation({
         }
         </QuizExplanations.Carousel>
         {/* </div> */}
-        </QuizExplanations>
+        {/* </QuizExplanations> */}
       </>
     );
   }
@@ -737,7 +655,7 @@ export default function QuizPage({
          variants={{
            // o elemento terá estados de animação
            show: { opacity: 1, y: '0', display: 'flex' },
-           hidden: { opacity: 0, y: '0', display: 'none' },
+           hidden: { opacity: 0, y: '0', display: 'flex' },
          }}
          initial="hidden"
          animate="show"
@@ -788,7 +706,7 @@ export default function QuizPage({
       <Footer>
         <Credits
             as={motion.div}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            transition={{ delay: 0, duration: 0.5 }}
             variants={{
               // o elemento terá estados de animação
               show: { opacity: 1, y: '0', display: 'flex' },
@@ -798,9 +716,9 @@ export default function QuizPage({
             animate="show"
           />  
       </Footer> 
-      <SeaWidget width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>  
-      <TurtleWidget innerHeight={windowHeight} innerWidth={windowWidth}/>   
-      <BottleWidget innerHeight={windowHeight} innerWidth={windowWidth}/>   
+      <SeaWidget isStopped={false} width="100%" height="100%" bottom="28px" innerHeight={windowHeight} innerWidth={windowWidth}/>  
+      <TurtleWidget isStopped={false} innerHeight={windowHeight} innerWidth={windowWidth}/>   
+      <BottleWidget isStopped={false} innerHeight={windowHeight} innerWidth={windowWidth}/>   
     </QuizBackground>
     </BreakpointProvider>
     </>

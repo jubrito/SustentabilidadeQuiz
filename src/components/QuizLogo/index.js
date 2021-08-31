@@ -7,7 +7,8 @@ import Link from '../Link';
 const QuizLogo = styled(Logo)`
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 40px;
   margin: auto;
   margin-top: 30px;
   // Ipad Pro

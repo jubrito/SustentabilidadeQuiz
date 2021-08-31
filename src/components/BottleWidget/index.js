@@ -16,13 +16,13 @@ const BottleWidgetContent = styled.div`
   }
 `
 
-export default function BottleWidget( innerHeight, innerWidth) {
+export default function BottleWidget({isStopped}) {
   const [width, setWidth] = useState('10%');
   const [height, setHeight] = useState('auto');
   const [bottom, setBottom] = useState('unset');
   const [top, setTop] = useState(140);
   const [animationState, setAnimationState] = useState({
-    isStopped: false, isPaused: false,
+    isStopped: isStopped, isPaused: false,
     direction: 1,
   });
 
@@ -40,13 +40,12 @@ export default function BottleWidget( innerHeight, innerWidth) {
       setWidth('100%');
       setHeight('100%');
       // setBottom('unset');
-      setTop(220)
+      setTop(220);
     }
-    if (window.innerWidth <= 380) {
-      setWidth('auto');
-      setHeight('11%');
+    if (window.innerWidth <= 637) {
+      setHeight('auto');
       setTop('unset');
-      setBottom(460);
+      setBottom(0);
     }
   }, []);
 
@@ -57,7 +56,7 @@ export default function BottleWidget( innerHeight, innerWidth) {
           options={defaultOptions}
           direction={animationState.direction}
           height={height}
-          speed={0.3}
+          speed={isStopped ? 0 : 0.2}
           width={width}
           style={{
             position: 'absolute',

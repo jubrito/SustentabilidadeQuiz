@@ -23,7 +23,17 @@ const GlobalStyle = createGlobalStyle`
   }
   font-family: 'Ubuntu', sans-serif;
   .relative {
+    width: fit-content;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: flex-start; */
+    height: 500px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      height: 100%;
+    }
   }
   .mt-15 {
     margin-top: 15px;
@@ -45,6 +55,9 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 1215px) {
       font-size: 12px !important;
     }
+  }
+  .react-3d-carousel{
+    height: 300px !important;
   }
   .slider-single-content {
     p{
@@ -71,6 +84,12 @@ const GlobalStyle = createGlobalStyle`
   }
   .slider-right div {
     border:0 !important;
+  }
+  .slider-single-content div {
+    height: 180px;
+  }
+  .slider-single-content div p{
+    height: fit-content;
   }
 `;
 

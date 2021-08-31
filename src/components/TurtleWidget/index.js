@@ -7,14 +7,14 @@ import Lottie from 'react-lottie';
 const TurtleWidgetContent = styled.div`
 `
 
-export default function TurtleWidget(innerHeight, innerWidth) {
+export default function TurtleWidget({isStopped}) {
   const [width, setWidth] = useState('40%');
   const [height, setHeight] = useState('100%');
   const [bottom, setBottom] = useState(0);
   const [top, setTop] = useState(0);
   const [right, setRight] = useState(0);
   const [animationState, setAnimationState] = useState({
-    isStopped: false, isPaused: false,
+    isStopped: isStopped, isPaused: false,
     direction: 1,
   });
 
@@ -35,30 +35,16 @@ export default function TurtleWidget(innerHeight, innerWidth) {
       setTop('50%');
       setRight('-20%');
     }
+    if (window.innerWidth <= 637) {
+      setRight(0);
+    }
     if (window.innerWidth <= 375) {
       setWidth('100%');
       setHeight('49%');
       setBottom(0);
     }
+    console.log(isStopped)
   }, []);
-
-  // useEffect(() => {
-  //   setAnimationState({
-  //     ...animationState,
-  //     isStopped: !animationState.isStopped, // o contrário do que tiver
-  //   })
-  // }, []);
-  // const reverseAnimation = -1;
-  // const normalAnimation = 1;
-  // useEffect(() => {
-  //   setAnimationState({
-  //     ...animationState,
-  //     isStopped: false,
-  //     direction: animationState.direction === normalAnimation 
-  //     ? reverseAnimation 
-  //     : normalAnimation,
-  //   })
-  // }, []);
 
   return (
     <TurtleWidgetContent>
@@ -66,7 +52,7 @@ export default function TurtleWidget(innerHeight, innerWidth) {
         options={defaultOptions}
         direction={animationState.direction}
         height={height}
-        speed={0.1}
+        speed={isStopped ? 0 : 0.1}
         width={width}
         style={{
           position: 'absolute',
