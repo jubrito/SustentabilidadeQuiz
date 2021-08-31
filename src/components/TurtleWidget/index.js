@@ -42,6 +42,24 @@ export default function TurtleWidget(innerHeight, innerWidth) {
     }
   }, []);
 
+  // useEffect(() => {
+  //   setAnimationState({
+  //     ...animationState,
+  //     isStopped: !animationState.isStopped, // o contrário do que tiver
+  //   })
+  // }, []);
+  // const reverseAnimation = -1;
+  // const normalAnimation = 1;
+  // useEffect(() => {
+  //   setAnimationState({
+  //     ...animationState,
+  //     isStopped: false,
+  //     direction: animationState.direction === normalAnimation 
+  //     ? reverseAnimation 
+  //     : normalAnimation,
+  //   })
+  // }, []);
+
   return (
     <TurtleWidgetContent>
       <Lottie

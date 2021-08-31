@@ -67,7 +67,7 @@ $ cd SustentabilidadeQuiz
 $ npm install
 
 # Instalando as dependências do website
-$ npm install
+$ npm run build
 
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev

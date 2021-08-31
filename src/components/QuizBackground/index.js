@@ -6,7 +6,6 @@ const QuizBackground = styled.div`
   height: 100%;
   background-color: ${({ theme }) => theme.colors.black};
   height: 110vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
   position: relative;
   flex: 1;
   z-index: 1;

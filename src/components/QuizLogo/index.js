@@ -11,15 +11,15 @@ const QuizLogo = styled(Logo)`
   margin: auto;
   margin-top: 30px;
   // Ipad Pro
-    @media screen and (max-width: 1024px) {
-      transform: translateY(-30px) translateZ(0px) !important;
-    }
-    // Ipad
-    @media screen and (max-width: 768px) {
-      transform: translateY(0px) translateZ(0px) !important;
-    }
+  @media screen and (max-width: 1024px) {
+    transform: translateY(-30px) translateZ(0px) !important;
+  }
+  // Ipad
+  @media screen and (max-width: 768px) {
+    transform: translateY(0px) translateZ(0px) !important;
+  }
   img{
-    @media screen and (max-width: 1215px) {
+    @media screen and (max-width: 1350px) {
       max-width: 320px;
     }
     // Ipad Pro
@@ -67,7 +67,7 @@ function Logo(props) {
 }
 
 Logo.propTypes = {
-  className: PropTypes.string.isRequired,
+  // className: PropTypes.string.isRequired,
 };
 
 export default Logo;
