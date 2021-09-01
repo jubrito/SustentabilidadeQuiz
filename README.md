@@ -1,3 +1,5 @@
+- copiar media query do widget pro quiz container 
+
 <div align="center">
 
 ![Node_Badge](https://img.shields.io/badge/node-14.13.1-brightgreen)  ![React_Badge](https://img.shields.io/badge/web-react-ff69b4) ![Next_Badge](https://img.shields.io/badge/framework-nextjs-blue) ![Npm_Badge](https://img.shields.io/badge/npm-6.14.8-red)  ![GitHub](https://img.shields.io/github/license/x0n4d0/SustentabilidadeQuiz)  <a href="https://alura.com.br">

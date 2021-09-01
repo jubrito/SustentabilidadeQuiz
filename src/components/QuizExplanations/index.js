@@ -50,12 +50,17 @@ const QuizExplanations = styled.div`
   } 
   // Ipad Pro
   @media screen and (max-width: 1024px) {
-    padding:0;
+    min-width: 500px;
+  }
+  @media screen and (max-width: 768px) {
+    min-width: calc(100% - 60px);
+    flex-direction: column;
+    padding: 0;
+    margin: 10px 30px;
   }
   @media screen and (max-width: 767px) {
-    min-width: calc(100% - 20px);
-    padding: 10px;
-    flex-direction: column;
+    min-width: calc(100% - 40px);
+    margin: 10px;
   }
   // Surface Duo
   @media screen and (max-width: 540px) {

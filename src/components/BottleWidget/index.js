@@ -21,6 +21,8 @@ export default function BottleWidget({isStopped}) {
   const [height, setHeight] = useState('auto');
   const [bottom, setBottom] = useState('unset');
   const [top, setTop] = useState(140);
+  const [right, setRight] = useState(140);
+  const [left, setLeft] = useState('unset');
   const [animationState, setAnimationState] = useState({
     isStopped: isStopped, isPaused: false,
     direction: 1,
@@ -36,15 +38,24 @@ export default function BottleWidget({isStopped}) {
   };
 
   useEffect(() => {
+    console.log(window.innerWidth)
     if (window.innerWidth <= 1024) {
       setWidth('100%');
-      setHeight('100%');
-      // setBottom('unset');
-      setTop(220);
+      setHeight('72%');
+      setTop('unset');
+      setBottom('110px');
+      setLeft('unset');
+      setRight('260px');
+    }
+    if (window.innerWidth <= 768) {
+      setWidth('80%');
+      setHeight('75%');
+      setRight('39%');
+      setTop('23%');
     }
     if (window.innerWidth <= 637) {
       setHeight('auto');
-      setTop('unset');
+      
       setBottom(0);
     }
   }, []);
@@ -62,7 +73,8 @@ export default function BottleWidget({isStopped}) {
             position: 'absolute',
             top: top,
             bottom: bottom,
-            right: '30%',
+            right: right,
+            left: left,
             zIndex: -1
           }}
         />

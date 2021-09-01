@@ -28,11 +28,15 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: flex-start; */
     height: 480px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1024px) {
+      height: 540px;
+    }
+    @media screen and (max-width: 768px) {
       flex-direction: column;
+      align-items: center;
       height: 100%;
+      width: 100%;
     }
   }
   .mt-15 {

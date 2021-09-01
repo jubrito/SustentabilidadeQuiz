@@ -8,7 +8,7 @@ const TurtleWidgetContent = styled.div`
 `
 
 export default function TurtleWidget({isStopped}) {
-  const [width, setWidth] = useState('40%');
+  const [width, setWidth] = useState('50%');
   const [height, setHeight] = useState('100%');
   const [bottom, setBottom] = useState(0);
   const [top, setTop] = useState(0);
@@ -29,18 +29,18 @@ export default function TurtleWidget({isStopped}) {
 
   useEffect(() => {
     if (window.innerWidth <= 1024) {
-      setWidth('100%');
+      setWidth('80%');
       setHeight('30%');
       setBottom('unset');
       setTop('50%');
-      setRight('-20%');
+      setRight('0');
     }
-    if (window.innerWidth <= 637) {
+    if (window.innerWidth <= 768) {
       setRight(0);
     }
     if (window.innerWidth <= 375) {
-      setWidth('100%');
       setHeight('49%');
+      setWidth('100%');
       setBottom(0);
     }
     console.log(isStopped)
