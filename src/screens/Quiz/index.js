@@ -221,6 +221,11 @@ function QuestionWidget({
   //     } 
   //   }
   // }, [window.innerWidth])
+  const executeScrollToTop = () => window.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  });
     
   return (
     <Widget
@@ -270,6 +275,7 @@ function QuestionWidget({
             if(hasAlreadyConfirmed){
               setTimeout(() => {
                 addResult(isCorrect);
+                executeScrollToTop();
                 onSubmit(); // dispara o onsubmit do form (o método handleQuizPageSubmit)
                 setIsQuestionSubmited(false);
                 setSelectedAlternative(undefined);
@@ -311,7 +317,7 @@ function QuestionWidget({
           {
             hasAlreadyConfirmed ? 
             <Button type="submit" onSubmit={() => handleQuizPageSubmit()} disabled={!hasAlreadyConfirmedDelay}>
-              RESPONDER PRÓXIMA PERGUNTA
+              PRÓXIMA PERGUNTA
             </Button>
             : 
             window.innerWidth < 1024 ? 
@@ -324,12 +330,12 @@ function QuestionWidget({
               duration={500}
             >
               <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
-                CONFIRMAR OPÇÃO SELECIONADA
+                CONFIRMAR
               </Button>
             </Link>
             :
             <Button type="button" onClick={() => {handleExplanation()}} disabled={!hasAlternativeSelected || hasAlreadyConfirmed}>
-              CONFIRMAR OPÇÃO SELECIONADA
+              CONFIRMAR
             </Button>
           }
         </AlternativesForm>

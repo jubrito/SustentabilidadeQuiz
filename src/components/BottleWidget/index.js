@@ -55,7 +55,7 @@ export default function BottleWidget({isStopped}) {
     }
     if (window.innerWidth <= 767) {
       setWidth('80%');
-      setHeight('60%');
+      setHeight('400px');
       setTop('unset');
       setRight('49%');
       setBottom('20px');

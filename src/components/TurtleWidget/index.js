@@ -39,12 +39,12 @@ export default function TurtleWidget({isStopped}) {
       setRight(0);
     }
     if (window.innerWidth <= 414) {
+      setHeight('500px');
+      setTop('unset');
       setBottom(0);
     }
     if (window.innerWidth <= 375) {
-      setHeight('49%');
-      setWidth('100%');
-      setBottom(0);
+      setHeight('400px');
     }
     console.log(isStopped)
   }, []);
