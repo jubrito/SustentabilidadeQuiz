@@ -17,7 +17,6 @@ const QuizExplanations = styled.div`
   font-size: 14px;
   z-index: 10;
   border-radius: ${({ theme }) => theme.borderRadius};
-  /* transform:translateX(15%) translateY(-50%) translateZ(0px); */
 
   h2 {
     width: 100%;
@@ -38,6 +37,11 @@ const QuizExplanations = styled.div`
     height: -webkit-fill-available;
     padding: 0;
     height: 100%;
+  }
+  .explanations--hidden {
+    p, h2, span, a {
+      color: transparent;
+    }
   }
   .explanations__content {
     padding: 10px 20px 10px 20px;
@@ -60,6 +64,7 @@ const QuizExplanations = styled.div`
   }
   @media screen and (max-width: 767px) {
     min-width: calc(100% - 20px);
+    min-height: 500px;
     margin: 10px;
   }
   // Surface Duo

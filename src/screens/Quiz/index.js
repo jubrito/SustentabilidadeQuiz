@@ -221,11 +221,6 @@ function QuestionWidget({
   //     } 
   //   }
   // }, [window.innerWidth])
-  const executeScrollToTop = () => window.scroll({
-    top: 0,
-    left: 0,
-    behavior: "smooth"
-  });
     
   return (
     <Widget
@@ -275,7 +270,6 @@ function QuestionWidget({
             if(hasAlreadyConfirmed){
               setTimeout(() => {
                 addResult(isCorrect);
-                executeScrollToTop();
                 onSubmit(); // dispara o onsubmit do form (o método handleQuizPageSubmit)
                 setIsQuestionSubmited(false);
                 setSelectedAlternative(undefined);
@@ -398,25 +392,29 @@ function QuestionExplanation({
           <QuizExplanations
           as={motion.section}
           // delay quanto tempo espera pra começar e duração em s
-          transition={{ delay: 0, duration: 0.5 }}
+          transition={{ delay: 0, duration: 0, ease: "easeOut" }}
           variants={{
             // o elemento terá estados de animação
-            show: { opacity: 1, x: translateShow.x , y: translateShow.y, z:'0' },
-            hidden: { opacity: 0, x: translateHide.x, y:translateHide.y, z:'100%' },
+            show: { opacity: 1, x: translateShow.x , y: translateShow.y, z:'0', transition: {delay: 0.5} },
+            hidden: { opacity: 0, x: translateHide.x, y:translateHide.y, z:'100%', transition: {delay: 0} },
           }}
           initial="hidden"
           animate={animate}
           >
-          <div ref={myRef} className="explanations">
-            <Subtitle id="explanation"><strong>Resposta correta:</strong> {answer}</Subtitle>
+          <div ref={myRef} className={`explanations explanations--${animate}`}>
+            <Subtitle id="explanation">
+              <strong>Resposta correta:</strong> {answer}
+            </Subtitle>
             <div className="explanations__content">
-                {explanations.map((explanation, explanationIndex) => {
-                return <div key={explanationIndex}>{parse(explanation)}</div>
-                })}
-                <p className="source">Fonte: 
-                {source.map((src, srcIndex) => {
-                return <a href={src.url} key={srcIndex} target="_blank">{src.title}</a>
-                })}
+                {
+                  explanations.map((explanation, explanationIndex) => {
+                  return <div key={explanationIndex}>{parse(explanation)}</div>
+                  })}
+                  <p className="source">Fonte: 
+                  {source.map((src, srcIndex) => {
+                  return <a href={src.url} key={srcIndex} target="_blank">{src.title}</a>
+                  })
+                }
                 </p>
             </div>
           </div>
@@ -495,7 +493,7 @@ export default function QuizPage({
   const [results, setResults] = useState([]);
   const bg = externalBg;
   const bg_mobile = externalBgMobile !== undefined ? externalBgMobile : externalBg;
-  const [action, setAction] = useState("hide");
+  const [action, setAction] = useState("hidden");
   const [hasAlreadyConfirmed, setHasAlreadyConfirmed] = useState(false);
   const [windowWidth, setWindowWidth] = useState('');
   const [windowHeight, setWindowHeight] = useState('');
@@ -536,7 +534,7 @@ export default function QuizPage({
   }, [hasAlreadyConfirmed]);
 
   function handleQuizSubmit() {
-    setAction("hide");
+    setAction("hidden");
     setHasAlreadyConfirmed(false);
     const nextQuestion = questionIndex + 1;
     if (nextQuestion < totalQuestions) {

@@ -46,7 +46,6 @@ export default function TurtleWidget({isStopped}) {
     if (window.innerWidth <= 375) {
       setHeight('400px');
     }
-    console.log(isStopped)
   }, []);
 
   return (
