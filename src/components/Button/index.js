@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.black};
+  box-shadow: 1px 3px 2px 0px rgb(0 255 255);
+  text-shadow: 1px 3px 4px blue;
+	/* background:linear-gradient(to bottom, black 5%, #c62d1f 100%); */
   font-family: 'Ubuntu', sans-serif;
   color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.borderRadius};
@@ -18,11 +21,14 @@ const Button = styled.button`
   cursor: pointer;
   &:hover,
   &:focus {
-    background-color: darken(${({ theme }) => theme.colors.secondary}, 10%);
+    /* background-color: darken(${({ theme }) => theme.colors.secondary}, 10%); */
+    background-color: ${({ theme }) => theme.colors.secondary};
   }
   &:disabled {
     background-color:#646464;
     cursor: not-allowed;
+    box-shadow: none;
+    text-shadow: none;
   }
 `;
 

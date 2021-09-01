@@ -66,7 +66,7 @@
         },
         {
           "image": "https://media.giphy.com/media/ffXJWN9NRGg0w/giphy.gif",
-          "title": "Embalagem de pizza: coloca no reciclável ou não?",
+          "title": "Embalagem de pizza: coloca no reciclável?",
           "answer": 1,
           "explanation": [
             "<p>O papelão, especialmente o ondulado, tem alta reciclabilidade, o que significa que este material vale muito para a indústria, mas as caixas de pizza muitas vezes não. Pizzas são super gordurosas e <strong>suas embalagens possuem restos de condimentos e... muito óleo</strong>. Durante a reciclagem, o papel descartado é misturado com água criando uma pasta que depois de seca vira papel de novo. Mas a água não se mistura com o óleo, lembra das aulas de química na escola? Então, toda <strong>a gordura que grudou na caixa de pizza impede a produção dessa pasta e, então, inutiliza ela pra reciclagem.</strong></p>",
@@ -78,7 +78,7 @@
 
           }],
           "alternatives": [
-            "Se não houver mais pizza dentro, coloca pra reciclar!",
+            "Se não houver mais pizza dentro, recicla!",
             "Coloca no orgânico",
             "Tanto faz"
           ]
@@ -185,7 +185,7 @@
         },
         {
           "image": "https://media.giphy.com/media/5pT47Vs6g1ZxGDK6im/giphy.gif",
-          "title": "O chuveiro solar é a melhor opção, mas qual a pior?",
+          "title": "Chuveiro solar é a melhor opção, mas qual a pior?",
           "answer": 1,
           "explanation": [
             "<p>O ideal seria usar um <strong>sistema misto de energia solar e aquecimento complementar com fonte elétrica</strong>, que responde por apenas 20% do aquecimento, em média. '<i>A conversão para aquecimento solar custa em torno de R$ 5 mil, com sistema de circulação, que garante que a água saia quente imediatamente, e paga-se no prazo de 3 a 5 anos porém apresenta uma restrição: não funciona bem em prédios.'</i></p>",
@@ -261,7 +261,7 @@
     "theme": {
         "colors": {
             "primary": "#052839",
-            "secondary": "#33bef0",
+            "secondary": "#208cdc",
             "tertiary": "#1f32a4",
             "quaternary": "#7396fd",
             "mainBg": "#161a40",

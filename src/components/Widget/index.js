@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Widget = styled.div`
-  /* margin-top: 24px; */
   flex-grow : 1;
   margin-bottom: 24px;
   background-color:rgb(255 255 255 / 100%);
@@ -13,6 +12,7 @@ const Widget = styled.div`
   max-width: 400px;
   min-height: 470px;
   box-shadow: 0px 0px 12px rgb(20 0 0 / 30%);
+  position: relative;
 
   h1, h2, h3 {
     font-size: 16px;
@@ -27,6 +27,10 @@ const Widget = styled.div`
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
+  }
+
+  p.description {
+    margin-top: 5px;
   }
   @media screen and (max-width: 1024px) {
     min-width: 400px;
@@ -51,6 +55,7 @@ const Widget = styled.div`
 `;
 Widget.Content = styled.div`
   padding: 14px;
+  padding-bottom: 50px !important;
   & > *:first-child {
     margin-top: 0;
   }
@@ -62,7 +67,15 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
-  position: relative;
+
+  button {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 93%;
+  }
+ 
   @media screen and (max-width: 1023px) {
     padding: 22px;
   }

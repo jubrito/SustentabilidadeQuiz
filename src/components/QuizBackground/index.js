@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes`
+  0%   {background-color: black;}
+  100%  {background-color: rgb(0 0 0 / 40%);}
+`;
+
+const fadeOut = keyframes`
+  0%   {background-color: rgb(0 0 0 / 40%);}
+  100%  {background-color: none;}
+`;
 
 const QuizBackground = styled.div`
   width: 100%;
@@ -17,16 +27,12 @@ const QuizBackground = styled.div`
     width: 100%;
     height: 100%;
     transition: background 1000s linear;
-    background: black;
+    background: ${({isHomepage}) => isHomepage ? 'rgb(0 0 0 / 40%)' : 'transparent'};
     pointer-events: none;
     top: 0;
     left: 0;
-    transition : opacity 0.5;
-    -webkit-animation: fadein 1000s linear forwards;
-    animation: fadein 1000s linear forwards;
-    opacity: ${({isHomepage}) => (setTimeout(() => {isHomepage ? 0.4 : 0}), 3000)};
-
-    opacity: ${({isHomepage}) => (isHomepage ? 0.4 : 0)};
+    /* opacity: ${({isHomepage}) => (isHomepage ? 0.4 : 0)}; */
+    animation: ${({isHomepage}) => isHomepage ? fadeIn : fadeOut} 1s linear;
   }
 
   @media screen and (max-width: 767px) {

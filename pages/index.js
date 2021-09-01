@@ -78,6 +78,7 @@ export default function Home() {
          }}
          initial="hidden"
          animate="show"
+         logoShouldBeWhite={true}
         />
         <div className="relative">
         <Widget

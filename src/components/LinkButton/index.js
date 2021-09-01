@@ -8,6 +8,7 @@ const StyledLinkButton = styled(Link)`
   &:focus {
     opacity: .5;
   }
+
   &:disabled {
     background-color:#646464;
     cursor: not-allowed;

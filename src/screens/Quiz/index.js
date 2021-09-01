@@ -92,7 +92,6 @@ function LoadingWidget() {
           width="200px"
         />
       </Widget.Content>
-
     </Widget>
   );
 }
@@ -258,7 +257,7 @@ function QuestionWidget({
         <h1>
           {question.title}
         </h1>
-        <p>
+        <p className="description">
           {question.description}
         </p>
 
@@ -277,7 +276,6 @@ function QuestionWidget({
             }
           }}
         >
-          {/* semelhante as alternativas */}
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`;
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
