@@ -4,7 +4,7 @@ import db from '../../../db.json';
 
 const QuizExplanations = styled.div`
   max-width: 750px;
-  min-width: 400px;
+  min-width: 550px;
   height: 100%;
   /* max-height: 500px; */
   flex-grow : 1;
@@ -39,8 +39,11 @@ const QuizExplanations = styled.div`
     height: 100%;
   }
   .explanations--hidden {
-    p, h2, span, a {
+    transition: 2s;
+    opacity: 0.4;
+    * {
       color: transparent;
+      opacity: 0.4;
     }
   }
   .explanations__content {

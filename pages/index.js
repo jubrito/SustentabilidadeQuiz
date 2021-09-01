@@ -79,6 +79,7 @@ export default function Home() {
          initial="hidden"
          animate="show"
         />
+        <div className="relative">
         <Widget
           as={motion.section}
           // delay quanto tempo espera pra começar e duração em s
@@ -103,6 +104,7 @@ export default function Home() {
             </form>
           </Widget.Content>
         </Widget>
+      </div>
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
       <Footer>

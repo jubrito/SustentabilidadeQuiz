@@ -395,8 +395,8 @@ function QuestionExplanation({
           transition={{ delay: 0, duration: 0, ease: "easeOut" }}
           variants={{
             // o elemento terá estados de animação
-            show: { opacity: 1, x: translateShow.x , y: translateShow.y, z:'0', transition: {delay: 0.5} },
-            hidden: { opacity: 0, x: translateHide.x, y:translateHide.y, z:'100%', transition: {delay: 0} },
+            show: { opacity: 1, transition: {delay: 0} },
+            hidden: { opacity: 0, transition: {delay: 0} },
           }}
           initial="hidden"
           animate={animate}
