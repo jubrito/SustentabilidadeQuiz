@@ -53,10 +53,15 @@ export default function BottleWidget({isStopped}) {
       setRight('39%');
       setTop('23%');
     }
-    if (window.innerWidth <= 637) {
-      setHeight('auto');
-      
-      setBottom(0);
+    if (window.innerWidth <= 767) {
+      setWidth('80%');
+      setHeight('60%');
+      setTop('unset');
+      setRight('49%');
+      setBottom('20px');
+    }
+    if (window.innerWidth <= 414) {
+      setBottom('0');
     }
   }, []);
 

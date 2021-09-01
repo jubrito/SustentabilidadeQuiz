@@ -38,6 +38,9 @@ export default function TurtleWidget({isStopped}) {
     if (window.innerWidth <= 768) {
       setRight(0);
     }
+    if (window.innerWidth <= 414) {
+      setBottom(0);
+    }
     if (window.innerWidth <= 375) {
       setHeight('49%');
       setWidth('100%');
