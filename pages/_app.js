@@ -19,8 +19,15 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.black};
     background-color: ${({ theme }) => theme.colors.primary}
   }
+  p, span, strong {
+    background: transparent;
+    transition: background 3s ease;
+  }
   .highlight {
-    background-color: yellow;
+    background: ${(props) => props.theme.colors.highlight};
+    padding: 1px 1px 2px;
+    line-height: 1.4;
+    transition: all 3s ease;
   }
   font-family: 'Ubuntu', sans-serif;
   .relative {
@@ -100,9 +107,6 @@ const GlobalStyle = createGlobalStyle`
   .slider-single-content div p{
     height: fit-content;
   }
-  /* #__next {
-    height: 100vh;
-  } */
 `;
 
 const { theme } = db;

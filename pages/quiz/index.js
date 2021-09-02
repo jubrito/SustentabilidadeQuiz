@@ -10,19 +10,25 @@ export default function QuizDaGaleraPage() {
   useEffect(() => {
     let allQuestions = db.questions;
     let randomQuestionsGenerated = [];
-    for (let i = 0; i < 12; i++)
-    {
-        let random_index;
-        while(!random_index)
-        {
-            let tmp = Math.floor(Math.random() * allQuestions.length);        
-            if( !randomQuestionsGenerated.filter( (g) => allQuestions[tmp] == g).length )
-                random_index = tmp;
-        }
-        randomQuestionsGenerated.push(allQuestions[random_index]);
-        setRandomQuestions(randomQuestionsGenerated);
-    }
+    randomQuestionsGenerated.push(allQuestions[7]);
+    setRandomQuestions(randomQuestionsGenerated);
   }, [])
+  // useEffect(() => {
+  //   let allQuestions = db.questions;
+  //   let randomQuestionsGenerated = [];
+  //   for (let i = 0; i < 12; i++)
+  //   {
+  //       let random_index;
+  //       while(!random_index)
+  //       {
+  //           let tmp = Math.floor(Math.random() * allQuestions.length);        
+  //           if( !randomQuestionsGenerated.filter( (g) => allQuestions[tmp] == g).length )
+  //               random_index = tmp;
+  //       }
+  //       randomQuestionsGenerated.push(allQuestions[random_index]);
+  //       setRandomQuestions(randomQuestionsGenerated);
+  //   }
+  // }, [])
   useEffect(() => {
     console.log(randomQuestions);
   }, [randomQuestions])
