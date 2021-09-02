@@ -63,11 +63,11 @@ Widget.Content = styled.div`
   }
 
   button {
+    width: calc(100% - 30px);
     position: absolute;
     bottom: 13px;
     left: 50%;
     transform: translateX(-50%);
-    width: 92%;
   }
   
   label {
@@ -79,8 +79,18 @@ Widget.Content = styled.div`
   @media screen and (max-width: 1023px) {
     padding: 22px;
   }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 60px !important;
+    button {
+      bottom: 22px;
+      width: calc(100% - 44px);
+    }
+  }
   @media screen and (max-width: 767px) {
     padding: 14px;
+    button {
+      width: calc(100% - 28px);
+    }
   }
 `;
 

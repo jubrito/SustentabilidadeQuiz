@@ -46,7 +46,7 @@ const QuizExplanations = styled.div`
     }
   }
   .explanations__content {
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
   }
 
   @media screen and (max-width: 1215px) {
@@ -62,12 +62,10 @@ const QuizExplanations = styled.div`
     min-width: calc(100% - 60px);
     flex-direction: column;
     padding: 0;
-    margin: 10px 30px;
     min-height: 500px;
   }
   @media screen and (max-width: 767px) {
     min-width: calc(100% - 20px);
-    /* min-height: 500px; */
     margin: 10px;
   }
   // Surface Duo
@@ -75,6 +73,9 @@ const QuizExplanations = styled.div`
     p, h2 {
       font-size: 13px;
     }
+  }
+  @media screen and (max-width: 411px) {
+    margin: 0;
   }
   @media screen and (max-width: 321px) {
     p {
