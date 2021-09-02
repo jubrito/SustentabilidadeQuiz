@@ -1,24 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-
-import animationData2 from '../../screens/Quiz/animations/turtle.json';
 import Lottie from 'react-lottie';
 
+import animationData2 from '../../screens/Quiz/animations/turtle.json';
+import UseWindowSize from '../UseWindowSize';
+
 const TurtleWidgetContent = styled.div`
+ * {
+   transition: opacity 1000ms ease-in-out;
+ }
 `
 
 export default function TurtleWidget({isStopped}) {
+  const windowSize = UseWindowSize();
   const [windowWidth, setWindowWidth] = useState();
-  const [width, setWidth] = useState('50%');
+  const [width, setWidth] = useState('0');
   const [height, setHeight] = useState('100%');
   const [bottom, setBottom] = useState(0);
   const [top, setTop] = useState(0);
   const [right, setRight] = useState(0);
+  const [opacity, setOpacity] = useState('0');
   const [animationState, setAnimationState] = useState({
     isStopped: isStopped, isPaused: false,
     direction: 1,
   });
-
   const defaultOptions = {
     loop: true, 
     autoplay: true, // false não carrega a animação quando recarrega
@@ -27,11 +32,20 @@ export default function TurtleWidget({isStopped}) {
       preserveAspectRatio: 'xMidYMid slice',
     },
   };
-
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
-  })
+    setWindowWidth(windowSize.width);
+  }, [windowSize.width]);
   useEffect(() => {
+    if (!isStopped) {
+      setTimeout(() => {
+        setOpacity(1);
+      }, 500)
+    } 
+  },[]);
+  useEffect(() => {
+    if (windowWidth > 1024) {
+      setWidth('50%');
+    }
     if (windowWidth <= 1024) {
       setWidth('80%');
       setHeight('30%');
@@ -65,7 +79,8 @@ export default function TurtleWidget({isStopped}) {
           bottom: bottom,
           top: top,
           right: right,
-          zIndex: -1
+          zIndex: -1,
+          opacity: opacity,
         }}
       />
     </TurtleWidgetContent>

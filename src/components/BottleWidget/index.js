@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-
-import animationData2 from '../../screens/Quiz/animations/floatingbottle.json';
 import Lottie from 'react-lottie';
 
-const BottleWidgetContent = styled.div`
+import UseWindowSize from '../UseWindowSize';
+import animationData2 from '../../screens/Quiz/animations/floatingbottle.json';
 
+const BottleWidgetContent = styled.div`
+  * {
+    transition: opacity 1000ms ease-in-out;
+  }
   svg {
     transform: scale(1);
   }
@@ -17,6 +20,7 @@ const BottleWidgetContent = styled.div`
 `
 
 export default function BottleWidget({isStopped}) {
+  const windowSize = UseWindowSize();
   const [windowWidth, setWindowWidth] = useState();
   const [width, setWidth] = useState('10%');
   const [height, setHeight] = useState('auto');
@@ -24,11 +28,11 @@ export default function BottleWidget({isStopped}) {
   const [top, setTop] = useState(140);
   const [right, setRight] = useState(140);
   const [left, setLeft] = useState('unset');
+  const [opacity, setOpacity] = useState('0');
   const [animationState, setAnimationState] = useState({
-    isStopped: isStopped, isPaused: false,
+    isStopped: false, isPaused: false,
     direction: 1,
   });
-
   const defaultOptions = {
     loop: true, 
     autoplay: true, // false não carrega a animação quando recarrega
@@ -38,8 +42,15 @@ export default function BottleWidget({isStopped}) {
     },
   };
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
-  })
+    setWindowWidth(windowSize.width);
+  }, [windowSize])
+  useEffect(() => {
+    if (!isStopped) {
+      setTimeout(() => {
+        setOpacity(1);
+      }, 500)
+    }
+  },[]);
   useEffect(() => {
     if (windowWidth <= 1024) {
       setWidth('100%');
@@ -82,7 +93,8 @@ export default function BottleWidget({isStopped}) {
             bottom: bottom,
             right: right,
             left: left,
-            zIndex: -1
+            zIndex: -1,
+            opacity: opacity
           }}
         />
       </div>

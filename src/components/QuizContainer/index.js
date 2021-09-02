@@ -19,12 +19,10 @@ const QuizContainer = styled.div`
     font-size: 14px;
     }
   }
-  // Ipad Pro
   @media screen and (max-width: 1024px) {
     margin: auto 7%;
     min-width: 400px;
   }
-  // Ipad
   @media screen and (max-width: 768px) {
     margin: 0 auto;
     min-height: 700px;
@@ -32,6 +30,9 @@ const QuizContainer = styled.div`
     min-width: min-content;
     max-width: calc(100% - 60px);
     padding-top: 15px;
+  }
+  @media screen and (max-width: 280px) {
+    max-width: calc(100% - 20px);
   }
 
   z-index: 10;

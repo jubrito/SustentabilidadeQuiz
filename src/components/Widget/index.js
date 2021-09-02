@@ -27,7 +27,7 @@ const Widget = styled.div`
     font-weight: 400;
     line-height: 1;
   }
-
+  
   p.description {
     margin-top: 5px;
   }
@@ -46,7 +46,12 @@ const Widget = styled.div`
     min-width: calc(100% - 20px);
     margin: 10px;
   }
-`;
+  @media screen and (max-width: 280px) {
+    p {
+      font-size: 12px;
+    }
+  }
+  `;
 Widget.Content = styled.div`
   padding: 14px;
   padding-bottom: 50px !important;

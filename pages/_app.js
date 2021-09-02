@@ -2,6 +2,7 @@ import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Head from 'next/head';
 import db from '../db.json';
+import UseWindowSize from '../src/components/UseWindowSize';
 
 const GlobalStyle = createGlobalStyle`
   // Reset
@@ -117,7 +118,7 @@ export default function App({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700" rel="stylesheet"/>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossOrigin="anonymous"></link>
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme} windowSize={UseWindowSize()}>
         <GlobalStyle />
         {/* GlobalStyle dentro do theme para que o db json seja lido em todos os componentes */}
         <Component {...pageProps} />

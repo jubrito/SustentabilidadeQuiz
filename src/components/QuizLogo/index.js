@@ -27,10 +27,19 @@ const QuizLogo = styled(Logo)`
   max-width: 450px;
   min-height: 120px;
   animation: ${({color}) => color === 'white' ? fadeIn : fadeOut} 2s linear;
-  /* max-width: 450px; */
-  img{
-    @media screen and (max-width: 1350px) {
+
+  @media screen and (max-width: 1350px) {
+    img {
       max-width: 320px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+  }
+  @media screen and (max-width: 280px) {
+    max-width: 280px;
+    img {
+      max-width: 100%;
     }
   }
 
@@ -40,7 +49,7 @@ const QuizLogo = styled(Logo)`
   }
 `;
 function Logo({ logoShouldBeWhite, ...props }) {
-  const [src, setSrc] = useState('');
+  const [src, setSrc] = useState('./logo-title-aqua-white.png');
   useEffect(() => {
     let color;
     if (logoShouldBeWhite) {

@@ -61,6 +61,9 @@ const Button = styled.button`
     width: 94%;
     bottom: 22px;
   }
+  @media screen and (max-width: 280px) {
+    font-size: 13px;
+  }
 `;
 
 // const Button = styled.button`

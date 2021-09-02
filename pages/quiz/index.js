@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import QuizScreen from '../../src/screens/Quiz';
 import db from '../../db.json';
+import UseWindowSize from '../../src/components/UseWindowSize';
+
 export default function QuizDaGaleraPage() {
 
   const [randomQuestions, setRandomQuestions] = useState(db.questions);
@@ -25,12 +27,13 @@ export default function QuizDaGaleraPage() {
     console.log(randomQuestions);
   }, [randomQuestions])
   return (
-    <ThemeProvider theme={db.theme}>
+    <ThemeProvider theme={db.theme} windowSize={UseWindowSize()}>
       <QuizScreen
         externalQuestions={randomQuestions}
         externalBg={db.bg}
         externalBgMobile={db.bg_mobile}
         externalTextResults={db.results}
+        windowSize={UseWindowSize()}
       />
     </ThemeProvider>
   );

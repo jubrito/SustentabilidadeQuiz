@@ -28,6 +28,7 @@ import ProgressBar from '../../components/ProgressBar';
 import dynamic from 'next/dynamic';
 import { Link, animateScroll as scroll } from "react-scroll";
 import BottleWidget from '../../components/BottleWidget';
+
   // import Carousel from "react-spring-3d-carousel";
   const Carousel = dynamic(
     () => import ('react-spring-3d-carousel'),
@@ -58,7 +59,7 @@ function getIOSInputEventHandlers() {
     }
   };
 }
-function LoadingWidget() {
+function LoadingWidget({maxWidth}) {
   const [animationState, setAnimationState] = useState({
     isStopped: false,
     isPaused: false,
@@ -81,7 +82,16 @@ function LoadingWidget() {
     },
   };
   return (
-    <Widget>
+    <Widget
+      as={motion.section}
+      // delay quanto tempo espera pra começar e duração em s
+      transition={{ delay: 0, duration: 0.5 }}
+      initial="hidden"
+      animate="show"
+      style={{
+        maxWidth: maxWidth
+      }}
+    >
       <Widget.Header>
         <h1>Carregando...</h1>
       </Widget.Header>
@@ -478,7 +488,7 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 export default function QuizPage({
-  externalQuestions, externalBg, externalBgMobile, externalTextResults, projectName, gitHubUser,
+  externalQuestions, externalBg, externalBgMobile, externalTextResults, projectName, gitHubUser, windowSize
 }) {
   const [screenState, setScreenState] = useState(screenStates.LOADING); // estado inicial
   const totalQuestions = externalQuestions.length;
@@ -559,7 +569,7 @@ export default function QuizPage({
     // <div style={{ backgroundImage: `url (${db.bg})` }}>
     <>
     <BreakpointProvider queries={queries}>
-    <QuizBackground backgroundImage={bg} backgroundImageResponsive={bg_mobile}>
+    <QuizBackground backgroundImage={bg} backgroundImageResponsive={bg_mobile} windowSize={windowSize}>
       <QuizContainer>
         <QuizLogo 
          as={motion.section}
@@ -572,12 +582,13 @@ export default function QuizPage({
          }}
          initial="hidden"
          animate="show"
+         logoShouldBeWhite={false}
          />
         {/* Se for loading renderiza o LoadingWidget */}
         {screenState == screenStates.LOADING && (
           <>
             <div className="relative">
-              <LoadingWidget />
+              <LoadingWidget/>
             </div>
           </>
         )}
