@@ -39,7 +39,7 @@ const Button = styled.button`
   &:hover::after{
     transform: translate(0, 0);
   }
-  &:hover {
+  &:hover, &:focus {
     color: white;
     will-change: transform;
   }
