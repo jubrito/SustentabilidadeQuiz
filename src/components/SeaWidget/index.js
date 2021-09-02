@@ -11,6 +11,7 @@ const SeaWidgetContent = styled.div`
 `
 
 export default function SeaWidget({ width, isStopped }) {
+  const [windowWidth, setWindowWidth] = useState();
   const [animationState, setAnimationState] = useState({
     isStopped: isStopped, isPaused: false,
     direction: 1,
@@ -24,6 +25,9 @@ export default function SeaWidget({ width, isStopped }) {
       preserveAspectRatio: 'xMidYMid slice',
     },
   };
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  })
   return (
     <SeaWidgetContent>
       <Lottie

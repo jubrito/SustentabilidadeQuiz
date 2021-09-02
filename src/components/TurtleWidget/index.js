@@ -8,6 +8,7 @@ const TurtleWidgetContent = styled.div`
 `
 
 export default function TurtleWidget({isStopped}) {
+  const [windowWidth, setWindowWidth] = useState();
   const [width, setWidth] = useState('50%');
   const [height, setHeight] = useState('100%');
   const [bottom, setBottom] = useState(0);
@@ -28,25 +29,28 @@ export default function TurtleWidget({isStopped}) {
   };
 
   useEffect(() => {
-    if (window.innerWidth <= 1024) {
+    setWindowWidth(window.innerWidth);
+  })
+  useEffect(() => {
+    if (windowWidth <= 1024) {
       setWidth('80%');
       setHeight('30%');
       setBottom('unset');
       setTop('50%');
       setRight('0');
     }
-    if (window.innerWidth <= 768) {
+    if (windowWidth <= 768) {
       setRight(0);
     }
-    if (window.innerWidth <= 414) {
+    if (windowWidth <= 414) {
       setHeight('500px');
       setTop('unset');
       setBottom(0);
     }
-    if (window.innerWidth <= 375) {
+    if (windowWidth <= 375) {
       setHeight('400px');
     }
-  }, []);
+  }, [windowWidth]);
 
   return (
     <TurtleWidgetContent>

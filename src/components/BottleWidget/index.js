@@ -17,6 +17,7 @@ const BottleWidgetContent = styled.div`
 `
 
 export default function BottleWidget({isStopped}) {
+  const [windowWidth, setWindowWidth] = useState();
   const [width, setWidth] = useState('10%');
   const [height, setHeight] = useState('auto');
   const [bottom, setBottom] = useState('unset');
@@ -36,10 +37,11 @@ export default function BottleWidget({isStopped}) {
       preserveAspectRatio: 'xMidYMid slice',
     },
   };
-
   useEffect(() => {
-    console.log(window.innerWidth)
-    if (window.innerWidth <= 1024) {
+    setWindowWidth(window.innerWidth);
+  })
+  useEffect(() => {
+    if (windowWidth <= 1024) {
       setWidth('100%');
       setHeight('72%');
       setTop('unset');
@@ -47,23 +49,23 @@ export default function BottleWidget({isStopped}) {
       setLeft('unset');
       setRight('260px');
     }
-    if (window.innerWidth <= 768) {
+    if (windowWidth <= 768) {
       setWidth('80%');
       setHeight('75%');
       setRight('39%');
       setTop('23%');
     }
-    if (window.innerWidth <= 767) {
+    if (windowWidth <= 767) {
       setWidth('80%');
       setHeight('400px');
       setTop('unset');
       setRight('49%');
       setBottom('20px');
     }
-    if (window.innerWidth <= 414) {
+    if (windowWidth <= 414) {
       setBottom('0');
     }
-  }, []);
+  }, [windowWidth]);
 
   return (
     <BottleWidgetContent>

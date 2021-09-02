@@ -14,7 +14,7 @@ const QuizBackground = styled.div`
   width: 100%;
   height: 100%;
   background-color: transparent;
-  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: 100vh; //Fallback for browsers that do not support Custom Properties
   position: relative;
   flex: 1;
   z-index: 1;

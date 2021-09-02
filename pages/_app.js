@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 480px;
+    height: 500px;
     @media screen and (max-width: 1024px) {
       height: 540px;
     }
@@ -95,6 +95,9 @@ const GlobalStyle = createGlobalStyle`
   .slider-single-content div p{
     height: fit-content;
   }
+  /* #__next {
+    height: 100vh;
+  } */
 `;
 
 const { theme } = db;

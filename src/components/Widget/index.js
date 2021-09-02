@@ -48,10 +48,6 @@ const Widget = styled.div`
     min-width: calc(100% - 20px);
     margin: 10px;
   }
-  // Surface Duo
-  @media screen and (max-width: 540px) {
-    /* min-height: 500px; */
-  }
 `;
 Widget.Content = styled.div`
   padding: 14px;
@@ -73,7 +69,13 @@ Widget.Content = styled.div`
     bottom: 13px;
     left: 50%;
     transform: translateX(-50%);
-    width: 93%;
+    width: 92%;
+  }
+  
+  label {
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
   }
  
   @media screen and (max-width: 1023px) {

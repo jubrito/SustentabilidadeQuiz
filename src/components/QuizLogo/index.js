@@ -5,11 +5,17 @@ import Link from '../Link';
 
 const fadeIn = keyframes`
   0%   {opacity: 1;}
+  25%   {opacity: 0.8;}
+  50%   {opacity: 0.7;}
+  75%   {opacity: 0.6;}
   100%  {opacity: 0.5;}
 `;
 
 const fadeOut = keyframes`
   0%   {opacity: 0.5;}
+  25%   {opacity: 0.6;}
+  50%   {opacity: 0.7;}
+  75%   {opacity: 0.8;}
   100%  {opacity: 1;}
 `;
 
@@ -19,8 +25,8 @@ const QuizLogo = styled(Logo)`
   padding: 0 14px;
   margin-top: 5px;
   max-width: 450px;
-  min-height: 145px;
-  animation: ${({color}) => color ? fadeIn : fadeOut} 1s linear;
+  min-height: 120px;
+  animation: ${({color}) => color === 'white' ? fadeIn : fadeOut} 2s linear;
   /* max-width: 450px; */
   img{
     @media screen and (max-width: 1350px) {

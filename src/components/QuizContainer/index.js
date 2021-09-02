@@ -3,12 +3,15 @@ import styled from 'styled-components';
 
 const QuizContainer = styled.div`
   width: 100%;
-  /* max-width: 400px; */
-  max-width: calc(100% - 250px);
+  min-width: 400px;
+  max-width: 400px;
   max-height: fit-content;
-  padding-top: 1px;
+  padding-top: 30px;
   margin: auto 10%;
   position: relative;
+  @media screen and (max-height: 700px) {
+    padding-top: 1px;
+  }
   @media screen and (max-width: 1215px) {
     max-width: 320px;
     margin: auto 10%;
@@ -19,29 +22,18 @@ const QuizContainer = styled.div`
   // Ipad Pro
   @media screen and (max-width: 1024px) {
     margin: auto 7%;
-    /* transform: translateY(20%); */
+    min-width: 400px;
   }
   // Ipad
   @media screen and (max-width: 768px) {
     margin: 0 auto;
-    max-width: 100%;
     min-height: 700px;
-    /* max-width: 620px; */
-    /* transform: translateY(10%); */
+    width: 100%;
+    min-width: min-content;
+    max-width: calc(100% - 60px);
+    padding-top: 15px;
   }
-  // Surface Duo
-  @media screen and (max-width: 540px) {
-    /* max-width: 450px; */
-    /* transform: translateY(6%); */
-  }
-  // Iphone Plus
-  @media screen and (max-width: 415px) {
-    /* max-width: 85%; */
-  }
-  // Iphone
-  @media screen and (max-width: 376px) {
-    /* transform: translateY(0%); */
-  }
+
   z-index: 10;
 `;
 
