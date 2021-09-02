@@ -2,11 +2,15 @@ import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
   0%   {background-color: black;}
+  25%  {background-color: rgb(0 0 0 / 80%);}
+  75%  {background-color: rgb(0 0 0 / 50%);}
   100%  {background-color: rgb(0 0 0 / 40%);}
 `;
 
 const fadeOut = keyframes`
   0%   {background-color: rgb(0 0 0 / 40%);}
+  25%   {background-color: rgb(0 0 0 / 30%);}
+  75%   {background-color: rgb(0 0 0 / 10%);}
   100%  {background-color: none;}
 `;
 

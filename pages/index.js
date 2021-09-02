@@ -81,31 +81,31 @@ export default function Home() {
          logoShouldBeWhite={true}
         />
         <div className="relative">
-        <Widget
-          as={motion.section}
-          // delay quanto tempo espera pra começar e duração em s
-          transition={{ delay: 0, duration: 0.5 }}
-          variants={{
-            // o elemento terá estados de animação
-            show: { opacity: 1, y: '0' },
-            hidden: { opacity: 0, y: '100%' },
-          }}
-          initial="hidden"
-          animate="show"
-        >
-          <Widget.Header>
-            <h1>QUIZ</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <form onSubmit={(changeEvent) => submitForm(changeEvent)}>
-              <p>{parse(db.description)}</p>
-              <Button type="submit">
-                CLIQUE AQUI PARA JOGAR
-              </Button>
-            </form>
-          </Widget.Content>
-        </Widget>
-      </div>
+          <Widget
+            as={motion.section}
+            // delay quanto tempo espera pra começar e duração em s
+            transition={{ delay: 0, duration: 0.5 }}
+            variants={{
+              // o elemento terá estados de animação
+              show: { opacity: 1, y: '0' },
+              hidden: { opacity: 0, y: '100%' },
+            }}
+            initial="hidden"
+            animate="show"
+          >
+            <Widget.Header>
+              <h1>QUIZ</h1>
+            </Widget.Header>
+            <Widget.Content>
+              <form onSubmit={(changeEvent) => submitForm(changeEvent)}>
+                <p>{parse(db.description)}</p>
+                <Button type="submit">
+                  CLIQUE AQUI PARA JOGAR
+                </Button>
+              </form>
+            </Widget.Content>
+          </Widget>
+        </div>
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/jubrito/SustentabilidadeQuiz"/>
       <Footer>

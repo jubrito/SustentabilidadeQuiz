@@ -89,7 +89,7 @@ function LoadingWidget() {
         <Lottie
           options={defaultOptions}
           height="auto"
-          width="200px"
+          width="300px"
         />
       </Widget.Content>
     </Widget>
@@ -574,7 +574,13 @@ export default function QuizPage({
          animate="show"
          />
         {/* Se for loading renderiza o LoadingWidget */}
-        {screenState == screenStates.LOADING && <LoadingWidget />}
+        {screenState == screenStates.LOADING && (
+          <>
+            <div className="relative">
+              <LoadingWidget />
+            </div>
+          </>
+        )}
         {screenState == screenStates.QUIZ && (
           <>
           <div className="relative">

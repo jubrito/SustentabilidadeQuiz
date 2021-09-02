@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import db from '../../../db.json';
 
 const QuizExplanations = styled.div`
-  max-width: 750px;
   min-width: 700px;
   height: 100%;
   /* max-height: 500px; */

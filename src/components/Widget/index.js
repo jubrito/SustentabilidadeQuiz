@@ -9,7 +9,6 @@ const Widget = styled.div`
   z-index: 21;
   height: 100%;
   min-width: 400px;
-  max-width: 400px;
   min-height: 470px;
   box-shadow: 0px 0px 12px rgb(20 0 0 / 30%);
   position: relative;
@@ -37,8 +36,7 @@ const Widget = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: 100%;
-    min-width: min-content;
-    max-width: calc(100% - 60px);
+    min-width: calc(100% - 60px);
     height: auto;
     min-height: unset;
     padding: 0;
