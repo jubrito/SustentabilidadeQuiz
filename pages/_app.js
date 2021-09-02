@@ -55,6 +55,10 @@ const GlobalStyle = createGlobalStyle`
     a {
       padding-left: 5px;
       color: ${({ theme }) => theme.colors.primary};
+      &:hover {
+        transition: 0.3s ease-in-out;
+        color: ${({ theme }) => theme.colors.quaternary};
+      }
     }
     @media screen and (max-width: 1215px) {
       font-size: 12px !important;

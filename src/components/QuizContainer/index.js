@@ -9,7 +9,7 @@ const QuizContainer = styled.div`
   padding-top: 30px;
   margin: auto 10%;
   position: relative;
-  @media screen and (max-height: 700px) {
+  @media screen and (max-height: 710px) {
     padding-top: 1px;
   }
   @media screen and (max-width: 1215px) {

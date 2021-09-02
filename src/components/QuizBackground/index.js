@@ -35,7 +35,7 @@ const QuizBackground = styled.div`
     animation: ${({isHomepage}) => isHomepage ? fadeIn : fadeOut} 1s linear;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     height: 100%;
   }
 `;

@@ -4,7 +4,7 @@ import db from '../../../db.json';
 
 const QuizExplanations = styled.div`
   max-width: 750px;
-  min-width: 550px;
+  min-width: 700px;
   height: 100%;
   /* max-height: 500px; */
   flex-grow : 1;
@@ -22,7 +22,7 @@ const QuizExplanations = styled.div`
     width: 100%;
     font-size: 14px;
     font-weight: normal;
-    padding: 15px;
+    padding: 14px;
     border-top-left-radius: ${({ theme }) => theme.borderRadius};
     border-top-right-radius: ${({ theme }) => theme.borderRadius};
     border-bottom-left-radius: 0;
@@ -64,10 +64,11 @@ const QuizExplanations = styled.div`
     flex-direction: column;
     padding: 0;
     margin: 10px 30px;
+    min-height: 500px;
   }
   @media screen and (max-width: 767px) {
     min-width: calc(100% - 20px);
-    min-height: 500px;
+    /* min-height: 500px; */
     margin: 10px;
   }
   // Surface Duo
@@ -94,6 +95,9 @@ QuizExplanations.Carousel = styled.div`
   
   .input-container {
     width: 100%;
+  }
+  @media screen and (max-width: 1024px) {
+    min-width: 550px;
   }
   @media screen and (max-width: 767px) {
     min-width: 100%;

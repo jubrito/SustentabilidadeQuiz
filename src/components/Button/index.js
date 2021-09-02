@@ -8,8 +8,9 @@ const Button = styled.button`
   padding: 10px 16px;
   border-radius: ${({ theme }) => theme.borderRadius};
 	line-height: 1rem;
-	font-size: 14px;
-	font-weight: 600;
+	font-size: 16px;
+  font-family: 'Ubuntu',sans-serif;
+	font-weight: 700;
   color: white;
   text-decoration: none;
   background-color: black;
@@ -17,10 +18,12 @@ const Button = styled.button`
   transition: 0.5s transform ease-in-out;
   will-change: transform;
   z-index: 0;
-  box-shadow: 1px 3px 2px -1px rgb(0 0 0 / 80%);
+  /* box-shadow: 1px 3px 2px -1px rgb(0 0 0 / 80%); */
+  box-shadow: 2px 3px 2px 0px rgb(0 255 255);
+  /* text-shadow: 1px 3px 4px rgb(0 255 255); */
 
   &::after {
-    background-color: #0a364e;
+    background-color: ${({ theme }) => theme.colors.secondary};
     border-radius: ${({ theme }) => theme.borderRadius};
     content: '';
     display: block;
@@ -42,6 +45,8 @@ const Button = styled.button`
   &:hover, &:focus {
     color: white;
     will-change: transform;
+    transition: 0.6s transform ease-out;
+    box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 50%);
   }
   &:disabled {
     background-color:#646464;
@@ -56,7 +61,6 @@ const Button = styled.button`
 
 // const Button = styled.button`
 //   background-color: ${({ theme }) => theme.colors.black};
-//   box-shadow: 1px 3px 2px -1px rgb(0 255 255);
 //   /* text-shadow: 1px 3px 4px blue; */
 // 	/* background:linear-gradient(to bottom, black 5%, #c62d1f 100%); */
 //   font-family: 'Ubuntu', sans-serif;
