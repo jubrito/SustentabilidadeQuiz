@@ -32,7 +32,7 @@ const Button = styled.button`
     color: black;
     transform: translate(-100%, 0);
     transform-origin: top left;
-    transition: 0.3s transform ease-out;
+    transition: 0.4s transform ease-out;
     will-change: transform;
     z-index: -1;
   }
