@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Label = styled.input`
     padding: 15px;
-    font-size: size 14px;
+    font-size: 14px;
     border: 1px solid ${({ theme }) => theme.colors.quaternary};
     border-radius: ${({ theme }) => theme.borderRadius};
     outline: 0;

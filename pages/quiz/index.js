@@ -10,7 +10,7 @@ export default function QuizDaGaleraPage() {
   useEffect(() => {
     let allQuestions = db.questions;
     let randomQuestionsGenerated = [];
-    randomQuestionsGenerated.push(allQuestions[7]);
+    randomQuestionsGenerated.push(allQuestions[15]);
     setRandomQuestions(randomQuestionsGenerated);
   }, [])
   // useEffect(() => {

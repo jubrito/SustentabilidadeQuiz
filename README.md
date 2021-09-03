@@ -1,3 +1,4 @@
+https://www.ecycle.com.br/postos/reciclagem.php
 - copiar media query do widget pro quiz container 
  "explanation": [
             "<p>Materiais <strong>reciclados</strong> são aqueles que possuiam outros usos mas foram <u>reaproveitados através do processo de reciclagem</u> para se transformarem em novos produtos. Já os <strong>recicláveis</strong> são aqueles com potencial para reciclagem.</p>", 

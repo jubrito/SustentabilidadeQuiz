@@ -155,7 +155,7 @@
         },
         {
           "image": "https://media.giphy.com/media/w5eNdiZw85xN6/giphy.gif",
-          "title": "'Isopor é um tipo de plástico não reciclável por ser derivado do petróleo'",
+          "title": "O Isopor...",
           "answer": 1,
           "explanation": [
             "<p>Sim, <span class='highlight'>isopor é um plástico derivado do petróleo e 100% reciclável</span>. Esse mito sobre reciclagem é tão forte que o isopor quase não é lembrado na hora da separação. O que é péssimo para o planeta!</p>",
@@ -167,28 +167,30 @@
             "url": "https://bhrecicla.com.br/blog/5-mitos-sobre-reciclagem-que-precisamos-desmentir/"
           }],
           "alternatives": [
-            "Isopor é um tipo de plástico não reciclável",
-            "Isopor é um tipo de plástico reciclável",
-            "Isopor não é um tipo de plástico e é reciclável",
-            "Isopor não é um tipo de plástico e é reciclável"
+            "É um tipo de plástico não reciclável por ser derivado do petróleo",
+            "É um tipo de plástico reciclável",
+            "Não é um tipo de plástico e não é reciclável",
+            "Não é um tipo de plástico mas é reciclável"
           ]
         },
         {
           "image": "https://media.giphy.com/media/NsBeF8XkXyIebEnjG3/giphy.gif",
           "title": "Produtos só podem ser reciclados uma vez?",
-          "answer": 1,
+          "description": "Verdade, mentira ou depende?",
+          "answer": 2,
           "explanation": [
-            "<p>Não! <strong>Alguns materiais podem ser reciclados infinitas vezes</strong>, como é o caso do vidro. Isso varia de acordo com a resistência e durabilidade de cada produto. Outro bom exemplo neste quesito são as latinhas de alumínio, cujo <strong>processo de reaproveitamento permite um retorno do item às prateleiras em cerca de 60 dias</strong>. Além disso, o material pode ser reaproveitado para outros fins.</p>",
+            "<p><span class='highlight'><strong>Alguns materiais podem ser reciclados infinitas vezes</strong>, como é o caso do vidro. Isso varia de acordo com a resistência e durabilidade de cada produto.</span> Outro bom exemplo neste quesito são as latinhas de alumínio, cujo <strong>processo de reaproveitamento permite um retorno do item às prateleiras em cerca de 60 dias</strong>. Além disso, o material pode ser reaproveitado para outros fins.</p>",
             "<p>Para se ter uma ideia, uma folha de papel, que é o produto que tem a vida mais curta dentro do processo, <strong>aguenta de cinco a sete reciclagens</strong>. É bastante coisa, não é mesmo? Já o plástico é considerado o mais complexo dentre os materiais pela variedade enorme de modelos que podem ser reciclados poucas ou muitas vezes, dependendo de sua composição.</p>",
-            "<p>Ou seja: <strong>o esforço vale a pena sim.</strong></p>"
+            "<p>Ou seja: <strong class='highlight'>o esforço vale a pena sim, produtos podem ser reciclados mais de uma vez!</strong></p>"
           ],
           "source": [{
             "title": "Conheça alguns mitos da sustentabilidade — Recicla Sampa",
             "url": "https://www.reciclasampa.com.br/artigo/no-dia-da-mentira-conheca-alguns-mitos-da-sustentabilidade"
           }],
           "alternatives": [
-            "Sim, isso inclusive me desanima a reciclar, sinto que não vale o esforço",
-            "Mentira!"
+            "Infelizmente é verdade, isso inclusive me desanima a reciclar",
+            "Depende do material",
+            "Mentira"
           ]
         },
         {
@@ -196,9 +198,9 @@
           "title": "Chuveiro solar é a melhor opção pro meio ambiente, mas qual a pior?",
           "answer": 1,
           "explanation": [
-            "<p>O ideal seria usar um <strong>sistema misto de energia solar e aquecimento complementar com fonte elétrica</strong>, que responde por apenas 20% do aquecimento, em média. '<i>A conversão para aquecimento solar custa em torno de R$ 5 mil, com sistema de circulação, que garante que a água saia quente imediatamente, e paga-se no prazo de 3 a 5 anos porém apresenta uma restrição: não funciona bem em prédios.'</i></p>",
+            "<p><span class='highlight'>O ideal seria usar um <strong>sistema misto de energia solar e aquecimento complementar com fonte elétrica</strong></span>, que responde por apenas 20% do aquecimento, em média. '<i>A conversão para aquecimento solar custa em torno de R$ 5 mil, com sistema de circulação, que garante que a água saia quente imediatamente, e <strong>paga-se no prazo de 3 a 5 anos</strong> porém apresenta uma restrição: não funciona bem em prédios.'</i></p>",
             "<p>Em segundo lugar, aparece o gás. <i>“A queima do gás não deixa resíduos; o problema dele é não ser renovável”</i>.</p>",
-            "<p>Já <strong>a pior opção é o chuveiro elétrico</strong>, presente em cerca de <strong>90% das casas do Brasil</strong>. Se a demanda cresce, para atender ao horário de pico, entre 18h e 21h, é preciso aumentar a capacidade de fornecimento, <strong>causando impacto ambiental </strong>na região onde a hidrelétrica é construída.</p>"
+            "<p><span class='highlight'>Já <strong>a pior opção é o chuveiro elétrico</strong>, presente em cerca de <strong>90% das casas do Brasil</strong>. Quando a demanda cresce para atender ao horário de pico, entre 18h e 21h, é preciso aumentar a capacidade de fornecimento, <strong>causando grande impacto ambiental </strong>na região onde a hidrelétrica é construída.</span></p>"
           ],
           "source": [{
             "title": "5 mitos sobre reciclagem que precisamos desmentir! — BH Recicla",
@@ -206,7 +208,8 @@
           }],
           "alternatives": [
             "Chuveiro a gás",
-            "Chuveiro elétrico"
+            "Chuveiro elétrico",
+            "Ambos são igualmente ruins"
           ]
         },
         {
@@ -214,14 +217,15 @@
           "title": "Abandonar o uso da sacolinha plástica no supermercado ajuda o meio-ambiente?",
           "answer": 1,
           "explanation": [
-            "<p>Mas se abandonar a sacola plástica significar comprar um saco plástico para embalar o lixo, não adianta. Como as <strong>sacolas plásticas vêm de matérias-primas fósseis não-renováveis que demoram séculos para se degradar na natureza</strong>, o ideal é usar <strong>sacolas retornáveis</strong>. Quando for necessário usar as descartáveis, deve-se buscar sacolas resistentes para aguentar mais peso.</p>"
+            "<p>Ajuda, mas se abandonar a sacola plástica significar comprar um saco plástico para embalar o lixo, não adianta. <span class='highlight'>Como as <strong>sacolas plásticas vêm de matérias-primas fósseis não-renováveis que demoram séculos para se degradar na natureza</strong>, o ideal é usar <strong>sacolas retornáveis</strong></span>. Quando for necessário usar as descartáveis, deve-se buscar sacolas resistentes para aguentar mais peso.</p>",
+            "<p><span class='highlight'>Além das retornáveis, <strong>existem sacolas recicláveis feitas a partir de plásticos retirados do meio ambiente</strong>. Muitas opções saem por 1 real a sacola, apenas alguns centávos a mais do que normalmente se paga por sacolas prejudiciais a natureza.</span></p>"
           ],
           "source": [{
             "title": "5 mitos sobre reciclagem que precisamos desmentir! — BH Recicla",
             "url": "https://bhrecicla.com.br/blog/5-mitos-sobre-reciclagem-que-precisamos-desmentir/"
           }],
           "alternatives": [
-            "Pegar sacolinhas do mercado evita a compra de mais sacolas de plástico para embalar o lixo",
+            "Não, pegar sacolinhas do mercado evita a compra de mais sacolas de plástico para embalar o lixo",
             "Ajuda sim"
           ]
         },
@@ -230,14 +234,20 @@
           "title": "Qual das opções abaixo é melhor para o meio ambiente?",
           "answer": 0,
           "explanation": [
-            "<p>Primeiro, a gasolina é um recurso natural finito. <strong>Etanol é renovável</strong>. De acordo com os últimos trabalhos científicos, cada litro de etanol utilizado nos veículos libera, do ciclo completo, 0,26 quilos de gás carbônico. Já a gasolina, por litro de etanol equivalente, libera 2,28 quilos de gás carbônico.</p>",
-            "<p>Ou seja, <strong>a gasolina polui quase 10 vezes mais</strong>.</p>",
-            "<p>Além disso, se a safra de cana for bem manejada (sem queimadas, por exemplo), com a tecnologia agrícola adequada, o <strong>crescimento da próxima safra de cana absorve gás carbônico da atmosfera</strong>.</p>"
+            "<p><span class='highlight'>Primeiro, a gasolina e o diesel são recursos naturais finitos. <strong>Etanol é renovável</strong>.</span></p>",
+            "<p>De acordo com os últimos trabalhos científicos, cada litro de etanol utilizado nos veículos libera, do ciclo completo, 0,26 quilos de gás carbônico. Já a gasolina, por litro de etanol equivalente, libera 2,28 quilos de gás carbônico. <span class='highlight'>Ou seja, <strong>a gasolina polui quase 10 vezes mais</strong>.</span></p>",
+            "<p>E o óleo diesel, além de não ser renovável, possui enxofre, o qual, durante a combustão, forma os gases tóxicos dióxido de enxofre e trióxido de enxofre. Esses gases são eliminados na atmosfera e <strong>contribuem para o aumento da poluição do ar e para a formação da chuva ácida</strong>.</p>",
+            "<p><span class='highlight'>Além do etanol ser renovável, se a safra de cana for bem manejada durante a sua produção (sem queimadas, por exemplo), com a tecnologia agrícola adequada, o <strong>crescimento da próxima safra de cana absorve gás carbônico da atmosfera</strong>.</span></p>"
           ],
-          "source": [{
-            "title": "5 mitos sobre reciclagem que precisamos desmentir! — BH Recicla",
-            "url": "https://bhrecicla.com.br/blog/5-mitos-sobre-reciclagem-que-precisamos-desmentir/"
-          }],
+          "source": [
+            {
+              "title": "5 mitos sobre reciclagem que precisamos desmentir! — BH Recicla,",
+              "url": "https://bhrecicla.com.br/blog/5-mitos-sobre-reciclagem-que-precisamos-desmentir/"
+            }, 
+            {
+              "title": "Mito ou verdade? — IstoÉ",
+              "url": "https://istoe.com.br/32395_MITO+OU+VERDADE+/" 
+            }],
           "alternatives": [
             "Etanol",
             "Gasolina",
@@ -246,20 +256,98 @@
         },
         {
           "image": "https://media.giphy.com/media/l46CsHym8hrV9s58I/giphy.gif",
-          "title": "Glitter prejudica o ambiente?",
+          "title": "O Glitter comum...",
           "description": "",
           "answer": 1,
           "explanation": [
-            "<p>O glitter comum é feito de micropartículas de plástico, metalizadas com alumínio e tingidas e leva mais de mil anos para se decompor!</p>",
-            "<p>Como é quase impossível coletar microplástico, ele vai para a rede de esgoto e acaba contaminando oceanos. Por isso, <strong>prefira marcas de glitters ecológicos</strong> feitos com materiais biodegradáveis.</p>"
+            "<p><strong class='highlight'>O glitter comum é feito de micropartículas de plástico, metalizadas com alumínio e tingidas e leva mais de mil anos para se decompor!</strong></p>",
+            "<p>Como é quase impossível coletar microplástico, ele vai para a rede de esgoto e acaba contaminando oceanos, principalmente se você utiliza o banho para removê-los do seu corpo. Por mais que se filtre, decante, purifique a água antes de devolvê-la aos rios e mares, esse plásticos persistentes e minúsculos tendem a permanecer por lá, acabam contaminando o solo e o fundo dos rios e mares.</p>",
+            "<p><span class='highlight'><strong>Remove-los antes do banho é uma boa pratica, mas ainda assim prefira marcas de glitters ecológicos</strong> produzidos a base de produtos naturais feitos com materiais biodegradáveis evitando assim o microplástico, um dos maiores vilões da sustentabilidade.</span></p>",
+            "<p><strong>Glitters comestíveis</strong> são uma alternativa por serem 100% biodegradáveis. Outra opção é o <strong>Pó de Mica</strong> - nome genérico dado a um grupo de minerais que possuem propriedades similares – e, entre elas, está o brilho. O pó de mica é usado como matéria-prima em diferentes cosméticos e tem efeito brilhante bem similar ao da purpurina, mas com menos impacto ambiental.</p>"
           ],
           "source": [{
-            "title": "Quer saber como curtir o carnaval de forma mais sustentável? — Nestlé",
+            "title": "Quer saber como curtir o carnaval de forma mais sustentável? — Nestlé,",
             "url": "https://www.nestle.com.br/proposito/repensar/quer-saber-como-curtir-o-carnaval-de-forma-mais-sustentavel"
+          }, {
+            "title": "Glitter faz mal ao meio ambiente? — Super Interessante",
+            "url": "https://super.abril.com.br/mundo-estranho/glitter-realmente-faz-mal-ao-meio-ambiente/"
           }],
           "alternatives": [
-            "Um pouquinho não faz mal",
-            "Prejudica muito"
+            "É feito de plástico mas não é reciclável",
+            "É feito de plástico portanto se for removido fora do banho, é reciclável"
+          ]
+        },
+        {
+          "image": "./quiz-caixa_papeltoalha_foto_isopor_adesivo.jpg",
+          "title": "Quantos objetos NÃO recicláveis estão presentes nessa foto?",
+          "description": "Existem 5 itens na imagem: Caixa de papelão, Etiqueta, Isopor, Papel-toalha e Fotografia.",
+          "answer": 1,
+          "explanation": [
+            "<p><strong class='highlight'>Apenas a caixa de papelão e o isopor são recicláveis nessa imagem.</strong></p>",
+            "<p><span class='highlight'><strong>Adesivos e etiquetas:</strong></span> Etiquetas e adesivos de uma forma geral também não são recicláveis. Isso porque eles são feitos de fibras difíceis de serem quebradas. <strong>Por isso, uma boa dica é remover etiquetas adesivas antes de descartar produtos recicláveis</strong> (como potes de iogurte e requeijão). Caso os adesivos passem pelo processo de reciclagem junto com as embalagens, eles <strong>não serão eliminados completamente, contaminando o material recém-reciclado.</strong></p>",
+            "<p><span class='highlight'><strong>Isopor:</strong></span> Apesar de ser 100% reciclável, a melhor atitude que podemos ter em relação ao isopor é, na verdade, evitar usá-lo e cobrar para que as empresas façam o mesmo. Devido à sua origem de uma fonte não renovável, seus impactos e o baixo índice de reciclagem.</p>",
+            "<p><span class='highlight'><strong>Papel toalha:</strong></span> Ao contrário do que parece, ele não é tão fácil de reciclar quanto outros papéis. Isso porque ele é feito à base de celulose e, como a água não consegue entrar bem nas fibras do material, a reciclagem acaba sendo mais complicada. O mesmo vale pro papel higiênico.</p>",
+            "<p><span class='highlight'><strong>Fotografias</strong></span>: Quando uma imagem é revelada, o papel passa por transformações químicas. Para quem não sabe, fotografias e negativos (filmes fotográficos) contêm cristais de prata em sua composição, o que impossibilita o processo de reciclagem.</p>"
+          ],
+          "source": [{
+            "title": "Isopor: reciclável ou não — Conexão Planeta — Letícia Klein,",
+            "url": "https://conexaoplaneta.com.br/blog/isopor-reciclavel-ou-nao/"
+          }, {
+            "title": "Saiba quais materiais precisam ir direto pro lixo — Qualitá",
+            "url": "https://www.casapraticaqualita.com.br/noticia/o-que-nao-pode-ser-reciclado-saiba-quais-materiais-precisam-ir-direto-pro-lixo_a1775/1"
+          }],
+          "alternatives": [
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "image": "https://itsthesway.com/wp-content/uploads/2020/03/snacks.gif",
+          "title": "Afinal, onde descartar embalagens plásticas metalizadas?",
+          "description": "O que fazer com embalagens de salgadinho?",
+          "answer": 0,
+          "explanation": [
+            "<p>Embalagens metalizadas são feitas de um material chamado BOPP (película de polipropileno biorientada), <strong>existindo controvérsias sobre sua reciclagem</strong>.</p>",
+            "<p><strong class='highlight'>Embora pesquisas revelem que o material é reciclável, na maioria dos lugares ele é considerado não reciclável por possuir alto custo e baixo retorno no mercado da reciclagem, além da dificuldade de limpeza. Isso faz com que embalagens metalizadas não sejam recolhidas pela maioria das cooperativas.</strong></p>",
+            "<p>De acordo com a prefeitura da cidade de São Paulo, por exemplo, <strong>o material é considerado não-reciclável</strong> e não é coletado pelos catadores e cooperativas vinculadas à instituição. Porém, há estudos publicados na Índia que atestam que o BOPP é 100% reciclável. As embalagens metalizadas só não têm um índice maior de reciclagem porque <strong>falta educação para os usuários limparem o material, além de pouca informação dos recicladores e produtores acerca das possibilidades de reaproveitamento</strong>.</p>",
+            "<p>E relaxa! Se você respondeu 'apenas no ponto de coleta' e na sua cidade os pontos recebem papéis plastificados, parafinados ou metalizados, pode considerar que você acertou ;)</p>"
+          ],
+          "source": [{
+            "title": "Pacotes laminados são recicláveis? — eCycle,",
+            "url": "https://www.ecycle.com.br/pacotes-laminados-sao-reciclaveis/"
+          }, {
+            "title": "'Reciclável' em São Paulo — Recicla Sampa",
+            "url": "https://www.reciclasampa.com.br/reciclavel"
+          }],
+          "alternatives": [
+            "Descartar no lixo comum orgânico",
+            "Descartar no reciclável (plástico)",
+            "Descartar apenas no ponto de coleta"
+          ]
+        },
+        {
+          "image": "./quiz-plasticos.png",
+          "title": "Quais plásticos da imagem são recicláveis?",
+          "description": "1. PVC, 2. Esponja, 3. Fita crepe, 4. Escova de dentes",
+          "answer": 0,
+          "explanation": [
+            "<p>Embalagens metalizadas são feitas de um material chamado BOPP (película de polipropileno biorientada), <strong>existindo controvérsias sobre sua reciclagem</strong>.</p>",
+            "<p><strong class='highlight'>Embora pesquisas revelem que o material é reciclável, na maioria dos lugares ele é considerado não reciclável por possuir alto custo e baixo retorno no mercado da reciclagem, além da dificuldade de limpeza. Isso faz com que embalagens metalizadas não sejam recolhidas pela maioria das cooperativas.</strong></p>",
+            "<p>De acordo com a prefeitura da cidade de São Paulo, por exemplo, <strong>o material é considerado não-reciclável</strong> e não é coletado pelos catadores e cooperativas vinculadas à instituição. Porém, há estudos publicados na Índia que atestam que o BOPP é 100% reciclável. As embalagens metalizadas só não têm um índice maior de reciclagem porque <strong>falta educação para os usuários limparem o material, além de pouca informação dos recicladores e produtores acerca das possibilidades de reaproveitamento</strong>.</p>",
+            "<p>E relaxa! Se você respondeu 'apenas no ponto de coleta' e na sua cidade os pontos recebem papéis plastificados, parafinados ou metalizados, pode considerar que você acertou ;)</p>"
+          ],
+          "source": [{
+            "title": "Pacotes laminados são recicláveis? — eCycle,",
+            "url": "https://www.ecycle.com.br/pacotes-laminados-sao-reciclaveis/"
+          }, {
+            "title": "'Reciclável' em São Paulo — Recicla Sampa",
+            "url": "https://www.reciclasampa.com.br/reciclavel"
+          }],
+          "alternatives": [
+            "PVC",
+            "PVC e Escova de dentes",
+            "Descartar apenas no ponto de coleta"
           ]
         }
       ],

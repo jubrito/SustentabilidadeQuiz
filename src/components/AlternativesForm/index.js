@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const AlternativesForm = styled.form`
   label {
+    font-size: 15px;
     &[data-selected="true"] {
       background-color: ${({ theme }) => theme.colors.primary};
       color: white;
@@ -18,6 +19,10 @@ const AlternativesForm = styled.form`
       opacity: 1;
     } 
   }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media
 `;
 
 export default AlternativesForm;
