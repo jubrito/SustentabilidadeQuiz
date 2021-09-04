@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-// import db from '../../../db.json';
-// Render das telas (da rota Quiz)
 import Lottie from 'react-lottie';
 import { motion } from 'framer-motion';
 import Widget from '../../components/Widget';
@@ -29,14 +27,6 @@ import dynamic from 'next/dynamic';
 import { Link, animateScroll as scroll } from "react-scroll";
 import BottleWidget from '../../components/BottleWidget';
 
-  // import Carousel from "react-spring-3d-carousel";
-  const Carousel = dynamic(
-    () => import ('react-spring-3d-carousel'),
-    {
-    ssr: false
-    }
-  )
-// import {Carousel} from '3d-react-carousal';
 function isIOS() {
   return (
     (/iPad|iPhone|iPod/.test(navigator.platform) ||
