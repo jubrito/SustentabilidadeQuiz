@@ -60,6 +60,7 @@ export default function Credits(props) {
             </defs>
           </svg>
         </a>
+        <div class="powr-hit-counter" id="b93aa091_1630799350"></div>
     </FooterWrapper>
     </>
   );

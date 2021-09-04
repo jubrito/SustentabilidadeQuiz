@@ -66,6 +66,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <meta property="og:title" content={db.title} key="title" />
         <meta property="og:image" content={db.backgroundImage} />
+        <script src="https://www.powr.io/powr.js?platform=react"></script>
       </Head>
       <QuizContainer>
         <QuizLogo 

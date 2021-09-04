@@ -120,6 +120,10 @@ const GlobalStyle = createGlobalStyle`
   .slider-single-content div p{
     height: fit-content;
   }
+  .powr-hit-counter{
+    position: absolute;
+    right: 0;
+  }
 `;
 
 const { theme } = db;
