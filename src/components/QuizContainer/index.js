@@ -25,7 +25,7 @@ const QuizContainer = styled.div`
   }
   @media screen and (max-width: 768px) {
     margin: 0 auto;
-    min-height: 700px;
+    min-height: 1024px;
     width: 100%;
     min-width: min-content;
     max-width: calc(100% - 60px);
@@ -33,6 +33,7 @@ const QuizContainer = styled.div`
   }
   @media screen and (max-width: 280px) {
     max-width: calc(100% - 20px);
+    min-height: 100%;
   }
 
   z-index: 10;

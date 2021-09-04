@@ -41,10 +41,11 @@ const QuizBackground = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    height: 1360px;
+    min-height: 1360px;
   }
   @media screen and (max-width: 768px) {
-    height: 1024px;
+    min-height: 1024px;
+    height: max-content;
   }
   @media screen and (max-width: 767px) {
     height: 100%;

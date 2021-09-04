@@ -18,7 +18,7 @@ const FooterBox = styled.footer`
     font-size: 10px;
     font-family: 'Ubuntu', sans-serif;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     position: relative;
   }
 `;

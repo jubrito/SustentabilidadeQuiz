@@ -23,6 +23,19 @@ const GlobalStyle = createGlobalStyle`
     background: transparent;
     transition: background 3s ease;
   }
+  a {
+    color: ${({ theme }) => theme.colors.tertiary};
+    &:hover {
+      transition: 0.3s ease-in-out;
+      color: ${({ theme }) => theme.colors.quaternary};
+    }
+  }
+  .description {
+    p{
+      font-size: 17px;
+    }
+  }
+    
   .highlight {
     background: ${(props) => props.theme.colors.highlight};
     padding: 1px 1px 2px;

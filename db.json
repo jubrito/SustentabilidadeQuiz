@@ -1,6 +1,6 @@
 {
     "title": "Sustentabilidade Quiz",
-    "description": "O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! <strong>O primeiro passo para transformar o mundo é entender os impactos das suas ações e, ao mesmo tempo, descobrir novas alternativas.</strong><p> Mas responda com sinceridade, a melhor forma de evoluir é identificando oportunidades de melhoria :)</p>",
+    "description": "<p><strong>O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis!</strong></p><p> O primeiro passo para transformar o mundo é entender os impactos das nossas ações e, ao mesmo tempo, descobrir novas alternativas.</p><p> Os resultados estarão disponíveis apenas pra você, então <strong>responda com sinceridade e sem medo de errar</strong>. A melhor forma de evoluir é identificando por onde começar :)</p><p>7 perguntas serão sorteadas aleatoriamente.</p>",
     "bg": "./bg.jpg",
     "bg_mobile": "./bg_mobile.jpg",
     "questions": [
@@ -284,9 +284,9 @@
           "answer": 1,
           "explanation": [
             "<p><strong class='highlight'>Apenas a caixa de papelão e o isopor são recicláveis nessa imagem.</strong></p>",
-            "<p><span class='highlight'><strong>Adesivos e etiquetas:</strong></span> Etiquetas e adesivos de uma forma geral também não são recicláveis. Isso porque eles são feitos de fibras difíceis de serem quebradas. <strong>Por isso, uma boa dica é remover etiquetas adesivas antes de descartar produtos recicláveis</strong> (como potes de iogurte e requeijão). Caso os adesivos passem pelo processo de reciclagem junto com as embalagens, eles <strong>não serão eliminados completamente, contaminando o material recém-reciclado.</strong></p>",
-            "<p><span class='highlight'><strong>Isopor:</strong></span> Apesar de ser 100% reciclável, a melhor atitude que podemos ter em relação ao isopor é, na verdade, evitar usá-lo e cobrar para que as empresas façam o mesmo. Devido à sua origem de uma fonte não renovável, seus impactos e o baixo índice de reciclagem.</p>",
-            "<p><span class='highlight'><strong>Papel toalha:</strong></span> Ao contrário do que parece, ele não é tão fácil de reciclar quanto outros papéis. Isso porque ele é feito à base de celulose e, como a água não consegue entrar bem nas fibras do material, a reciclagem acaba sendo mais complicada. O mesmo vale pro papel higiênico.</p>",
+            "<p><span class='highlight'><strong>Adesivos e etiquetas</strong></span>: Etiquetas e adesivos de uma forma geral também não são recicláveis. Isso porque eles são feitos de fibras difíceis de serem quebradas. <strong>Por isso, uma boa dica é remover etiquetas adesivas antes de descartar produtos recicláveis</strong> (como potes de iogurte e requeijão). Caso os adesivos passem pelo processo de reciclagem junto com as embalagens, eles <strong>não serão eliminados completamente, contaminando o material recém-reciclado.</strong></p>",
+            "<p><span class='highlight'><strong>Isopor</strong></span>: Apesar de ser 100% reciclável, a melhor atitude que podemos ter em relação ao isopor é, na verdade, evitar usá-lo e cobrar para que as empresas façam o mesmo. Devido à sua origem de uma fonte não renovável, seus impactos e o baixo índice de reciclagem.</p>",
+            "<p><span class='highlight'><strong>Papel toalha</strong></span>: Ao contrário do que parece, ele não é tão fácil de reciclar quanto outros papéis. Isso porque ele é feito à base de celulose e, como a água não consegue entrar bem nas fibras do material, a reciclagem acaba sendo mais complicada. O mesmo vale pro papel higiênico e para a maioria dos guardanapos.</p>",
             "<p><span class='highlight'><strong>Fotografias</strong></span>: Quando uma imagem é revelada, o papel passa por transformações químicas. Para quem não sabe, fotografias e negativos (filmes fotográficos) contêm cristais de prata em sua composição, o que impossibilita o processo de reciclagem.</p>"
           ],
           "source": [{
@@ -329,25 +329,109 @@
         {
           "image": "./quiz-plasticos.png",
           "title": "Quais plásticos da imagem são recicláveis?",
-          "description": "1. PVC, 2. Esponja, 3. Fita crepe, 4. Escova de dentes",
-          "answer": 0,
+          "description": "Imagem: PVC, Esponja e Escova de dentes",
+          "answer": 2,
           "explanation": [
-            "<p>Embalagens metalizadas são feitas de um material chamado BOPP (película de polipropileno biorientada), <strong>existindo controvérsias sobre sua reciclagem</strong>.</p>",
-            "<p><strong class='highlight'>Embora pesquisas revelem que o material é reciclável, na maioria dos lugares ele é considerado não reciclável por possuir alto custo e baixo retorno no mercado da reciclagem, além da dificuldade de limpeza. Isso faz com que embalagens metalizadas não sejam recolhidas pela maioria das cooperativas.</strong></p>",
-            "<p>De acordo com a prefeitura da cidade de São Paulo, por exemplo, <strong>o material é considerado não-reciclável</strong> e não é coletado pelos catadores e cooperativas vinculadas à instituição. Porém, há estudos publicados na Índia que atestam que o BOPP é 100% reciclável. As embalagens metalizadas só não têm um índice maior de reciclagem porque <strong>falta educação para os usuários limparem o material, além de pouca informação dos recicladores e produtores acerca das possibilidades de reaproveitamento</strong>.</p>",
-            "<p>E relaxa! Se você respondeu 'apenas no ponto de coleta' e na sua cidade os pontos recebem papéis plastificados, parafinados ou metalizados, pode considerar que você acertou ;)</p>"
+            "<p><strong class='highlight'>PVC</strong>: 100% reciclável e, como qualquer termoplástico, pode ser facilmente reciclado.</p>",
+            "<p><strong class='highlight'>Esponja de lavar louça comum</strong>: é feita de uma mistura de plásticos, o que faz com que sua <strong>reciclagem seja muito difícil e pouco viável economicamente</strong>, além de conterem muitas bactérias. Uma alternativa sustentável a ela é a bucha vegetal.</p>",
+            "<p><strong class='highlight'>Escova de dentes</strong>: é totalmente reciclável, das cerdas de nylon ao cabo de plástico, <strong>tudo pode ser encaminhado para a coleta seletiva!</strong></p>",
+            "<h3 style='margin-bottom: 0; margin-top: 25px'>Plásticos recicláveis e não recicláveis</h3>",
+            "<ul><li><p><strong class='highlight'>Recicláveis</strong>: Tampas, potes de alimentos, frascos, embalagens de refrigerante, garrafas de água, recipientes para produtos de higiene e limpeza, <strong>PVC</strong>, tubos e conexões, sacos plásticos em geral, peças de brinquedos, engradados de bebidas e baldes.</p></li><li><p><strong class='highlight'>Não Recicláveis</strong>: Cabo de panela, tomadas, isopor, adesivo, espuma, teclado de pc e acrílicos.</p></li></ul>"
           ],
           "source": [{
-            "title": "Pacotes laminados são recicláveis? — eCycle,",
-            "url": "https://www.ecycle.com.br/pacotes-laminados-sao-reciclaveis/"
+            "title": "Esponja de lavar louça é reciclável? — eCycle,",
+            "url": "https://www.ecycle.com.br/esponja-nao-e-reciclavel/"
           }, {
-            "title": "'Reciclável' em São Paulo — Recicla Sampa",
-            "url": "https://www.reciclasampa.com.br/reciclavel"
+            "title": "Materiais recicláveis e não recicláveis — Pensamento Verde",
+            "url": "https://www.pensamentoverde.com.br/reciclagem/quais-sao-os-materiais-reciclaveis-e-nao-reciclaveis/"
           }],
           "alternatives": [
-            "PVC",
+            "Apenas o PVC",
+            "PVC e Espoja",
             "PVC e Escova de dentes",
-            "Descartar apenas no ponto de coleta"
+            "Todos são recicláveis"
+          ]
+        },
+        {
+          "image": "./quiz-papeis.png",
+          "title": "Quais papéis da imagem devemos descartar no lixo reciclável?",
+          "description": "Imagem: Extrato, Fita crepe, Adesivo e Revista",
+          "answer": 0,
+          "explanation": [
+            "<p><strong class='highlight'>Extratos</strong>: o papel termo-sensível em São Paulo <strong>não é considerado reciclável</strong>. por conter BPA, uma substância nociva à saúde que pode ser liberada no processo de reciclagem (contaminando outros materiais ou o papel final reciclado) além de estar associada à alterações no sistema endócrino e alguns tipos de câncer.</p>",
+            "<p><strong class='highlight'>Fita crepe</strong>:<strong> não é reciclável</strong>, mas por ser à base de papel, pode ser compostada.</p>",
+            "<p><strong class='highlight'>Adesivo</strong>:<strong> não é reciclável</strong>, assim como etiquetas. No processo de reciclagem, a existência de plastificantes oriundos dos adesivos compromete a segurança na medida em que estes não podem ser eliminados completamente e acabam por contaminar o material reciclado.</p>",
+            "<p><strong class='highlight'>Revista</strong>:<strong> é 100% reciclável.</strong></p>",
+            "<h3 style='margin-bottom: 0; margin-top: 25px'>Papéis recicláveis e não recicláveis</h3>",
+            "<ul><li><p><strong class='highlight'>Recicláveis</strong>: Jornais, <strong>revistas</strong>, caixas, papelão, papel de fax, formulários de computador, folhas de caderno, cartolinas, cartões, envelopes, fotocópias, folhetos e impressos em geral.</p></li><li><p><strong class='highlight'>Não Recicláveis</strong>: <strong>Adesivos</strong>, etiquetas, <strong>fita crepe</strong>, papel carbono, fotografias, papel toalha, papel higiênico, <strong>extratos</strong>, papéis metalizados, parafinados ou plastificados.</p></li></ul>"
+          ],
+          "source": [{
+            "title": "Todo papel é reciclável? — Conexão Planeta,",
+            "url": "https://conexaoplaneta.com.br/blog/todo-papel-e-reciclavel/"
+          }, {
+            "title": "Recicláveis e não recicláveis — Pensamento Verde,",
+            "url": "https://www.pensamentoverde.com.br/reciclagem/quais-sao-os-materiais-reciclaveis-e-nao-reciclaveis/"
+          }, {
+            "title": "Adesivos e o processo de reciclagem — Adesivo Industrial",
+            "url": "http://blogadhesivoindustrial.com/index.php/embalagem-e-papel/como-adesivos-afetam-o-processo-de-reciclagem-da-embalagem/?lang=pb"
+          }],
+          "alternatives": [
+            "Revista",
+            "Fita crepe e Extrato",
+            "Adesivo, Revista e Extrato",
+            "Adesivo e Revista"
+          ]
+        },
+        {
+          "image": "./quiz-vidros.png",
+          "title": "Quais vidros descartar no lixo reciclável?",
+          "description": "Imagem: Espelho, Lâmpada, Cerâmica e Lente de óculos",
+          "answer": 3,
+          "explanation": [
+            "<p><strong class='highlight'>Lâmpadas</strong>: O primeiro passo é <strong>separar o material ainda em casa, jamais descartando as lâmpadas junto ao lixo comum</strong>. É interessante acomodá-las em caixas ou sacos grossos (para que não quebrem) e etiquetá-los, informando sobre o conteúdo. As lâmpadas fluerescentes geram diversos problemas ambientais e de saúde pública. Já as lâmpadas LED tem 98% dos componentes recicláveis e <strong>além de serem mais econômicas, ajudam a combater as mudanças climáticas</strong>, economizando de 50 a 70% de energia em comparação com as tecnologias antigas. Apesar de não podermos colocá-las no lixo reciclável, <span class='highlight'>devemos <strong>descartá-las no ponto de coleta</strong></span> e fazer a nossa parte.</p>",
+            "<h3 style='margin-bottom: 0; margin-top: 25px'>Vidros recicláveis e não recicláveis</h3>",
+            "<ul><li><p><strong class='highlight'>Recicláveis</strong>: Tampas, potes, frascos, garrafas de bebidas, copos e embalagens.</p></li><li><p><strong class='highlight'>Não Recicláveis</strong>: <strong>Espelhos</strong>, cristal, ampolas de medicamentos, <strong>cerâmicas</strong>, <strong>louças</strong>, <strong>lâmpadas</strong>, vidros temperados planos e <strong>lentes</strong> de óculos.</p></li></ul>"
+          ],
+          "source": [{
+            "title": "Reciclus: Descarte de lâmpadas — eCycle,",
+            "url": "https://www.ecycle.com.br/reciclus/"
+          }, {
+            "title": "Recicláveis e não recicláveis — Pensamento Verde,",
+            "url": "https://www.pensamentoverde.com.br/reciclagem/quais-sao-os-materiais-reciclaveis-e-nao-reciclaveis/"
+          }, {
+            "title": "Descarte correto de lâmpadas — Recicla Sampa",
+            "url": "https://www.reciclasampa.com.br/artigo/entenda-por-que-a-reciclagem-de-lampadas-e-tao-importante"
+          }],
+          "alternatives": [
+            "Espelho e Lente de óculos",
+            "Lâmpada e Cerâmica",
+            "Cerâmica e Lente de óculos",
+            "Nenhum"
+          ]
+        },
+        {
+          "image": "./quiz-metais.png",
+          "title": "Quais metais descartar no lixo reciclável?",
+          "description": "Imagem: Pilha, Grampos, Clipe de papel e Lata de tinta",
+          "answer": 3,
+          "explanation": [
+            "<p><strong class='highlight'>Pilhas</strong>: Pilhas e baterias embora <strong>não recicláveis</strong>, não devem ser descartados com o lixo comum, pois em contato com o meio ambiente podem gerar contaminação do solo e água). Por isso, <strong class='highlight'>devem ser descartados em pontos de coleta.</strong></p>",
+            "<p><strong class='highlight'>Latas de tinta</strong>: Apesar de muitas vezes serem feitas de materiais recicláveis, em São Paulo, por exemplo, <strong class='highlight'>devem ser descartadas apenas em pontos de coleta</strong>. Esvazie a lata, não lave e Procure um <a href='https://ciclovivo.com.br/planeta/desenvolvimento/saiba-como-reciclar-latas-de-tintas-e-vernizes/#:~:text=PEVs%20Prolata%2C%20basta-,clicar%20aqui,-.'>Ponto de Entrega Voluntária (PEV) da Prolata</a> e entregue a embalagem. Se a alça e a tampa também forem de metal, melhor ainda, pois tudo será reciclável.</p>",
+            "<h3 style='margin-bottom: 0; margin-top: 25px'>Metais recicláveis e não recicláveis</h3>",
+            "<ul><li><p><strong class='highlight'>Recicláveis</strong>: Latas de alumínio, latas de aço, tampas, ferragens, canos, esquadrias e molduras de quadros.</p></li><li><p><strong class='highlight'>Não Recicláveis</strong>: <strong>Clipes</strong>, <strong>grampos</strong>, esponjas de aço, <strong>latas de tintas</strong>, latas de combustível, baterias e pilhas.</p></li></ul>"
+          ],
+          "source": [{
+            "title": "Recicláveis e não recicláveis — Pensamento Verde,",
+            "url": "https://www.pensamentoverde.com.br/reciclagem/quais-sao-os-materiais-reciclaveis-e-nao-reciclaveis/"
+          }, {
+            "title": "Como reciclar latas de tintas — Ciclo Vivo",
+            "url": "https://ciclovivo.com.br/planeta/desenvolvimento/saiba-como-reciclar-latas-de-tintas-e-vernizes/"
+          }],
+          "alternatives": [
+            "Pilha",
+            "Grampos e Clipe",
+            "Lata de tinta",
+            "Nenhum"
           ]
         }
       ],

@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 import React from 'react';
-import PropTypes from 'prop-types';
-
-
 
 const LogoDefault = styled(LogoAlura)`
   margin: auto;

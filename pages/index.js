@@ -98,7 +98,7 @@ export default function Home() {
             </Widget.Header>
             <Widget.Content>
               <form onSubmit={(changeEvent) => submitForm(changeEvent)}>
-                <p>{parse(db.description)}</p>
+                <div className='description'>{parse(db.description)}</div>
                 <Button type="submit">
                   CLIQUE AQUI PARA JOGAR
                 </Button>

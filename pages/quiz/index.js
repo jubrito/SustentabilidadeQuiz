@@ -7,28 +7,29 @@ import UseWindowSize from '../../src/components/UseWindowSize';
 export default function QuizDaGaleraPage() {
 
   const [randomQuestions, setRandomQuestions] = useState(db.questions);
+  /* Para testar perguntas individualmente
   useEffect(() => {
     let allQuestions = db.questions;
     let randomQuestionsGenerated = [];
-    randomQuestionsGenerated.push(allQuestions[15]);
+    randomQuestionsGenerated.push(allQuestions[18]);
     setRandomQuestions(randomQuestionsGenerated);
+  }, []) */
+  useEffect(() => {
+    let allQuestions = db.questions;
+    let randomQuestionsGenerated = [];
+    for (let i = 0; i < 8; i++)
+    {
+        let random_index;
+        while(!random_index)
+        {
+            let tmp = Math.floor(Math.random() * allQuestions.length);        
+            if( !randomQuestionsGenerated.filter( (g) => allQuestions[tmp] == g).length )
+                random_index = tmp;
+        }
+        randomQuestionsGenerated.push(allQuestions[random_index]);
+        setRandomQuestions(randomQuestionsGenerated);
+    }
   }, [])
-  // useEffect(() => {
-  //   let allQuestions = db.questions;
-  //   let randomQuestionsGenerated = [];
-  //   for (let i = 0; i < 12; i++)
-  //   {
-  //       let random_index;
-  //       while(!random_index)
-  //       {
-  //           let tmp = Math.floor(Math.random() * allQuestions.length);        
-  //           if( !randomQuestionsGenerated.filter( (g) => allQuestions[tmp] == g).length )
-  //               random_index = tmp;
-  //       }
-  //       randomQuestionsGenerated.push(allQuestions[random_index]);
-  //       setRandomQuestions(randomQuestionsGenerated);
-  //   }
-  // }, [])
   useEffect(() => {
     console.log(randomQuestions);
   }, [randomQuestions])

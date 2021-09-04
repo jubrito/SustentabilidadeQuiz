@@ -149,31 +149,12 @@ function ResultWidget({ results, totalQuestions, externalTextResults }) {
         <p>
           Você acertou
           {' '}
-          {/* {results.reduce((somatoriaAtual, resultAtual) => {
-            const isAcerto = resultAtual === true;
-            if (isAcerto) {
-              return somatoriaAtual + 1;
-            }
-            return somatoriaAtual;
-          }, 0)} */}
           {points+"/"+totalQuestions}
           {' '}
           perguntas
         </p>
         <p>{parse(textResult)}</p>
-        {/* <ul>
-          {results.map((result, index) => (
-            <li key={`result__${index}`}>
-              #
-              {index + 1}
-              {' '}
-              Resultado:
-              {result === true
-                ? 'Acertou'
-                : 'Errou'}
-            </li>
-          ))}
-        </ul> */}
+        <p>Se quiser tentar realizar o teste novamente, perguntas serão sorteadas aleatóriamente.</p>
         <LinkButton href="/" text="Refazer o teste"/>
       </Widget.Content>
     </Widget>
@@ -448,23 +429,27 @@ function QuestionExplanation({
     )
     let slides = [
       <div>
-        <img src="./carousel_led.jpg" alt="Lâmpadas led consomem 10 vezes menos energia que as incandescentes. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <a href="https://www.ecycle.com.br/postos/reciclagem.php" target="_blank"><img src="./carousel_ecycle.jpg" alt="Encontre postos de reciclagem e doação mais próximos de você"  title="Encontre postos de reciclagem e doação mais próximos de você" /></a>
+        <p><strong>Saiba onde descartar seus resíduos</strong>. Encontre postos de reciclagem e doação mais próximos de você.</p>
+      </div>,
+      <div>
+        <img src="./carousel_led.jpg" alt="Lâmpada LED com plantas dentro, Arte: Juliana Witzke de Brito" />
         <p>Lâmpadas led consomem <strong>10 vezes menos energia que as incandescentes.</strong></p>
       </div>,
       <div>
-        <img src="./carousel_embalagens.jpg" alt="A cada 5kg de lixo caseiro, 1kg é de embalagens. Por dia, no Brasil são descartadas 25 mil toneladas de embalagens, equivalente a todo o cimento usado na construção do Maracanã. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <img src="./carousel_embalagens.jpg" alt="Lixeira demonstrando a porcentagens de embalagens por lixo. Fonte: akatu, Arte: Juliana Witzke de Brito" />
         <p>A cada 5kg de lixo caseiro, 1kg é de embalagens. Por dia, no Brasil são descartadas <strong>25 mil toneladas de embalagens</strong>, equivalente a <strong>todo o cimento usado na construção do Maracanã</strong>.</p>
       </div>,
       <div>
-        <img src="./carousel_oil.jpg" alt="1 litro de óleo de cozinha contabina água suficiente para você tomar banho por 1 ano. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <img src="./carousel_oil.jpg" alt="Chuveiro saindo óleo e caindo no oceano. Arte: Juliana Witzke de Brito" />
         <p><strong>1 litro de óleo de cozinha</strong> contabina água suficiente para você <strong>tomar banho por 1 ano</strong>.</p>
       </div>,
       <div>
-        <img src="./carousel_banho.jpg" alt="No Brasil, 5 minutos de banho equivalem a 128 piscinas olímpicas por dia. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <img src="./carousel_banho.jpg" alt="Piscina dentro de uma banheira. Fonte: akatu, Arte: Juliana Witzke de Brito" />
         <p>No Brasil, <strong>5 minutos de banho</strong> equivalem a <strong>128 piscinas olímpicas</strong> por dia.</p>
       </div>,
       <div>
-        <img src="./carousel_eiffel.jpg" alt="Ao usar sacolas duráveis, uma família deia de usar em 1 ano sacolinhas descartáveis que, lado a lado, formariam uma faixa da altura da Torre Eiffel. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
+        <img src="./carousel_eiffel.jpg" alt="Torre Eiffel com uma sacola plástica do lado. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
         <p>Ao usar sacolas duráveis, uma família deia de usar <strong>em 1 ano</strong> sacolinhas descartáveis que, lado a lado, formariam uma <strong>faixa da altura da Torre Eiffel</strong>.</p>
       </div>
     ];
