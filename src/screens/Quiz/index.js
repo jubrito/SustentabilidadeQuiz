@@ -89,7 +89,7 @@ function LoadingWidget({maxWidth}) {
         <Lottie
           options={defaultOptions}
           height="auto"
-          width="300px"
+          width={maxWidth > 320 ? "300px" : "250px" }
         />
       </Widget.Content>
     </Widget>
@@ -563,7 +563,7 @@ export default function QuizPage({
         {screenState == screenStates.LOADING && (
           <>
             <div className="relative">
-              <LoadingWidget/>
+              <LoadingWidget maxWidth={windowWidth}/>
             </div>
           </>
         )}

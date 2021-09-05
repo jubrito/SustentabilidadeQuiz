@@ -46,7 +46,7 @@ const Widget = styled.div`
     min-width: calc(100% - 20px);
     margin: 10px;
   }
-  @media screen and (max-width: 280px) {
+  @media screen and (max-width: 320px) {
     p {
       font-size: 12px;
     }

@@ -36,7 +36,8 @@ const QuizLogo = styled(Logo)`
   @media screen and (max-width: 1024px) {
     max-width: 100%;
   }
-  @media screen and (max-width: 280px) {
+ 
+  @media screen and (max-width: 320px) {
     max-width: 280px;
     img {
       max-width: 100%;

@@ -31,8 +31,11 @@ const QuizContainer = styled.div`
     max-width: calc(100% - 60px);
     padding-top: 15px;
   }
+  @media screen and (max-width: 320px) {
+    max-width: calc(100% - 30px);
+  }
   @media screen and (max-width: 280px) {
-    max-width: calc(100% - 20px);
+    min-width: auto;
     min-height: 100%;
   }
 
