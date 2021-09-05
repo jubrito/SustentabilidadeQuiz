@@ -1,4 +1,3 @@
-react-retro-hit-counter
 
 <div align="center">
 

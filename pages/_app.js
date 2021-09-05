@@ -3,7 +3,6 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Head from 'next/head';
 import db from '../db.json';
 import UseWindowSize from '../src/components/UseWindowSize';
-
 const GlobalStyle = createGlobalStyle`
   // Reset
   * {
@@ -125,6 +124,10 @@ const GlobalStyle = createGlobalStyle`
 const { theme } = db;
 
 export default function App({ Component, pageProps }) {
+  async function getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
+  }
   return (
     <>
       <Head>
@@ -134,6 +137,7 @@ export default function App({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700" rel="stylesheet"/>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossOrigin="anonymous"></link>
+        <html lang="pt-br" />
       </Head>
       <ThemeProvider theme={theme} windowSize={UseWindowSize()}>
         <GlobalStyle />
