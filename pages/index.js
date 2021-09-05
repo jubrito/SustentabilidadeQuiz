@@ -68,7 +68,7 @@ export default function Home() {
         <meta property="og:image" content={db.backgroundImage} />
         <meta name="description" content="O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! Quiz criado por Juliana Witzke de Brito"></meta>
         <meta name="google-site-verification" content="h4778lwuG2KPHy--S9BxnxUsFRSchljthm2INr8jO_U" />
-        <meta name="robots" content="noindex,follow" />
+        <meta name="robots" content="index,follow" />
       </Head>
       <QuizContainer>
         <QuizLogo 
