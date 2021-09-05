@@ -1,8 +1,9 @@
 {
     "title": "Sustentabilidade Quiz",
-    "description": "<p><strong>O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis!</strong></p><p> O primeiro passo para transformar o mundo é entender os impactos das nossas ações e, ao mesmo tempo, descobrir novas alternativas.</p><p> Os resultados estarão disponíveis apenas pra você, então <strong>responda com sinceridade e sem medo de errar</strong>. A melhor forma de evoluir é identificando por onde começar :)</p><p>7 perguntas serão sorteadas aleatoriamente.</p>",
+    "description": "<p><strong>O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis!</strong></p><p> O primeiro passo para transformar o mundo é entender os impactos das nossas ações e, ao mesmo tempo, descobrir novas alternativas.</p><p> Os resultados estarão disponíveis apenas pra você, então <strong>responda com sinceridade e sem medo de errar</strong>. A melhor forma de evoluir é identificando por onde começar :)</p>",
     "bg": "./bg.jpg",
     "bg_mobile": "./bg_mobile.jpg",
+    "number_of_questions": 7,
     "questions": [
         {
           "image": "https://media.giphy.com/media/3oEhmCVfXL9o75NcPe/giphy.gif",
