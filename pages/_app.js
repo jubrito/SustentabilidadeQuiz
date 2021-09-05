@@ -51,7 +51,7 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     height: 500px;
     @media screen and (max-width: 1024px) {
-      height: 540px;
+      height: 630px;
     }
     @media screen and (max-width: 768px) {
       flex-direction: column;
