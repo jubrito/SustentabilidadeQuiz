@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import RetroHitCounter from 'react-retro-hit-counter';
+// import RetroHitCounter from 'react-retro-hit-counter';
 
 const FooterWrapper = styled.div`
   background-color: #00000070;
@@ -61,9 +61,8 @@ export default function Credits(props) {
           <span>Imersão React da Alura</span>
         </a>
       </p>
-      <RetroHitCounter
+      {/* <RetroHitCounter
       hits={5}
-      /* The following are all default values: */
       withBorder={false}
       withGlow={false}
       minLength={2}
@@ -77,7 +76,7 @@ export default function Credits(props) {
       backgroundColor="#000"
       borderThickness={0}
       glowStrength={0.5}
-    />
+    /> */}
     </FooterWrapper>
     </>
   );
