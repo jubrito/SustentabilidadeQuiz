@@ -66,9 +66,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <meta property="og:title" content={db.title} key="title" />
         <meta property="og:image" content={db.backgroundImage} />
-        <meta name="description" content="O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! Quiz criado por Juliana Witzke de Brito"></meta>
+        <meta name="description" content="O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! O primeiro passo para transformar o mundo é entender os impactos das nossas ações e, ao mesmo tempo, descobrir novas alternativas."></meta>
         <meta name="google-site-verification" content="h4778lwuG2KPHy--S9BxnxUsFRSchljthm2INr8jO_U" />
         <meta name="robots" content="index,follow" />
+        <meta charset="UTF-8"/>
       </Head>
       <QuizContainer>
         <QuizLogo 

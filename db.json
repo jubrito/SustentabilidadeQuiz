@@ -1,5 +1,5 @@
 {
-    "title": "Sustentabilidade Quiz",
+    "title": "Quiz — Suas ações são sustentáveis?",
     "description": "<p><strong>O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis!</strong></p><p> O primeiro passo para transformar o mundo é entender os impactos das nossas ações e, ao mesmo tempo, descobrir novas alternativas.</p><p> Os resultados estarão disponíveis apenas pra você, então <strong>responda com sinceridade e sem medo de errar</strong>. A melhor forma de evoluir é identificando por onde começar :)</p>",
     "bg": "./bg.jpg",
     "bg_mobile": "./bg_mobile.jpg",
@@ -7,6 +7,7 @@
     "questions": [
         {
           "image": "https://media.giphy.com/media/3oEhmCVfXL9o75NcPe/giphy.gif",
+          "imageDescription": "Uma pilha gigante de plásticos com um efeito fazendo-a girar 360°",
           "title": "Plástico oxibiodegradável é melhor do que o plástico comum.",
           "description": "Verdade ou mentira?",
           "answer": 0,
@@ -28,6 +29,7 @@
         },
         {
           "image": "https://media.giphy.com/media/L8q7fOnh6CQ9O/giphy.gif",
+          "imageDescription": "Gambás colocando embalagens no lixo reciclável",
           "title": "Quebrei um objeto de vidro. Eai?",
           "description": "O que normalmente você faz?",
           "answer": 2,
@@ -48,6 +50,7 @@
         },
         {
           "image": "https://media.giphy.com/media/IffPH0Qv6XslahXngh/giphy.gif",
+          "imageDescription": "Muitas garrafas plásticas caindo em cima de um personagem",
           "title": "Qual tipo de material apresenta maior dificuldade de reciclagem?",
           "description": "",
           "answer": 2,
@@ -70,6 +73,7 @@
         },
         {
           "image": "https://media.giphy.com/media/ffXJWN9NRGg0w/giphy.gif",
+          "imageDescription": "Walter White de Breaking Bad jogando uma embalagem de pizza no telhado",
           "title": "Embalagem de pizza: coloca no reciclável?",
           "answer": 1,
           "explanation": [
@@ -89,6 +93,7 @@
         },
         {
           "image": "https://media.giphy.com/media/3o6MbhTM1e05DOjDqM/giphy.gif",
+          "imageDescription": "Homer Simpson encontrando a filha Maggie na lata de lixo",
           "title": "O tamanho influencia na reciclagem do material?",
           "answer": 0,
           "explanation": [
@@ -108,6 +113,7 @@
         },
         {
           "image": "https://media.giphy.com/media/R7eZuOTVtL7gc/giphy.gif",
+          "imageDescription": "Panqueca sendo preparada na frigideira por Remy e Linguini de Ratatouille",
           "title": "Como você lava a panela/frigideira suja de óleo depois de fritar uma refeição?",
           "description": "O que normalmente acontece?",
           "answer": 2,
@@ -133,6 +139,7 @@
         },
         {
           "image": "https://media.giphy.com/media/3orieX2ARzDI7NgOJy/giphy.gif",
+          "imageDescription": "Lisa Simpson segurando uma lata de alumínio e uma garrafa de vidro enquanto discute sobre reciclagem",
           "title": "Qual tipo de recipiente afeta MENOS o meio ambiente?",
           "answer": 2,
           "explanation": [
@@ -156,6 +163,7 @@
         },
         {
           "image": "https://media.giphy.com/media/w5eNdiZw85xN6/giphy.gif",
+          "imageDescription": "Um gato sendo coberto por vários pedaços de isopor",
           "title": "O Isopor...",
           "answer": 1,
           "explanation": [
@@ -176,6 +184,7 @@
         },
         {
           "image": "https://media.giphy.com/media/NsBeF8XkXyIebEnjG3/giphy.gif",
+          "imageDescription": "Pilha de garrafas plásticas amassadas desaparecendo, sobrando apenas uma garrafa",
           "title": "Produtos só podem ser reciclados uma vez?",
           "description": "Verdade, mentira ou depende?",
           "answer": 2,
@@ -196,6 +205,7 @@
         },
         {
           "image": "https://media.giphy.com/media/5pT47Vs6g1ZxGDK6im/giphy.gif",
+          "imageDescription": "Réptil tomando banho em uma banheira",
           "title": "Chuveiro solar é a melhor opção pro meio ambiente, mas qual a pior?",
           "answer": 1,
           "explanation": [
@@ -215,6 +225,7 @@
         },
         {
           "image": "https://media.giphy.com/media/3o752df1BeOvfwxuzS/giphy.gif",
+          "imageDescription": "Garrafa plástica boiando no oceano",
           "title": "Abandonar o uso da sacolinha plástica no supermercado ajuda o meio-ambiente?",
           "answer": 1,
           "explanation": [
@@ -232,6 +243,7 @@
         },
         {
           "image": "https://media.giphy.com/media/3o6ZtjY6kNlUKNaTrq/giphy.gif",
+          "imageDescription": "Personagem de South Park ateando gasolina em si mesmo",
           "title": "Qual das opções abaixo é melhor para o meio ambiente?",
           "answer": 0,
           "explanation": [
@@ -257,6 +269,7 @@
         },
         {
           "image": "https://media.giphy.com/media/l46CsHym8hrV9s58I/giphy.gif",
+          "imageDescription": "Homem preto girando a cabeça coberta de glitter",
           "title": "O Glitter comum...",
           "description": "",
           "answer": 1,
@@ -280,6 +293,7 @@
         },
         {
           "image": "./quiz-caixa_papeltoalha_foto_isopor_adesivo.jpg",
+          "imageDescription": "Caixa de papelão com etiqueta, isopor, papel toalha e uma fotografia",
           "title": "Quantos objetos NÃO recicláveis estão presentes nessa foto?",
           "description": "Existem 5 itens na imagem: Caixa de papelão, Etiqueta, Isopor, Papel-toalha e Fotografia.",
           "answer": 1,
@@ -305,6 +319,7 @@
         },
         {
           "image": "https://itsthesway.com/wp-content/uploads/2020/03/snacks.gif",
+          "imageDescription": "Leonor de Good Place colocando muitas embalagens metalizadas de salgadinho em seu carrinho de supermercado",
           "title": "Afinal, onde descartar embalagens plásticas metalizadas?",
           "description": "O que fazer com embalagens de salgadinho?",
           "answer": 0,
@@ -329,6 +344,7 @@
         },
         {
           "image": "./quiz-plasticos.png",
+          "imageDescription": "PVC, esponja e escova de dentes",
           "title": "Quais plásticos da imagem são recicláveis?",
           "description": "Imagem: PVC, Esponja e Escova de dentes",
           "answer": 2,
@@ -355,6 +371,7 @@
         },
         {
           "image": "./quiz-papeis.png",
+          "imageDescription": "Extrato, fita crepe, adesivo e revista",
           "title": "Quais papéis da imagem devemos descartar no lixo reciclável?",
           "description": "Imagem: Extrato, Fita crepe, Adesivo e Revista",
           "answer": 0,
@@ -385,6 +402,7 @@
         },
         {
           "image": "./quiz-vidros.png",
+          "imageDescription": "Espelho, lâmpada, cerâmica e lente de óculos",
           "title": "Quais vidros descartar no lixo reciclável?",
           "description": "Imagem: Espelho, Lâmpada, Cerâmica e Lente de óculos",
           "answer": 3,
@@ -412,6 +430,7 @@
         },
         {
           "image": "./quiz-metais.png",
+          "imageDescription": "Pilha, grampos, clipe de papel e lata de tinta",
           "title": "Quais metais descartar no lixo reciclável?",
           "description": "Imagem: Pilha, Grampos, Clipe de papel e Lata de tinta",
           "answer": 3,

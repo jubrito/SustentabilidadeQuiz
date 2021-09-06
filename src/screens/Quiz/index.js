@@ -237,7 +237,8 @@ function QuestionWidget({
         </h1>
       </Widget.Header>
       <img
-        alt="Descrição"
+        alt={question.imageDescription}
+        title={question.imageDescription}
         style={{
           width: '100%',
           height: '150px',
