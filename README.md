@@ -1,5 +1,5 @@
 <div align="center" style="padding-bottom: 20px">
-    <h1><a href="https://sustentabilidade-quiz-jubrito.vercel.app">Suas ações são sustentáveis? Clique aqui e faça o teste!</a></h1>
+    <h1><a href="https://sustentabilidade-quiz-jubrito.vercel.app" target="_blank">Suas ações são sustentáveis? Clique aqui e faça o teste!</a></h1>
 </div>
 
 <div align="center">
