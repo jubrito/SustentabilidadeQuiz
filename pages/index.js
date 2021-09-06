@@ -65,11 +65,20 @@ export default function Home() {
         <title>{db.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <meta property="og:title" content={db.title} key="title" />
+        <meta property="og:site_name" content={db.title}>
         <meta property="og:image" content={db.backgroundImage} />
+        <meta property="og:locale" content="pt_BR"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image"content="./cover.jpg"/>
+        <meta property="og:url" content="https://sustentabilidade-quiz-jubrito.vercel.app"/>
         <meta name="description" content="O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! O primeiro passo para transformar o mundo é entender os impactos das nossas ações e, ao mesmo tempo, descobrir novas alternativas."></meta>
         <meta name="google-site-verification" content="h4778lwuG2KPHy--S9BxnxUsFRSchljthm2INr8jO_U" />
         <meta name="robots" content="index,follow" />
         <meta charset="UTF-8"/>
+        <meta name="application-name" content={db.title}/>
+        <meta http-equiv="content-language" content="pt-br"/>
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+        <meta name="author" content="Juliana Witzke de Brito"/>
       </Head>
       <QuizContainer>
         <QuizLogo 
