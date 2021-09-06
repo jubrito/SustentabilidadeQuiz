@@ -74,7 +74,7 @@ const QuizExplanations = styled.div`
       font-size: 13px;
     }
   }
-  @media screen and (max-width: 411px) {
+  @media screen and (max-width: 414px) {
     margin: 0;
   }
   @media screen and (max-width: 321px) {
