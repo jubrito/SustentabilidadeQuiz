@@ -16,7 +16,7 @@
 O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! O primeiro passo para transformar o mundo é entender os impactos das suas ações e, ao mesmo tempo, descobrir novas alternativas. 
 
 </p>
-<p align="center"><i>As referências da Nestlé utilizadas também são páginas desenvolvidas por mim.</i></p>
+<p align="center"><i><a href="https://www.linkedin.com/feed/update/urn:li:activity:6712066041360465920/" target="_blank">As referências da Nestlé utilizadas também são páginas desenvolvidas por mim.</a></i></p>
 
 
 <p align="center">
