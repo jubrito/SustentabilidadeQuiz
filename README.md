@@ -1,3 +1,6 @@
+<div align="center" style="padding-bottom: 20px">
+    <h1><a href="https://sustentabilidade-quiz-jubrito.vercel.app" target="_blank">Suas ações são sustentáveis? Clique aqui e faça o teste!</a></h1>
+</div>
 
 <div align="center">
 
@@ -10,9 +13,11 @@
 <p align="center">
 <strong>Quiz - Suas Ações são sustentáveis?</strong> 
 
-O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! O primeiro passo para transformar o mundo é entender os impactos das suas ações e, ao mesmo tempo, descobrir novas alternativas.
+O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! O primeiro passo para transformar o mundo é entender os impactos das suas ações e, ao mesmo tempo, descobrir novas alternativas. 
 
 </p>
+<p align="center"><i><a href="https://www.linkedin.com/feed/update/urn:li:activity:6712066041360465920/" target="_blank">As referências da Nestlé utilizadas também são páginas desenvolvidas por mim.</a></i></p>
+
 
 <p align="center">
   <a href="#computer-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
