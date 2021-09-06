@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 500px;
+    height: 510px;
     @media screen and (max-width: 1024px) {
       height: 630px;
     }

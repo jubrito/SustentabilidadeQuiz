@@ -69,7 +69,7 @@ const ProgressBarDefault = styled.div`
 
 
 export default function ProgressBar({ result }) {
-  console.log(result)
+  // console.log(result)
   return (
     <ProgressBarDefault result={result}>
       <div id="progress-bar-container">

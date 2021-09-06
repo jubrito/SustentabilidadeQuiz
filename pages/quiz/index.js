@@ -30,9 +30,6 @@ export default function QuizDaGaleraPage() {
         setRandomQuestions(randomQuestionsGenerated);
     }
   }, [])
-  useEffect(() => {
-    console.log(randomQuestions);
-  }, [randomQuestions])
   return (
     <ThemeProvider theme={db.theme} windowSize={UseWindowSize()}>
       <QuizScreen

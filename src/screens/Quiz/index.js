@@ -97,26 +97,37 @@ function LoadingWidget({maxWidth}) {
 }
 
 function ResultWidget({ results, totalQuestions, externalTextResults }) {
-  const points = results.filter((x) => x).length;
+  let points = results.filter((x) => x).length
   const [textResult, setTextResult] = useState("");
   const [finalResult, setFinalResult] = useState("");
   const [percentageResult, setPercentageResult] = useState("");
+
+  useEffect(() => {
+    let percentage = 10*(points/totalQuestions);
+    setPercentageResult(percentage);
+    console.log('points', points);
+    console.log('totalQuestions', totalQuestions);
+    console.log(percentage);
+    console.log('percentage');
+  }, [points, totalQuestions, percentageResult])
   
   useEffect(()=> {
-    if (points < 4) {
+    console.log('percentageResult');
+    console.log(percentageResult);
+    if (percentageResult < 4) {
       setTextResult(externalTextResults.indiferente);
       setFinalResult("indiferente");
-    } else if (points >= 4 && points < 8) {
+    } else if (percentageResult >= 4 && percentageResult < 6) {
       setTextResult(externalTextResults.iniciante);
       setFinalResult("iniciante");
-    } else if (points >= 8 && points < 12) {
+    } else if (percentageResult >= 6 && percentageResult < 9) {
       setTextResult(externalTextResults.engajado);
       setFinalResult("engajado");
     } else {
       setTextResult(externalTextResults.consciente);
       setFinalResult("consciente");
     }
-  }, [externalTextResults]);
+  }, [externalTextResults, percentageResult]);
   return (
     <Widget
       as={motion.section}
@@ -144,7 +155,7 @@ function ResultWidget({ results, totalQuestions, externalTextResults }) {
           perguntas
         </p>
         <p>{parse(textResult)}</p>
-        <p>Se quiser tentar realizar o teste novamente, perguntas serão sorteadas aleatóriamente.</p>
+        <p><strong>Se quiser tentar realizar o teste novamente, perguntas serão sorteadas aleatóriamente.</strong></p>
         <LinkButton href="/" text="Refazer o teste"/>
       </Widget.Content>
     </Widget>
@@ -337,7 +348,6 @@ function QuestionExplanation({
         switch (media) {
           case 'iphonese_screen':
             iphonese_screen = breakpoint_media;
-            // console.log(iphonese_screen)
           break;
           case 'motog4_screen':
             motog4_screen = breakpoint_media;
