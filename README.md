@@ -1,5 +1,5 @@
 <div align="center" style="padding-bottom: 20px">
-    <h1><a href="https://sustentabilidade-quiz-jubrito.vercel.app" target="_blank">Suas ações são sustentáveis? Clique aqui e faça o teste!</a></h1>
+    <h1><a href="https://sustentabilidade-quiz-jubrito.vercel.app" target="_blank">Suas atitudes são sustentáveis? Clique aqui e faça o teste!</a></h1>
 </div>
 
 <div align="center">
@@ -14,7 +14,13 @@
 <strong>Quiz - Suas Ações são sustentáveis?</strong> 
 
 O objetivo desse teste é te ajudar a encontrar oportunidades para deixar suas ações mais sustentáveis! O primeiro passo para transformar o mundo é entender os impactos das suas ações e, ao mesmo tempo, descobrir novas alternativas. 
-
+</p>
+<p>
+Meu intuito é incentivar mais pessoas a refletirem sobre como levar o meio ambiente em consideração no dia a dia. Nos últimos meses tenho tentado entender o que eu estava fazendo de errado e principalmente quais pequenas ações sustentáveis eu podia realizar. Mas para essas ações terem impacto, a informação precisa chegar a mais pessoas, então acessa do seu computador ou celular para entender pequenas coisas que você pode fazer pra contribuir, como por exemplo reciclar de maneira correta. 
+</p>
+<p>
+E você sentir preguiça, lembre-se que há dois anos atrás o relatório da ONU previu 'catástrofe ambiental' no mundo em 2050" e pouco foi feito para evitar que isso aconteça. É inegável que precisamos cobrar mudanças drásticas na forma que a sociedade funciona hoje, já que diversas entidades colaboram para o esgotamento dos recursos finitos de maneira insustentável. A agropecuária, as organizações, e o próprio consumo e acúmulo de riquezas desenfreado incentivado pelo modelo econômico capitalista estão transformando o nosso planeta de maneira irresponsável e irreversível. Então, para podermos cobrar ações sustentáveis precisamos entender o que elas são, já que a informação deve ser nossa aliada se desejarmos que a Terra continue um planeta habitável.
+</p>
 </p>
 <p align="center"><i><a href="https://www.linkedin.com/feed/update/urn:li:activity:6712066041360465920/" target="_blank">As referências da Nestlé utilizadas também são páginas desenvolvidas por mim.</a></i></p>
 
