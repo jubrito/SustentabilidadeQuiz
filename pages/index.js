@@ -65,7 +65,7 @@ export default function Home() {
         <title>{db.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <meta property="og:title" content={db.title} key="title" />
-        <meta property="og:site_name" content={db.title}>
+        <meta property="og:site_name" content={db.title}/>
         <meta property="og:image" content={db.backgroundImage} />
         <meta property="og:locale" content="pt_BR"/>
         <meta property="og:type" content="website"/>
