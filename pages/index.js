@@ -19,6 +19,8 @@ import Button from '../src/components/Button';
 import LogoAlura from '../src/components/LogoAlura';
 import parse from "html-react-parser";
 import BottleWidget from '../src/components/BottleWidget';
+import UseWindowSize from '../src/components/UseWindowSize';
+
 
 // Sem o Styled-Components
 // function Title(props) {
@@ -41,12 +43,12 @@ export default function Home() {
   const [name, setName] = useState('');
   const [windowHeight, setWindowHeight] = useState('');
   const [windowWidth, setWindowWidth] = useState('');
+  const windowSize = UseWindowSize();
+  
   useEffect(()=> {
-    if (typeof window !== "undefined") {
-      setWindowHeight(window.innerHeight);
-      setWindowWidth(window.innerWidth);
-    }
-  }, [])
+    setWindowHeight(windowSize.height);
+    setWindowWidth(windowSize.width);
+  }, [windowSize])
 
   function submitForm(event) {
     event.preventDefault(); // impede o recarregamento da página que viola o SPA
@@ -60,7 +62,7 @@ export default function Home() {
   return (
     // Ao invés de fazer assim abaixo, criamos o componente com o style do background
     // <div style={{ backgroundImage: `url (${db.bg})` }}>
-    <QuizBackground backgroundImage={db.bg} backgroundImageResponsive={db.bg_mobile} isHomepage={true}>
+    <QuizBackground backgroundImage={db.bg} backgroundImageResponsive={db.bg_mobile} isHomepage={true} height={windowHeight}>
       <Head>
         <title>{db.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />

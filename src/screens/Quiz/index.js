@@ -452,6 +452,9 @@ function QuestionExplanation({
       <div>
         <img src="./carousel_eiffel.jpg" alt="Torre Eiffel com uma sacola plástica do lado. Fonte: akatu, Imagem: Juliana Witzke de Brito" />
         <p>Ao usar sacolas duráveis, uma família deia de usar <strong>em 1 ano</strong> sacolinhas descartáveis que, lado a lado, formariam uma <strong>faixa da altura da Torre Eiffel</strong>.</p>
+      </div>,
+      <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7pKVLvNViIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     ];
     return (

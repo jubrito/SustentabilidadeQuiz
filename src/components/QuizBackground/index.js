@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
+import UseWindowSize from '../UseWindowSize';
 
 const fadeIn = keyframes`
   0%   {background-color: black;}
@@ -19,7 +21,7 @@ const QuizBackground = styled.div`
   height: 100%;
   background-color: transparent;
   height: 100vh; //Fallback for browsers that do not support Custom Properties
-  height: ${({windowSize}) => windowSize};;
+  height: ${({height}) => height}px;
   position: relative;
   flex: 1;
   z-index: 1;
