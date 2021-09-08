@@ -32,7 +32,7 @@ export default function Credits(props) {
     // eslint-disable-next-line react/jsx-props-no-spreading
     <>
     <FooterWrapper {...props}>
-      <a href="https://www.alura.com.br/" hreflang="pt-br">
+      <a href="https://www.alura.com.br/" hrefLang="pt-br">
         <svg className="a" width="60" height="37" viewBox="0 0 135 67" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0)">
             <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="2" y="2" width="110" height="50" fill="black">
@@ -57,7 +57,7 @@ export default function Credits(props) {
       </a>
       <p>
         Adaptação feita por Juliana Witzke de Brito do desafio proposto durante a  
-        <a href="https://www.alura.com.br/" hreflang="pt-br"> 
+        <a href="https://www.alura.com.br/" hrefLang="pt-br"> 
           <span>Imersão React da Alura</span>
         </a>
       </p>

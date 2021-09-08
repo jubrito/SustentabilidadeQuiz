@@ -402,7 +402,7 @@ function QuestionExplanation({
                   })}
                   <p className="source">Fonte: 
                   {source.map((src, srcIndex) => {
-                  return <a href={src.url} key={srcIndex} hreflang="pt-br" target="_blank">{src.title}</a>
+                  return <a href={src.url} key={srcIndex} hrefLang="pt-br" target="_blank">{src.title}</a>
                   })
                 }
                 </p>
@@ -430,7 +430,7 @@ function QuestionExplanation({
     )
     let slides = [
       <div>
-        <a href="https://www.ecycle.com.br/postos/reciclagem.php" hreflang="pt-br" target="_blank"><img src="./carousel_ecycle.jpg" alt="Encontre postos de reciclagem e doação mais próximos de você"  title="Encontre postos de reciclagem e doação mais próximos de você" /></a>
+        <a href="https://www.ecycle.com.br/postos/reciclagem.php" hrefLang="pt-br" target="_blank"><img src="./carousel_ecycle.jpg" alt="Encontre postos de reciclagem e doação mais próximos de você"  title="Encontre postos de reciclagem e doação mais próximos de você" /></a>
         <p><strong>Saiba onde descartar seus resíduos</strong>. Encontre postos de reciclagem e doação mais próximos de você.</p>
       </div>,
       <div>
